@@ -1,0 +1,499 @@
+vi:
+  person: "Cá nhân"
+  company: "Công ty"
+  invoice: "In hóa đơn"
+  shipping: "Giao hàng"
+  other: "Khác"
+  creator: "Người tạo"
+  percent: "Tỉ lệ phần trăm"
+  total_revenue: "Tống bán (trừ trả hàng)"
+  total_invoiced: "Tổng bán"
+  reward_point: "Điểm hiện tại"
+  total_point: "Tổng điểm"
+  purchase_date: "Thời gian mua hàng"
+  purchase_number: "Số lần mua hàng"
+  debt: "Công nợ hiện tại"
+  birthday: "Tháng sinh"
+  age: "Tuổi"
+  gender: "Giới tính"
+  greater_than: ">"
+  less_than: "<"
+  equals: "="
+  greater_than_or_equal_to: ">="
+  less_than_or_equal_to: "<="
+  male: "Nam"
+  female: "Nữ"
+  not_allow_blank: "không được để trống"
+  backend:
+    contacts_contacts:
+      contact:
+        edit: "Sửa"
+        delete: "Xóa"
+  layouts:
+    erp:
+      backend:
+        sidebar:
+          contacts: "Danh bạ"
+          contact: "Khách hàng"
+          manufacturer: "Nhà cung cấp"
+          delivery_partners: "Đối tác giao hàng"
+          message: "Tất cả tin nhắn"
+        mega_menu:
+          configuration: "Cấu hình"
+          contacts: "Tất cả khách hàng"
+          contact_groups: "Nhóm khách hàng"
+          titles: "Tất cả danh xưng"
+          tags: "Tất cả nhãn"
+  erp:
+    contacts: 
+      backend:
+        contacts:
+          create:
+            success: "Thêm thông tin liên hệ thành công."
+          update:
+            success: "Cập nhật thông tin liên hệ thành công."
+          destroy:
+            success: "Xóa thông tin liên hệ thành công."
+          delete_all:
+            success: "Xóa thông tin liên hệ được chọn thành công."
+          archive:
+            success: "Liên hệ không còn được sử dụng."
+          unarchive:
+            success: "Liên hệ đã được sử dụng trở lại."
+          archive_all:
+            success: "Liên hệ không còn được sử dụng."
+          unarchive_all:
+            success: "Liên hệ đã được sử dụng trở lại."
+          index:
+            contacts: "Danh sách liên hệ"
+            create: "Thêm liên hệ"
+            archive_confirm: "Bạn chắc chắn muốn ngừng sử dụng liên hệ này?"
+            unarchive_confirm: "Bạn chắc chắn muốn sử dụng lại liên hệ này?"
+            delete: "Xóa liên hệ"
+            delete_confirm: "Bạn có chắc muốn xóa?"
+            persons: "Nhóm cá nhân"
+            companies: "Nhóm công ty"
+            customers: "Khách hàng"
+            vendors: "Nhà cung cấp"
+            invoices: "Thông tin hóa đơn"
+            shippings: "Thông tin giao hàng"
+            others: "Các thông tin khác"
+            code: "Mã liên hệ"
+            name: "Tên liên hệ"
+            company_name: "Tên công ty"
+            contact_type: "Nhóm/Loại"
+            phone: "Điện thoại"
+            email: "Email"
+            address: "Địa chỉ"
+            parent_contact: "Thuộc liên hệ"
+            salesperson: "N.viên phụ trách"
+            contact_archived: "Đã ngưng sử dụng"
+          list:
+            code: "Mã liên hệ"
+            name: "Tên liên hệ"
+            company_name: "Tên công ty"
+            contact_type: "Nhóm/Loại"
+            email: "Email"
+            phone: "Điện thoại"
+            address: "Địa chỉ"
+            parent_contact: "Thuộc liên hệ"
+            salesperson: "N.viên p.trách"
+            show: "Xem chi tiết"
+            no_matching_records_found: "Danh sách liên hệ hiện tại đang trống."            
+            archive_confirm: "Bạn chắc chắn muốn ngừng sử dụng liên hệ này?"
+            unarchive_confirm: "Bạn chắc chắn muốn sử dụng lại liên hệ này?"
+            delete: "Xóa liên hệ"
+            is_customer: "Khách hàng"
+            is_supplier: "Nhà C.cấp"
+          new:
+            contacts: "Danh sách liên hệ"
+            create: "Thêm liên hệ"
+            contact_details: "Chi tiết liên hệ"
+          edit:
+            create: "Thêm liên hệ"
+            contacts: "Danh sách liên hệ"
+            edit: "Cập nhật thông tin liên hệ"
+            contact_details: "Chi tiết liên hệ"
+          show:
+            contacts: "Danh sách liên hệ"
+            create: "Thêm liên hệ"
+            delete: "Xóa liên hệ"
+            delete_confirm: "Bạn có chắc muốn xóa?"
+            contact_details: "Chi tiết liên hệ"
+            edit: "Cập nhật"
+          form:
+            contact_group: "Nhóm liên hệ"
+            choose_contact_group: "Chọn nhóm liên hệ"
+            type: "Loại liên hệ"
+            code: "Mã liên hệ"
+            enter_code: "Nhập mã liên hệ"
+            name: "Tên liên hệ"
+            enter_name: "Nhập tên liên hệ..."
+            company_name: "Tên công ty"
+            enter_company_name: "Nhập tên công ty..."
+            create: "Thêm liên hệ"
+            birthday: "Ngày sinh"
+            choose_birthday: "Chọn ngày sinh..."
+            gender: "Giới tính"
+            male: "Nam"
+            female: "Nữ"
+            address: "Địa chỉ"
+            enter_address: "Ví dụ: 188 Đường số 1, Phg 16"
+            country: "Nước/Quốc gia"
+            choose_country: "Chọn quốc gia"
+            city: "Thành phố"
+            choose_city: "Chọn thành phố..."
+            state: "Khu vực (Tỉnh/TP)"
+            choose_state: "Chọn khu vực/tỉnh/thành phố"
+            district: "Quận/Huyện/TX"
+            choose_district: "Chọn quận/huyện/thị xã"
+            zip_code: "Mã ZIP"
+            enter_zip_code: "Nhập mã ZIP"
+            job_position: "Vị trí công việc"
+            eg_job_position: "Ví dụ: Giám đốc tài chính"
+            phone: "Số điện thoại"
+            enter_phone_numbers: "Nhập số điện thoại"
+            mobile: "Số di động"
+            enter_mobile_numbers: "Nhập số di động"
+            email_address: "Địa chỉ email"
+            enter_email_address: "Nhập địa chỉ email"
+            website: "Website"
+            eg_website: "Ví dụ: http://hoangkhang.com.vn/"
+            tax_code: "Mã số thuế"
+            enter_tax_code: "Nhập mã số thuế"
+            fax: "Số fax"
+            enter_fax: "Nhập số fax"
+            salesperson: "Nhân viên phụ trách"
+            choose_staff: "Chọn nhân viên phụ trách"
+            title: "Danh xưng"
+            choose_title: "Chọn danh xưng"
+            choose_salesperson: "Chọn nhân viên kinh doanh..."
+            contacts_address: "Địa chỉ liên hệ khác"
+            notes: "Ghi chú"
+            sales_purchases: "Cài đặt người mua/người bán"
+            add_contact: "Thêm địa chỉ"
+            create_contact: "Tạo mới khách hàng"
+            enter_note: "Nhập nội dung ghi chú"
+            is_a_customer: "Là khách hàng mua"
+            is_a_vendor: "Là nhà cung cấp"
+            salesperson: "Nhân viên kinh doanh"
+            sale: "Khách hàng mua"
+            purchases: "Khách hàng bán"
+            payments_prices: "Thanh toán & Giá"
+            payment_term: "Kỳ hạn thanh toán"
+            payment_method: "Hình thức thanh toán"
+            price_term: "Chính sách giá"
+            choose_payment_term: "Chọn kỳ hạn thanh toán"
+            choose_payment_method: "Chọn hình thức thanh toán"
+            choose_price_term: "Chọn chính sách giá"
+            taxes_commission: "Thuế & Chiết khấu"
+            tax_default: "Thuế mặc định"
+            choose_tax_default: "Chọn thuế mặc định"
+            commission_percent: "Phần trăm hoa hồng cho nhân viên (%)"
+            new_account_commission_amount: "Tiền thưởng tài khoản mới (New Acc)"
+            contact_is_customer: "Là khách hàng"
+            is_customer: "Khách hàng"
+            contact_is_supplier: "Là nhà cung cấp"
+            is_supplier: "Nhà cung cấp"
+            commission_rate: "Hoa hồng và chiết khấu"
+            commission_rate_for_salesperson: "Hoa hồng áp dụng cho nhân viên kinh doanh"
+            commission_rate_for_contact: "Chiết khấu theo sản phẩm áp dụng cho địa chỉ liên hệ"
+            add_commission_rate: "Thêm chiết khấu theo loại sản phẩm"
+            category_name: "Chuyên mục sản phẩm"
+            rate: "Phần trăm chiết khấu (%)"
+            prices_list_for_contact: "Cấu hình bảng giá"
+            sales_prices: "Bảng giá bán hàng"
+            purchase_prices: "Bảng giá nhập hàng"
+            add_sales_price: "Thêm giá bán"
+            add_purchase_price: "Thêm giá nhập"
+            categories: "Chuyên mục"
+            properties_values: "Giá trị thuộc tính"
+            min_quantity: "SL tối thiểu"
+            max_quantity: "SL tối đa"
+            sales_price: "Giá bán"
+            purchase_price: "Giá nhập"
+            actions: "Tùy chọn"
+            title_sales_prices: "Bảng giá bán hàng"
+            title_purchase_prices: "Bảng giá nhập hàng"
+          detail:
+            code: "Mã liên hệ"
+            birthday: "Sinh nhật"
+            gender: "Giới tính"
+            address: "Địa chỉ liên hệ"
+            phone: "Điện thoại"
+            email_address: "E-mail"
+            type: "Loại liên hệ"
+            is_customer: "Khách hàng"
+            is_supplier: "Nhà cung cấp"
+            website: "Trang web"
+            tags: "Tất cả nhãn"
+            tax: "Mã thuế"
+            fax: "Số Fax"
+            salesperson: "Nhân viên phụ trách"
+            contact_group: "Nhóm liên hệ"
+            contacts_addresses: "Liên hệ & Địa chỉ khác"
+            payments_prices: "Thanh toán & Giá"
+            payment_term: "Kỳ hạn thanh toán"
+            payment_method: "Hình thức thanh toán"
+            taxes_commission: "Thuế & Chiết khấu"
+            commission_percent: "Phần trăm chiết khấu"
+            new_account_commission: "Thưởng New Acc"
+            price_term: "Chính sách giá"
+            notes: "Ghi chú"
+            contact_child: "Thông tin liên hệ khác"
+          contact_details:
+            edit: "Cập nhật"
+          history_payment_records_list:
+            payment_date: "Ngày thanh toán"
+            payment_code: "Mã thanh toán"
+            payment_type: "Hình thức"
+            contact: "Đối tượng thu/chi"
+            amount: "Số tiền"
+            description: "Mô tả"
+            accountant: "Kế toán"
+            actions: "Hành động"
+            receive: "Phiếu thu"
+            pay: "Phiếu chi"
+            receive_sales_order: "Thu tiền - Bán lẻ"
+            receive_purchase_order: "Thu tiền - Nhập hàng"
+            receive_customer: "Thu tiền - Công nợ"
+            receive_supplier: "Thu tiền - Công nợ"
+            receive_custom: "Thu khác"
+            pay_sales_order: "Chi tiền - Bán lẻ"
+            pay_purchase_order: "Chi tiền - Nhập hàng"
+            pay_customer: "Chi tiền - Công nợ"
+            pay_supplier: "Chi tiền -   Công nợ"
+            pay_commission: "Chi tiền - Hoa hồng"
+            pay_customer_commission: "Chi tiền - Chiết khấu"
+            pay_product_return: "Chi tiền - Hàng trả lại"
+            pay_custom: "Chi khác"
+        contacts_contacts:
+          create:
+            success: "Thêm thông tin liên hệ thành công."
+          update:
+            success: "Cập nhật thông tin liên hệ thành công."
+          destroy:
+            success: "Xóa thông tin liên hệ thành công."
+          form:
+            none: "Chưa chọn..."
+            type: "Loại liên hệ/địa chỉ"
+            address: "Địa chỉ"
+            enter_address: "Nhập địa chỉ"
+            city: "Thành phố"
+            state: "Khu vực/Tỉnh/TP"
+            choose_state: "Chọn khu vực"
+            district: "Quận/Huyện/TX"
+            choose_district: "Chọn quận/huyện/T.xã..."
+            zip_code: "Mã ZIP"
+            country: "Quốc gia"
+            choose_country: "Chọn quốc gia"
+            enter_zip_code: "Nhập mã ZIP"
+            name: "Tên liên hệ"
+            company_name: "Tên công ty"
+            enter_full_name: "Nhập tên liên hệ..."
+            title: "Danh xưng"
+            choose_title: "Chọn danh xưng"
+            create: "Tạo mới"
+            job_position: "Vị trí công việc"
+            eg_job_position: "Ví dụ: Giám đốc tài chính"
+            email_address: "Địa chỉ email"
+            enter_email_address: "Nhập địa chỉ email"
+            phone: "Số điện thoại"
+            enter_phone_numbers: "Nhập số điện thoại"
+            mobile: "Số di động"
+            enter_mobile_numbers: "Nhập số di động"
+            notes: "Ghi chú"
+            enter_notes: "Nhập ghi chú"
+            save_close: "Lưu & Đóng"
+            save_create: "Lưu & Tạo mới"
+          contact:
+            phone: "Điện thoại"
+            mobile: "Di động"
+        contact_groups:
+          create:
+            success: "Thêm nhóm liên hệ thành công."
+          update:
+            success: "Cập nhật nhóm liên hệ thành công."
+          destroy:
+            success: "Xóa nhóm liên hệ thành công."
+          delete_all:
+            success: "Xóa nhóm liên hệ được chọn thành công."
+          archive:
+            success: "Thao tác thành công! Nhóm liên hệ đã ngưng sử dụng."
+          archive_all:
+            success: "Thao tác thành công! Nhóm liên hệ đã ngưng sử dụng."
+          unarchive:
+            success: "Thao tác thành công! Nhóm liên hệ đã được sử dụng lại."
+          unarchive_all:
+            success: "Thao tác thành công! Nhóm liên hệ đã được sử dụng lại."
+          index:
+            contact_groups: "Nhóm liên hệ"
+            create: "Thêm nhóm liên hệ"
+            name: "Tên nhóm"
+            discount: "Giảm"
+            discount_type: "Loại"
+            delete: "Xóa nhóm liên hệ"
+            contact_group_archived: "Nhóm liên hệ đã bị ẩn"
+            archive_confirm: "Bạn chắc chắn muốn ngừng sử dụng nhóm liên hệ?"
+            unarchive_confirm: "Bạn chắc chắn muốn sử dụng lại nhóm liên hệ?"
+          list:
+            name: "Tên nhóm"
+            discount: "Giảm"
+            discount_type: "Loại"
+            delete: "Xóa nhóm liên hệ"
+            archive_confirm: "Bạn chắc chắn muốn ngừng sử dụng nhóm liên hệ?"
+            unarchive_confirm: "Bạn chắc chắn muốn sử dụng lại nhóm liên hệ?"
+            no_matching_records_found: "Danh sách nhóm liên hệ hiện tại đang trống."
+          new:
+            contact_groups: "Nhóm liên hệ"
+            create: "Thêm nhóm liên hệ"
+          edit:
+            contact_groups: "Nhóm liên hệ"
+            create: "Thêm nhóm liên hệ"
+          form:
+            name: "Tên nhóm"
+            discount: "Giảm"
+            discount_type: "Loại"
+            note: "Ghi chú"
+            add: "Thêm điều kiện"
+        conts_cates_commission_rates:
+          form_line:
+            choose_category: "Chọn chuyên mục của sản phẩm"
+            enter_rate: "Nhập số"
+        titles:
+          create:
+            success: "Thêm danh xưng thành công."
+          update:
+            success: "Cập nhật danh xưng thành công."
+          destroy:
+            success: "Xóa danh xưng thành công."
+          archive:
+            success: "Danh xưng đã ngưng sử dụng."
+          unarchive:
+            success: "Danh xưng đã được sử dụng trở lại."
+          delete_all:
+            success: "Xóa danh xưng được chọn thành công."
+          archive_all:
+            success: "Danh xưng đã ngưng sử dụng."
+          unarchive_all:
+            success: "Danh xưng đã được sử dụng trở lại."
+          index:
+            titles: "Tất cả danh xưng"
+            create: "Thêm danh xưng"
+            name: "Tên danh xưng"
+            abbreviation: "Tên viết tắt"
+            delete: "Xóa danh xưng"
+            delete_confirm: "Bạn có chắc muốn xóa?"
+            archive_confirm: "Bạn chắc chắn muốn ngừng sử dụng danh xưng này?"
+            unarchive_confirm: "Bạn chắc chắn muốn sử dụng lại danh xưng này?"
+          list:
+            name: "Tên danh xưng"
+            abbreviation: "Tên viết tắt"
+            no_matching_records_found: "Danh sách danh xưng hiện tại đang trống."
+            delete: "Xóa danh xưng"
+            delete_confirm: "Bạn có chắc muốn xóa?"
+            archive_confirm: "Bạn chắc chắn muốn ngừng sử dụng danh xưng này?"
+            unarchive_confirm: "Bạn chắc chắn muốn sử dụng lại danh xưng này?"
+          new:
+            titles: "Tất cả danh xưng"
+            create: "Thêm danh xưng"
+          edit:
+            titles: "Tất cả danh xưng"
+            edit: "Cập nhật"
+            create: "Thêm danh xưng"
+          form:
+            name: "Tên danh xưng"
+            abbreviation: "Tên viết tắt"
+        tags:
+          create:
+            success: "Thêm nhãn thành công."
+          update:
+            success: "Cập nhật nhãn thành công."
+          archive:
+            success: "Nhãn không còn được sử dụng."
+          unarchive:
+            success: "Nhãn đã được sử dụng trở lại."
+          destroy:
+            success: "Xóa nhãn thành công."
+          delete_all:
+            success: "Xóa nhãn được chọn thành công."
+          archive_all:
+            success: "Nhãn không còn được sử dụng."
+          unarchive_all:
+            success: "Nhãn đã được sử dụng trở lại."
+          index:
+            tags: "Tất cả nhãn"
+            create: "Thêm nhãn"
+            delete: "Xóa nhãn"
+            name: "Tên nhãn"
+            tag_archived: "Nhãn không còn sử dụng"
+            archive_confirm: "Bạn chắc chắn muốn ngừng sử dụng thẻ này?"
+            unarchive_confirm: "Bạn chắc chắn muốn sử dụng lại thẻ này?"
+          list:
+            name: "Tên nhãn"
+            delete: "Xóa nhãn"
+            no_matching_records_found: "Danh sách nhãn hiện tại đang trống."
+            archive_confirm: "Bạn chắc chắn muốn ngừng sử dụng thẻ này?"
+            unarchive_confirm: "Bạn chắc chắn muốn sử dụng lại thẻ này?"
+          new:
+            tags: "Tất cả nhãn"
+            create: "Thêm nhãn"
+          edit:
+            tags: "Tất cả nhãn"
+            create: "Thêm nhãn"
+          form:
+            name: "Tên nhãn"
+        messages:
+          destroy:
+            success: "Tin nhắn đã xóa thành công"
+          delete_all:
+            success: "Tin nhắn đã xóa thành công"
+          index:
+            messages: "Tất cả tin nhắn"
+            name: "Tên khách hàng"
+            email: "Địa chỉ email"
+            phone: "Điện thoại"
+            message: "Chi tiết lời nhắn"
+            created_at: "Ngày gửi"
+            delete: "Xóa tin nhắn"
+          list:
+            messages: "Tất cả tin nhắn"
+            name: "Tên liên hệ"
+            email: "Địa chỉ email"
+            phone: "Điện thoại"
+            message: "Chi tiết lời nhắn"
+            delete: "Xóa tin nhắn"
+            delete_confirm: "Bạn thực sự muốn xóa nội dung tin nhắn này?"
+            no_matching_records_found: "Danh sách tin nhắn không được tìm thấy"
+  activerecord:
+    errors:
+      models:
+        erp/contacts/contact:
+          attributes:
+            name:
+              blank: "không được để trống."
+            is_customer:
+              message_must_select: "Bắt buộc liên hệ phải là 'Khách hàng' hay/hoặc 'Nhà cung cấp'"
+        erp/contacts/contact_group:
+          attributes:
+            name:
+              blank: "không được để trống."
+        erp/contacts/title:
+          attributes:
+            name:
+              blank: "không được để trống."
+        erp/contacts/tag:
+          attributes:
+            name:
+              blank: "không được để trống."
+    attributes:
+      erp/contacts/contact:
+        name: "Tên liên hệ"
+        company_name: "Tên công ty"
+        is_customer: ""
+      erp/contacts/contact_group:
+        name: "Tên nhóm"
+      erp/contacts/title:
+        name: "Tên danh xưng"
+      erp/contacts/tag:
+        name: "Tên nhãn"

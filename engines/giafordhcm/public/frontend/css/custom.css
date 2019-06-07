@@ -1,0 +1,189 @@
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Roboto', sans-serif;
+}
+.navbar-info * {
+    color: #fff !important;
+}
+.navbar-info {
+	height: 60px;
+	padding: 5px 5px;
+	font-size: 19px !important;
+	top: 5px;
+	border-radius: 5px;
+	color: #fff !important;
+	line-height: 20px;
+	font-weight: bold;
+	font: 600 12px/20px 'Roboto', sans-serif;
+    text-transform: none;
+    letter-spacing: 0;
+}
+.navbar-info div {
+    font-size: 24px;
+    padding-bottom: 5px;
+}
+.navbar-info span {
+    font-size: 18px;
+    letter-spacing: -0.5px;
+}
+.navbar-info:active, 
+.navbar-info:focus, 
+.navbar-info:active:focus
+.navbar-info.active.focus {
+	background-color: #1565c0 !important;
+	border-color: #0653ab !important;
+}
+.navbar-info span {
+	color: #fff !important;
+}
+.b-advantages-1__title {
+	font-size: 20px;
+}
+.b-filter__btns {
+	margin-top: 0;
+    margin-left: 0;
+    text-align: right;
+}
+.b-filter__btns button.btn {
+	font: 600 12px/40px Roboto;
+}
+.b-info__title_lg {
+	font-size: 30px;
+}
+.b-bnr__title {
+	font: 600 36px/1 Roboto;
+}
+.header.header-color-black .navbar .navbar-nav > li.active > a,
+.header.navbar-scrolling .navbar .navbar-nav > li.active > a
+ {
+    border-bottom: 0.1875em solid #1565c0;
+}
+.header.header-color-black .navbar .navbar-nav > li > a:hover,
+.header.header-color-black .navbar .navbar-nav > li > a:focus {
+	color: #222;
+    border-bottom: 0.1875em solid #1565c0;
+    background: none;
+}
+.yamm .dropdown-menu li > a {
+	font-size: 14px;
+}
+.dropdown-menu > li.active > a,
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus,
+.navbar-scrolling .dropdown-menu > li.active > a,
+.navbar-scrolling .dropdown-menu > li > a:hover,
+.navbar-scrolling .dropdown-menu > li > a:focus {
+	background-color: #1565c0;
+	color: #fff !important;
+}
+.breadcrumb > li, .breadcrumb > li > a {
+    font-size: 14px;
+    font-family: Roboto;
+}
+.section-default {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.section-default .container {
+    padding-top: 40px;
+}
+.section-default .container:first-child {
+    padding-top: 0;
+}
+.ui-title-block {
+    font-size: 30px;
+    font-weight: 500;
+    color: #015697;
+}
+.ui-subtitle-block {
+    color: #222;
+}
+.goods-group {
+    padding-top: 30px;
+}
+.b-goods-ac {
+    padding: 25px 30px 25px;
+    margin-bottom: 30px;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.b-goods-ac__img {
+    height: auto;
+}
+.b-goods-ac__info {
+    padding-bottom: 10px;
+}
+.b-goods-ac__info:before {
+    content: '';
+    position: absolute;
+    bottom: 80px;
+    width: 28px;
+    background: #1565c0;
+    height: 3px;
+    -webkit-transform: skew(-45deg);
+    -moz-transform: skew(-45deg);
+    -ms-transform: skew(-45deg);
+    -o-transform: skew(-45deg);
+    transform: skew(-45deg);
+}
+.b-goods-ac__info:after {
+    content: '';
+    position: absolute;
+    bottom: 80px;
+    left: 62px;
+    width: 56px;
+    height: 3px;
+    background: #333;
+    -webkit-transform: skew(-45deg);
+    -moz-transform: skew(-45deg);
+    -ms-transform: skew(-45deg);
+    -o-transform: skew(-45deg);
+    transform: skew(-45deg);
+}
+.b-goods-ac__name {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.b-goods-ac__name:hover {
+    color: #1565c0;
+}
+.b-goods-ac__price {
+    float: left;
+    color: #222;
+    font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+}
+.b-goods-ac__price span {
+    color: #ed1c24;
+    font-size: 16px;
+}
+.b-goods-ac__price sup {
+    font-size: 12px;
+    font-weight: normal;
+}
+.b-goods-ac__price, .b-goods-ac__price.discount span {
+    font-size: 14px;
+}
+.b-car-details__share-links {
+    line-height: 1;
+}
+.b-car-details__share-link {
+    display: inline-block;
+    margin-right: 21px;
+    font: 500 12px Roboto;
+    text-decoration: underline;
+    color: #222;
+}
+.b-car-details__header {
+    padding-bottom: 20px;
+}
+.b-car-info__price div {
+    font-size: 16px;
+    display: block;
+}
+.b-car-info__price-unit {
+    padding-left: 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.b-calculator__input {
+    font-family: Roboto;
+}
