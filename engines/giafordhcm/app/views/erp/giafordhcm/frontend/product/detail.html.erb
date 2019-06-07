@@ -20,8 +20,9 @@
                     </li>
                     <li><a href="<%= erp_giafordhcm.all_product_path %>">Sản phẩm</a>
                     </li>
-                    <li><a href="<%= erp_giafordhcm.product_listing_path(menu_id: 1, title: url_friendly("Ford Everest")) %>">Ford Everest</a>
-                    </li>
+                    <% if false %>
+                        <li><a href="<%= erp_giafordhcm.product_listing_path(menu_id: 1, title: url_friendly("Ford Everest")) %>">Ford Everest</a></li>
+                    <% end %>
                     <li class="active">Ford Everest Ambiente 2.0L AT 4x2</li>
                 </ol>
             </div>
