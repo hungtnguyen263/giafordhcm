@@ -34,3 +34,53 @@
 <script src="/frontend/assets/plugins/scrollreveal/scrollreveal.min.js"></script>
 <!-- Main slider-->
 <script src="/frontend/assets/plugins/slider-pro/jquery.sliderPro.min.js"></script>
+
+<script src="/frontend/js/custom.js"></script>
+<script src="/frontend/js/modal.js"></script>
+
+<script>
+    $(document).on('click', '.sidebar-toggle', function(e) {
+        $(".sidebar-toggle").closest(".sidebar-contact-us").addClass("collapsed");
+        $(".sidebar-toggle").addClass("closed");
+        $(".sidebar-toggle").html("Thông tin liên hệ");
+        $(".sidebar-toggle").attr('title', 'Nhấn để hiện');
+    });
+    
+    $(document).on('click', '.sidebar-toggle.closed', function(e) {
+        $(".sidebar-toggle").closest(".sidebar-contact-us").removeClass("collapsed");
+        $(".sidebar-toggle").removeClass("closed");
+        $(".sidebar-toggle").html("");
+        $(".sidebar-toggle").attr('title', 'Nhấn để ẩn');
+    });
+</script>
+
+<script>
+    var dang_ky_modal = new gModal({size: 'lg'});
+    //var updateEmployeeCallback;
+    var dang_ky_callback;
+    
+    $(function() {
+        $('.sidebar-toggle').click();
+        $('.dang-ky-button').click(function(e) {
+            e.preventDefault();
+            var button = $(this);
+            
+            dang_ky_modal.load(button.attr('href'));
+            
+            dang_ky_callback = function(response) {
+                if (typeof(response.status) !== 'undefined') {
+                    showNotification(response.status, response.message);
+                    // hide modal
+                    dang_ky_modal.hide();
+                } else {
+                    // validation error
+                    dang_ky_modal.renderHtml(response);
+                }
+            };
+        });
+        
+        //$('.dang-ky-close').click(function(e) {
+    });
+</script>
+
+<%= yield :page_script %>

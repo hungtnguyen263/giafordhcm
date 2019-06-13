@@ -31,7 +31,7 @@
             
             <%= yield %>
             <div class="sidebar-contact-us">
-                <div class="sidebar-toggle"></div>
+                <div class="sidebar-toggle" title="Nhấn để ẩn"></div>
                 <div class="sidebar-info">
                     <div class="business-man__img">
                         <img src="/frontend/assets/media/components/b-blockquote/mrtuong.jpg" alt="" />
@@ -61,18 +61,6 @@
         <!-- end layout-theme-->
         
         <%= render "layouts/erp/frontend/modules/main_script" %>
-        
-        <script>
-            $(document).on('click', '.sidebar-toggle', function(e) {
-                $(".sidebar-toggle").closest(".sidebar-contact-us").addClass("collapsed");
-                $(".sidebar-toggle").addClass("closed");
-            });
-            
-            $(document).on('click', '.sidebar-toggle.closed', function(e) {
-                $(".sidebar-toggle").closest(".sidebar-contact-us").removeClass("collapsed");
-                $(".sidebar-toggle").removeClass("closed");
-            });
-        </script>
     </body>
 
 </html>
