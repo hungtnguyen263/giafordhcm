@@ -8,7 +8,7 @@ Erp::Giafordhcm::Engine.routes.draw do
     
     get "bang-gia.html" => "frontend/product#price_list", as: :price_list
     get "san-pham.html" => "frontend/product#list", as: :all_product
-    get ":title(-:menu_id).html" => "frontend/product#category", as: :product_listing
-    get "san-pham/:title-(:product_id).html" => "frontend/product#detail", as: :product_detail
+    get "san-pham/:title-sp-:product_id.html" => "frontend/product#detail", as: :product_detail
+    get ":title-dx-:menu_id.html" => "frontend/product#category", as: :product_listing
   end
 end

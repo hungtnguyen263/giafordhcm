@@ -1,0 +1,86 @@
+<% if (can? :read, Erp::Products::Product) %>
+<li class="nav-item  <%= "active open" if ["erp/products/backend/products",
+                                            "erp/products/backend/categories",
+                                            "erp/products/backend/brands",
+                                            "erp/products/backend/property_groups",
+                                            "erp/products/backend/properties",
+                                            "erp/products/backend/properties_values",
+                                            "erp/menus/backend/menus"
+                                        ].include?(params[:controller]) %>">
+    <a href="javascript:;" class="nav-link nav-toggle">
+        <i class="fa fa-database"></i>
+        <span class="title">Sản phẩm</span>
+        <% if ["erp/products/backend/products",
+                "erp/products/backend/categories",
+                "erp/products/backend/brands",
+                "erp/products/backend/property_groups",
+                "erp/products/backend/properties",
+                "erp/products/backend/properties_values",
+                "erp/menus/backend/menus"
+            ].include?(params[:controller]) %>
+            <span class="selected"></span>
+            <span class="arrow open"></span>
+        <% else %>
+            <span class="arrow"></span>
+        <% end %>
+    </a>
+    <ul class="sub-menu">
+        <li class="nav-item <%= "active open" if ["erp/products/backend/products"].include?(params[:controller]) %>">
+            <a href="<%= erp_products.backend_products_path %>" class="nav-link ">
+                <span class="title">D.sách sản phẩm</span>
+                <% if ["erp/products/backend/products"].include?(params[:controller]) %>
+                <span class="selected"></span>
+                <% end %>
+            </a>
+        </li>
+        <li class="nav-item <%= "active open" if ["erp/products/backend/categories"].include?(params[:controller]) %>">
+            <a href="<%= erp_products.backend_categories_path %>" class="nav-link ">
+                <span class="title">Chuyên mục</span>
+                <% if ["erp/products/backend/categories"].include?(params[:controller]) %>
+                <span class="selected"></span>
+                <% end %>
+            </a>
+        </li>
+        <li class="nav-item <%= "active open" if ["erp/products/backend/brands"].include?(params[:controller]) %>">
+            <a href="<%= erp_products.backend_brands_path %>" class="nav-link ">
+                <span class="title">Thương hiệu</span>
+                <% if ["erp/products/backend/brands"].include?(params[:controller]) %>
+                <span class="selected"></span>
+                <% end %>
+            </a>
+        </li>
+        <li class="nav-item <%= "active open" if ["erp/products/backend/property_groups"].include?(params[:controller]) %>">
+            <a href="<%= erp_products.backend_property_groups_path %>" class="nav-link ">
+                <span class="title">Nhóm thuộc tính</span>
+                <% if ["erp/products/backend/property_groups"].include?(params[:controller]) %>
+                <span class="selected"></span>
+                <% end %>
+            </a>
+        </li>
+        <li class="nav-item <%= "active open" if ["erp/products/backend/properties"].include?(params[:controller]) %>">
+            <a href="<%= erp_products.backend_properties_path %>" class="nav-link ">
+                <span class="title">D.sách thuộc tính</span>
+                <% if ["erp/products/backend/properties"].include?(params[:controller]) %>
+                <span class="selected"></span>
+                <% end %>
+            </a>
+        </li>
+        <li class="nav-item <%= "active open" if ["erp/products/backend/properties_values"].include?(params[:controller]) %>">
+            <a href="<%= erp_products.backend_properties_values_path %>" class="nav-link ">
+                <span class="title">Giá trị thuộc tính</span>
+                <% if ["erp/products/backend/properties_values"].include?(params[:controller]) %>
+                <span class="selected"></span>
+                <% end %>
+            </a>
+        </li>
+        <li class="nav-item <%= "active open" if ["erp/menus/backend/menus"].include?(params[:controller]) %>">
+            <a href="<%= erp_menus.backend_menus_path %>" class="nav-link ">
+                <span class="title">Menu sản phẩm</span>
+                <% if ["erp/menus/backend/menus"].include?(params[:controller]) %>
+                <span class="selected"></span>
+                <% end %>
+            </a>
+        </li>
+    </ul>
+</li>
+<% end %>

@@ -8,12 +8,21 @@ module Erp
       
       # menu link helper
       def menu_link(menu)
-        erp_giafordhcm.product_listing_path(menu_id: menu.id, title: url_friendly(menu.name))
+        erp_giafordhcm.product_listing_path(title: url_friendly(menu.name), menu_id: menu.id)
       end
       
       # product link helper
       def product_link(product)
         erp_giafordhcm.product_detail_path(product_id: product.id, title: url_friendly(product.name))
+      end
+      
+      # product image
+      def product_image(images, ordinal, thumb)
+        if images.present?
+          images.count < 2 ? images.first.image_url.send(thumb).url : images.send(ordinal).image_url.send(thumb).url
+        else
+          url_for('/frontend/images/no-image.png')
+        end
       end
     end
   end

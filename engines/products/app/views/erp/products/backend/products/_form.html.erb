@@ -71,20 +71,6 @@
                                         </div>
                                     </div>
                                 <% end %>
-                                <% if Erp::Core.available?("ortho_k") %>
-                                    <div class="row form-control-mb-0">
-                                        <div class="col-md-6">
-                                            <%= erp_form_control('checkbox', {
-                                                name: 'product[is_outside]',
-                                                id: 'is_outside',
-                                                value: product.is_outside,
-                                                not_selected_value: 'false',
-                                                options: [{value: 'true', text: 'Len ngoài bảng'}],
-                                                help: 'Len ngoài bảng'
-                                            }) %>
-                                        </div>
-                                    </div>
-                                <% end %>
                             </div>
                             <div class="col-md-7">
                                 <%= erp_form_control("images", {
@@ -123,7 +109,7 @@
                             <a href="#tab_5_3" data-toggle="tab"> <%= t('.products_units') %> </a>
                         </li>
                         <li>
-                            <a href="#tab_5_4" data-toggle="tab"> <%= t('.parts') %> </a>
+                            <a href="#tab_5_4" data-toggle="tab"> <%= t('.description') %> </a>
                         </li>
                     </ul>
                     <div class="tab-content">
@@ -248,53 +234,21 @@
                                 item: :products_unit
                             }) %>
                         </div>
-                        <div class="tab-pane addableform-table products-parts-details" id="tab_5_4">
-                            <%= erp_form_control("addableform", {
-                                type: 'table',
-                                add_button: t('.add_part'),
-                                partial: 'erp/products/backend/products_parts/part_form',
-                                partial_url: erp_products.part_form_backend_products_parts_path,
-                                items: @product.products_parts,
-                                item: :products_part,
-                                add_control_selector: "input[name='product_id']",
-                                add_control: erp_form_control("dataselect", {
-                                    name: 'product_id',
-                                    value: product.id,
-                                    placeholder: t('.choose_product_part'),
-                                    label: t('.product_part'),
-                                    help: t('.help_product_part'),
-                                    url: erp_products.dataselect_backend_products_path(format: 'json'),
-                                    create: {
-                                        url: erp_products.new_backend_product_path,
-                                        title: t('.create_product_part'),
-                                        container_selector: '.new_product',
-                                        input_selector: 'input[name="product[name]"]'
-                                    },
-                                    edit: {
-                                        url: erp_products.edit_backend_product_path(id: ':value'),
-                                        title: t('.edit_product_part'),
-                                        container_selector: '.edit_product',
-                                    }
-                                }),
-                                thead: "<th>#{t('.part_code')}</th>
-                                        <th>#{t('.part_name')}</th>
-                                        <th>#{t('.quantity')}</th>
-                                        <th>#{t('.cost')}</th>
-                                        <th>#{t('.total')}</th>
-                                        <th>#{t('.action')}</th>"
+                        <div class="tab-pane" id="tab_5_4">
+                            <h4><%= t('.short_description') %></h4>
+                            <%= erp_form_control("editor", {
+                                name: 'product[short_description]',
+                                value: product.short_description,
+                                placeholder: t('.enter_short_description'),
+                                type: 'tiny'
                             }) %>
                             
-                            <hr />
-                            <table class="table">
-                                <tr>
-                                    <td width="90%" class="text-right text-semibold">Tổng số lượng:</td>
-                                    <td class="text-right">
-                                        <h4 class="no-margin">
-                                            <span class="part_quantity text-bold text-primary"></span>
-                                        </h4>
-                                    </td>
-                                </tr>
-                            </table>
+                            <h4><%= t('.description') %></h4>
+                            <%= erp_form_control("editor", {
+                                name: 'product[description]',
+                                value: product.description,
+                                placeholder: t('.enter_description')
+                            }) %>
                         </div>
                     </div>
                 </div>

@@ -1,230 +1,46 @@
 <section class="section-default">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
-                <div class="text-center">
-                    <h2 class="ui-title-block">XE BÁN TẢI - HOTLINE 090 525 0593</h2>
-                    <div class="ui-subtitle-block">Tempor veniam incididunt labore dolore magna aliqua volputate ipsum</div>
-                    <div class="ui-decor"></div>
+            <% Erp::Menus::Menu.get_active.where(parent_id: nil).each do |menu| %>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="text-center">
+                                <h2 class="ui-title-block text-uppercase"><%= menu.name %> - HOTLINE 090 525 0593</h2>
+                                <div class="ui-subtitle-block"><%= menu.description %></div>
+                                <div class="ui-decor"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods-group wrap-inl-block">
+                        <div class="row vehicle-group">
+                            <% children = (menu.children.empty? ? menu.parent.children : menu.children) %>
+                            <% children.get_active.each do |submenu| %>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="b-goods-ac">
+                                        <div class="b-goods-ac__wrap">
+                                            <div class="b-goods-ac__img">
+                                                <a href="<%= menu_link(submenu) %>">
+                                                    <img class="img-responsive" src="<%= submenu.image_menu.present? ? (submenu.image_menu.thumb_560_350) : '/frontend/assets/media/components/b-goods/ford-everest-ambiente.jpg' %>" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="b-goods-ac__inner">
+                                                <div class="b-goods-ac__info">
+                                                    <a href="<%= menu_link(submenu) %>">
+                                                        <div class="b-goods-ac__name"><%= submenu.name %></div>
+                                                    </a>
+                                                </div>
+                                                <div class="b-goods-ac__price">Big Sale trong tháng</div>
+                                                <div class="b-goods-ac__price discount">Liên hệ: <span>090 525 0593</span> để nhận ưu đãi</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% end %>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="goods-group wrap-inl-block">
-            <div class="row vehicle-group">
-                
-                    <div class="col-md-4 col-sm-6">
-                        <div class="b-goods-ac">
-                            <div class="b-goods-ac__wrap">
-                                <!--<span class="b-goods-ac__label label-pink">Special deal</span>-->
-                                <div class="b-goods-ac__img">
-                                    <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                        <img class="img-responsive" src="/frontend/assets/media/components/b-goods/ford-everest-ambiente.jpg" alt="foto" />
-                                    </a>
-                                </div>
-                                <div class="b-goods-ac__inner">
-                                    <div class="b-goods-ac__info">
-                                        <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                            <div class="b-goods-ac__name">Ford Ranger mới</div>
-                                        </a>
-                                        <!--<div class="b-goods-ac__category">Dashboard</div>-->
-                                    </div>
-                                    <div class="b-goods-ac__price">Giá chỉ từ: <span>1.022.000.000</span><sup>VNĐ</sup></div>
-                                    <div class="b-goods-ac__price discount">Giảm thêm (tháng 6): <span>30.000.000</span><sup>VNĐ</sup></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4 col-sm-6">
-                        <div class="b-goods-ac">
-                            <div class="b-goods-ac__wrap">
-                                <!--<span class="b-goods-ac__label label-pink">Special deal</span>-->
-                                <div class="b-goods-ac__img">
-                                    <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                        <img class="img-responsive" src="/frontend/assets/media/components/b-goods/ford-everest-ambiente.jpg" alt="foto" />
-                                    </a>
-                                </div>
-                                <div class="b-goods-ac__inner">
-                                    <div class="b-goods-ac__info">
-                                        <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                            <div class="b-goods-ac__name">Ford Ranger Raptor</div>
-                                        </a>
-                                        <!--<div class="b-goods-ac__category">Dashboard</div>-->
-                                    </div>
-                                    <div class="b-goods-ac__price">Giá chỉ từ: <span>1.022.000.000</span><sup>VNĐ</sup></div>
-                                    <div class="b-goods-ac__price discount">Giảm thêm (tháng 6): <span>30.000.000</span><sup>VNĐ</sup></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="text-center">
-                    <h2 class="ui-title-block">XE 7 CHỖ - HOTLINE 090 525 0593</h2>
-                    <div class="ui-subtitle-block">Tempor veniam incididunt labore dolore magna aliqua volputate ipsum</div>
-                    <div class="ui-decor"></div>
-                </div>
-            </div>
-        </div>
-        <div class="goods-group wrap-inl-block">
-            <div class="row vehicle-group">
-                
-                    <div class="col-md-4 col-sm-6">
-                        <div class="b-goods-ac">
-                            <div class="b-goods-ac__wrap">
-                                <!--<span class="b-goods-ac__label label-pink">Special deal</span>-->
-                                <div class="b-goods-ac__img">
-                                    <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                        <img class="img-responsive" src="/frontend/assets/media/components/b-goods/ford-everest-ambiente.jpg" alt="foto" />
-                                    </a>
-                                </div>
-                                <div class="b-goods-ac__inner">
-                                    <div class="b-goods-ac__info">
-                                        <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                            <div class="b-goods-ac__name">Ford Everest</div>
-                                        </a>
-                                        <!--<div class="b-goods-ac__category">Dashboard</div>-->
-                                    </div>
-                                    <div class="b-goods-ac__price">Giá chỉ từ: <span>1.022.000.000</span><sup>VNĐ</sup></div>
-                                    <div class="b-goods-ac__price discount">Giảm thêm (tháng 6): <span>30.000.000</span><sup>VNĐ</sup></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="col-md-4 col-sm-6">
-                        <div class="b-goods-ac">
-                            <div class="b-goods-ac__wrap">
-                                <!--<span class="b-goods-ac__label label-pink">Special deal</span>-->
-                                <div class="b-goods-ac__img">
-                                    <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                        <img class="img-responsive" src="/frontend/assets/media/components/b-goods/ford-everest-ambiente.jpg" alt="foto" />
-                                    </a>
-                                </div>
-                                <div class="b-goods-ac__inner">
-                                    <div class="b-goods-ac__info">
-                                        <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                            <div class="b-goods-ac__name">Ford Explorer</div>
-                                        </a>
-                                        <!--<div class="b-goods-ac__category">Dashboard</div>-->
-                                    </div>
-                                    <div class="b-goods-ac__price">Giá chỉ từ: <span>1.022.000.000</span><sup>VNĐ</sup></div>
-                                    <div class="b-goods-ac__price discount">Giảm thêm (tháng 6): <span>30.000.000</span><sup>VNĐ</sup></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="text-center">
-                    <h2 class="ui-title-block">XE 5 CHỖ - HOTLINE 090 525 0593</h2>
-                    <div class="ui-subtitle-block">Tempor veniam incididunt labore dolore magna aliqua volputate ipsum</div>
-                    <div class="ui-decor"></div>
-                </div>
-            </div>
-        </div>
-        <div class="goods-group wrap-inl-block">
-            <div class="row vehicle-group">
-                
-                    <div class="col-md-4 col-sm-6">
-                        <div class="b-goods-ac">
-                            <div class="b-goods-ac__wrap">
-                                <!--<span class="b-goods-ac__label label-pink">Special deal</span>-->
-                                <div class="b-goods-ac__img">
-                                    <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                        <img class="img-responsive" src="/frontend/assets/media/components/b-goods/ford-everest-ambiente.jpg" alt="foto" />
-                                    </a>
-                                </div>
-                                <div class="b-goods-ac__inner">
-                                    <div class="b-goods-ac__info">
-                                        <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                            <div class="b-goods-ac__name">Ford Focus</div>
-                                        </a>
-                                        <!--<div class="b-goods-ac__category">Dashboard</div>-->
-                                    </div>
-                                    <div class="b-goods-ac__price">Giá chỉ từ: <span>1.022.000.000</span><sup>VNĐ</sup></div>
-                                    <div class="b-goods-ac__price discount">Giảm thêm (tháng 6): <span>30.000.000</span><sup>VNĐ</sup></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="col-md-4 col-sm-6">
-                        <div class="b-goods-ac">
-                            <div class="b-goods-ac__wrap">
-                                <!--<span class="b-goods-ac__label label-pink">Special deal</span>-->
-                                <div class="b-goods-ac__img">
-                                    <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                        <img class="img-responsive" src="/frontend/assets/media/components/b-goods/ford-everest-ambiente.jpg" alt="foto" />
-                                    </a>
-                                </div>
-                                <div class="b-goods-ac__inner">
-                                    <div class="b-goods-ac__info">
-                                        <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                            <div class="b-goods-ac__name">Ford EcoSport</div>
-                                        </a>
-                                        <!--<div class="b-goods-ac__category">Dashboard</div>-->
-                                    </div>
-                                    <div class="b-goods-ac__price">Giá chỉ từ: <span>1.022.000.000</span><sup>VNĐ</sup></div>
-                                    <div class="b-goods-ac__price discount">Giảm thêm (tháng 6): <span>30.000.000</span><sup>VNĐ</sup></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="text-center">
-                    <h2 class="ui-title-block">XE THƯƠNG MẠI - HOTLINE 090 525 0593</h2>
-                    <div class="ui-subtitle-block">Tempor veniam incididunt labore dolore magna aliqua volputate ipsum</div>
-                    <div class="ui-decor"></div>
-                </div>
-            </div>
-        </div>
-        <div class="goods-group wrap-inl-block">
-            <div class="row vehicle-group">
-                <% (1..1).each do |dd| %>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="b-goods-ac">
-                            <div class="b-goods-ac__wrap">
-                                <!--<span class="b-goods-ac__label label-pink">ưu đãi tháng 6</span>-->
-                                <div class="b-goods-ac__img">
-                                    <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                        <img class="img-responsive" src="/frontend/assets/media/components/b-goods/ford-everest-ambiente.jpg" alt="foto" />
-                                    </a>
-                                </div>
-                                <div class="b-goods-ac__inner">
-                                    <div class="b-goods-ac__info">
-                                        <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                            <div class="b-goods-ac__name">Ford Transit</div>
-                                        </a>
-                                        <!--<div class="b-goods-ac__category">Dashboard</div>-->
-                                    </div>
-                                    <div class="b-goods-ac__price">Giá chỉ từ: <span>1.022.000.000</span><sup>VNĐ</sup></div>
-                                    <div class="b-goods-ac__price discount">Giảm thêm (tháng 6): <span>30.000.000</span><sup>VNĐ</sup></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <% end %>
-            </div>
+            <% end %>
         </div>
     </div>
 </section>

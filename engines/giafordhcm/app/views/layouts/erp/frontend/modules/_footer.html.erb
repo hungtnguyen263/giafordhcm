@@ -28,13 +28,9 @@
                         <section class="footer-section footer-section_list-columns">
                             <h3 class="footer-section__title ui-title-inner">Sản phẩm</h3>
                             <ul class="footer-list list-unstyled">
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Ford Ranger</a></li>
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Ford Ranger Raptor</a></li>
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Ford Everest</a></li>
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Ford Explorer</a></li>
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Ford Focus</a></li>
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Ford EcoSport</a></li>
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Ford Transit</a></li>
+                                <% Erp::Menus::Menu.get_active.where.not(parent_id: nil).each do |menu| %>
+                                    <li class="footer-list__item"><a class="footer-list__link" href="<%= menu_link(menu) %>"><%= menu.name %></a></li>
+                                <% end %>
                             </ul>
                         </section>
                     </div>
@@ -61,7 +57,7 @@
                             <div class="footer-contact"><i class="icon icon-xs fa fa-user-circle-o"></i>Mr. Nguyễn Phan Phúc Tường</div>
                             <div class="footer-contact"><i class="icon icon-xs fa fa-envelope-o"></i>tuong.npp@giafordhcm.com</div>
                             <div class="footer-contact"><i class="icon icon-lg fa fa-map-marker"></i>900 Quốc Lộ 1A, Phường Thạnh Xuân, Quận 12, TP Hồ Chí Minh</div>
-                            <div class="footer-contact"><i class="icon fa fa-clock-o"></i>Mon - Fri : 0900am to 0600pm</div>
+                            <!--<div class="footer-contact"><i class="icon fa fa-clock-o"></i>Mon - Fri : 0900am to 0600pm</div>-->
                         </section>
                     </div>
                 </div>
