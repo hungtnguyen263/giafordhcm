@@ -1,20 +1,19 @@
 <form class="ui-form-3" id="contactForm" action="#" method="post">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
     </div>
     <div class="modal-body">
         <div class="registration-form">
-            <h2 class="text-center text-uppercase">Yêu cầu báo giá</h2>
-            <div class="text-center">Để nhận được "BÁO GIÁ ĐẶC BIỆT" và các "CHƯƠNG TRÌNH ƯU ĐÃI", Quý khách vui lòng điền form báo giá dưới đây:</div>
+            <h2 class="title text-center text-uppercase">Yêu cầu báo giá</h2>
+            <div class="sub-title text-center">Để nhận được "BÁO GIÁ ĐẶC BIỆT" và các "CHƯƠNG TRÌNH ƯU ĐÃI", Quý khách vui lòng điền form báo giá dưới đây:</div>
                 <div class="form-group">
-                    <label>Họ và tên: </label>
+                    <label>Họ và tên <span class="required">*</span> </label>
                     <input class="form-control" id="user-name" type="text" name="user-name" placeholder="Họ và tên" required="required" />
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>Số điện thoại: </label>
+                            <label>Số điện thoại <span class="required">*</span> </label>
                             <input class="form-control" id="user-phone" type="tel" name="user-phone" placeholder="Số điện thoại" required="required" />
                         </div>
                     </div>
@@ -29,23 +28,23 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>Dòng xe: </label>
-                            <select class="selectpicker" data-width="100%">
-                                <option>Vui lòng chọn dòng xe</option>
-                                <option>Ford Ranger</option>
-                                <option>Ford Ecosport</option>
-                                <option>Ford Everest</option>
+                            <label>Dòng xe <span class="required">*</span> </label>
+                            <select class="select2" data-width="100%">
+                                <option value=""> --- Chọn dòng xe quan tâm --- </option>
+                                <% Erp::Products::Category.where.not(parent_id: nil).each do |category| %>
+                                    <option value="<%= category.id %>"><%= category.name %></option>
+                                <% end %>
                             </select>
                         </div>
                     </div>
                     <div class="col-xs-6">
                         <div class="form-group">
-                            <label>Địa chỉ: </label>
-                            <select class="selectpicker" data-width="100%">
-                                <option>Vui lòng chọn Tỉnh/Thành phố</option>
-                                <option>TP. Hồ Chí Minh</option>
-                                <option>Hà Nội</option>
-                                <option>Đà Nẵng</option>
+                            <label>Địa chỉ <span class="required">*</span> </label>
+                            <select class="select2" data-width="100%" data-live-search="true" title='Choose one of the following...'>
+                                <option value=""> --- Chọn tỉnh/thành phố --- </option>
+                                <% Erp::Areas::State.get_all.each do |state| %>
+                                    <option value="<%= state.id %>"><%= state.name %></option>
+                                <% end %>
                             </select>
                         </div>
                     </div>
@@ -54,9 +53,10 @@
                 <div class="form-group">
                     <label>Hình thức thanh toán: </label>
                     <span class="label-group">
-                        <input class="forms__radio hidden" id="forms__radio-5" type="radio" name="radio-group-1" value="" />
+                        <input class="forms__radio hidden" id="forms__radio-5" type="radio" name="radio-group-1" value="" checked="checked" />
                         <label class="forms__label forms__label-radio forms__label-radio-3" for="forms__radio-5">Trả góp</label>
-                        <input class="forms__radio hidden" id="forms__radio-6" type="radio" name="radio-group-1" value="" checked="checked" />
+                        
+                        <input class="forms__radio hidden" id="forms__radio-6" type="radio" name="radio-group-1" value="" />
                         <label class="forms__label forms__label-radio forms__label-radio-3" for="forms__radio-6">Trả hết</label>
                     </span>
                 </div>
@@ -64,6 +64,6 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Bỏ qua</button>
-        <button type="button" class="btn btn-primary">Gửi yêu cầu</button>
+        <button type="button" class="btn btn-standard">Gửi yêu cầu</button>
     </div>
 </form>

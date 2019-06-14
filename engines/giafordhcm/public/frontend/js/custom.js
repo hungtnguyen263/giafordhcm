@@ -4,3 +4,17 @@ function uniqueId() {
         return v.toString(16);
     });
 }
+
+function applyJs(container) {
+    //container.find('.select2').select2();
+    
+    if (container.find('.select2').length > 0) {
+
+        $('.select2').selectpicker({
+          style: 'ui-select',
+          styleBase: '',
+          size: "auto",
+          "data-live-search": "true"
+        });
+    }
+}

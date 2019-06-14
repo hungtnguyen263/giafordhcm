@@ -1,4 +1,4 @@
-function gModal(options) {
+function giafordhcmModal(options) {
     var thisModal = this;
     
     // size
@@ -63,7 +63,7 @@ function gModal(options) {
     this.renderHtml = function(html) {
         // loading effect
         thisModal.content.html(html);
-        //applyJs(thisModal.content);
+        applyJs(thisModal.content);
     };
 }
 

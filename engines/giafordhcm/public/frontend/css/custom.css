@@ -528,3 +528,29 @@ article.b-post blockquote.sub-title i.fa {
 .section-news_mod-a {
     padding-top: 50px;
 }
+.modal .registration-form {
+    padding: 0 20px;
+}
+.modal .registration-form .title {
+    margin-top: 0;
+    color: #1565c0;
+}
+.modal .registration-form .sub-title {
+    margin-bottom: 30px;
+}
+.modal .modal-header {
+    padding-bottom: 30px;
+    border: none;
+}
+.modal button.close {
+    float: right;
+    font-size: 25px;
+    opacity: .2;
+}
+.modal .close:hover, .modal .close:focus {
+    color: #222;
+    opacity: .2;
+}
+.required {
+    color: red;
+}
