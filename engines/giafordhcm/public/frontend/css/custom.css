@@ -89,6 +89,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .b-bnr__title {
 	font: 600 36px/1 Roboto;
 }
+.header-topbarbox-1, .header-topbarbox-2 {
+    padding: 15px 0 15px;
+}
 .header.header-color-black .navbar .navbar-nav > li.active > a,
 .header.navbar-scrolling .navbar .navbar-nav > li.active > a
  {
@@ -113,8 +116,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	color: #fff !important;
 }
 .breadcrumb > li, .breadcrumb > li > a {
-    font-size: 14px;
+    font-size: 16px;
     font-family: Roboto;
+}
+.breadcrumb > li + li:before {
+    font-size: 16px;
 }
 .footer-list__item {
     display: list-item;
@@ -158,19 +164,61 @@ footer.footer.area-bg {
     justify-content: center;
     flex-flow: row wrap;
 }
-.b-goods-ac {
+.b-goods-feat__name:before {
+    content: none;
+}
+.b-goods-feat:before, .b-goods-feat:after {
+    display: table;
+    content: "";
+}
+.b-goods-feat:after {
+    clear: both;
+}
+.b-goods-feat {
+    position: relative;
+    min-height: 250px;
+    padding: 25px 30px 25px;
+    font-family: Roboto;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.b-goods-ac  {
     background-color: #fff;
     padding: 25px 30px 25px;
     margin-bottom: 60px;
     border: none;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-.b-goods-ac__img {
+.b-goods-ac__img,
+.b-goods-feat__img {
     height: auto;
 }
-.b-goods-ac__info {
+.b-goods-ac__info,
+.b-goods-feat__info {
     padding-bottom: 10px;
     width: 100%;
+}
+.b-goods-feat:hover {
+    border-color: #fff;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+}
+.b-goods-feat:hover .b-goods-links {
+  opacity: 1;
+}
+.b-goods-feat:hover .b-goods-feat__img {
+  top: -10px;
+  left: -10px;
+}
+.b-goods-feat__img {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.owl-theme_w-btn {
+    padding-bottom: 60px;
 }
 /*.b-goods-ac__info:before {*/
 /*    content: '';*/
@@ -201,35 +249,49 @@ footer.footer.area-bg {
 /*    -o-transform: skew(-45deg);*/
 /*    transform: skew(-45deg);*/
 /*}*/
-.b-goods-ac__name {
+.b-goods-ac__name,
+.b-goods-feat__name {
     font-size: 16px;
     text-transform: uppercase;
     border-bottom: #eee solid;
 }
-.b-goods-ac__name:hover {
+.b-goods-ac__name:hover,
+.b-goods-feat__name:hover {
     color: #1565c0;
 }
-.b-goods-ac__price {
+.b-goods-ac__price,
+.b-goods-feat__price {
     float: left;
     color: #222;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
-.b-goods-ac__price span {
+.b-goods-ac__price span,
+.b-goods-feat__price span {
     color: #ed1c24;
     font-size: 16px;
 }
-.b-goods-ac__price sup {
+.b-goods-ac__price sup,
+.b-goods-feat__price sup {
     font-size: 12px;
     font-weight: normal;
 }
-.b-goods-ac__price, .b-goods-ac__price.discount span {
+.b-goods-ac__price, .b-goods-ac__price.discount span,
+.b-goods-feat__price, .b-goods-feat__price.discount span {
     font-size: 14px;
 }
-.b-goods-ac__price, .b-goods-ac__price.callme span {
+.b-goods-ac__price, .b-goods-ac__price.callme span,
+.b-goods-feat__price, .b-goods-feat__price.callme span {
     font-size: 14px;
 }
-.b-goods-ac__label {
+.b-goods-feat__label {
     z-index: 900;
+}
+.b-goods-feat__name {
+    margin-top: inherit;
+    margin-bottom: inherit;
+}
+.b-goods-feat__price {
+    font-weight: 600;
 }
 .b-car-details__share-links {
     line-height: 1;
@@ -244,6 +306,10 @@ footer.footer.area-bg {
 .b-car-details__header {
     padding-bottom: 20px;
 }
+.b-car-info__price {
+    background-color: #5c80a9;
+    color: #990000;
+}
 .b-car-info__price div {
     font-size: 16px;
     display: block;
@@ -252,6 +318,9 @@ footer.footer.area-bg {
     padding-left: 12px;
     font-size: 14px;
     font-weight: 500;
+}
+.b-calculator {
+    border: 1px solid #eee;
 }
 .b-calculator__input {
     font-family: Roboto;
@@ -594,7 +663,7 @@ article.b-post blockquote.sub-title i.fa {
 .panel-group .panel-custom {
     margin-bottom: 0;
     padding-bottom: 15px;
-    background-color: rgb(229, 229, 229);
+    background-color: rgb(255, 255, 255);
     border: none;
 }
 .l-theme-custom .b-brands__item {
@@ -620,11 +689,14 @@ article.b-post blockquote.sub-title i.fa {
 }
 .sidebar .contact-info-boxes {
     position: fixed;
-    border: 1px #eee solid;
+    width: 19%;
     box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.15);
+}
+.sidebar .contact-info-boxes,
+.sidebar .contact-info {
+    border: 1px #eee solid;
     color: #000;    
-    background-color: #ffffff;    
-    width: 19%;    
+    background-color: #ffffff;
     height: auto;    
     padding: 25px 20px;
     z-index: 100;
@@ -632,51 +704,61 @@ article.b-post blockquote.sub-title i.fa {
     box-sizing: border-box;    
     z-index: 900;
 }
-.sidebar .contact-info-boxes .business-man__img {
+.sidebar .contact-info-boxes .business-man__img,
+.sidebar .contact-info .business-man__img {
     overflow: hidden;
     text-align: center;
 }
-.sidebar .contact-info-boxes .business-man__img img {
+.sidebar .contact-info-boxes .business-man__img img,
+.sidebar .contact-info .business-man__img img {
     width: 260px;
     /*border-radius: 50%;*/
 }
-.sidebar .contact-info-boxes blockquote {
+.sidebar .contact-info-boxes blockquote,
+.sidebar .contact-info blockquote {
     padding: 0;
     margin: 10px 0 12px;
     position: relative;
     font-weight: 400;
 }
-.sidebar .contact-info-boxes blockquote cite {
+.sidebar .contact-info-boxes blockquote cite,
+.sidebar .contact-info blockquote cite {
     text-align: center;
 }
-.sidebar .contact-info-boxes .b-blockquote__author {
+.sidebar .contact-info-boxes .b-blockquote__author,
+.sidebar .contact-info .b-blockquote__author {
     display: block;
     font: 600 18px Roboto;
     color: #222;
     text-transform: uppercase;
 }
-.sidebar .contact-info-boxes .b-blockquote__category {
+.sidebar .contact-info-boxes .b-blockquote__category,
+.sidebar .contact-info .b-blockquote__category {
     display: block;
     margin: 2px 0 16px;
     font: 500 15px Roboto;
     color: #888;
 }
-.sidebar .contact-info-boxes .b-blockquote__hotline {
+.sidebar .contact-info-boxes .b-blockquote__hotline,
+.sidebar .contact-info .b-blockquote__hotline {
     display: block;
     margin-bottom: 16px;
     font-size: 20px;
     font-weight: bold;
     color: red;
 }
-.sidebar .contact-info-boxes .list-mark li {
+.sidebar .contact-info-boxes .list-mark li,
+.sidebar .contact-info .list-mark li {
     font-size: 15px;
     padding-left: 20px;
 }
-.sidebar .contact-info-boxes .list-mark li:before {
+.sidebar .contact-info-boxes .list-mark li:before,
+.sidebar .contact-info .list-mark li:before {
     font-family: FontAwesome;
     content: "\f058";
 }
-.sidebar .contact-info-boxes a.btn {
+.sidebar .contact-info-boxes a.btn,
+.sidebar .contact-info a.btn {
     width: 100%;
     font: 14px Roboto;
     line-height: 20px;
@@ -717,7 +799,6 @@ article.b-post blockquote.sub-title i.fa {
 }
 .b-post-full .entry-content img {
     max-width: 100%;
-    border: 1px solid #13ff00;
 }
 .b-post-full .entry-content p+p {
     margin-top: 10px;
@@ -725,4 +806,45 @@ article.b-post blockquote.sub-title i.fa {
 .b-post-full .entry-content ul {
     padding-left: 0px;
     margin-left: 20px;
+}
+.installment-page .b-post-full .entry-content img {
+    border: 1px solid #13ff00;
+}
+.price-list-page .entry-main .group table .price {
+    color: #ff0000;
+}
+.filter-goods__page {
+    float: right;
+    padding: 12px 0 0 10px;
+    letter-spacing: .01em;
+}
+.filter-goods__info h2 {
+    font-size: 20px;
+    margin: 0;
+}
+.b-info_mod-a {
+    margin: 15px -90px 0 0;
+    padding: 40px 25% 40px 35%;
+}
+.b-info_mod-b {
+    padding: 30px 34% 80px 23%;
+}
+.b-info .btn {
+    margin-top: 10px;
+}
+.b-car-info__desc {
+    padding: 40px 15px 23px;
+    text-transform: none;
+}
+.b-car-info .b-car-info__desc-dt {
+    width: 140px;
+    line-height: 1.4;
+    color: #222;
+}
+.b-car-info .b-car-info__desc-dd {
+    line-height: 1.4;
+    font-weight: normal;
+}
+.b-car-details .b-car-details__section img {
+    max-width: 100%;
 }

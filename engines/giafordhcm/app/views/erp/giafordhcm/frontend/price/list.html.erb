@@ -50,10 +50,10 @@
                                         </blockquote>
                                         <div class="b-post__section">
                                             <div class="row">
-                                                <div class="col-sm-3">
+                                                <div class="col-sm-5">
                                                     <img class="img-post img-responsive" src="<%= menu.image_menu.present? ? (menu.image_menu.thumb_560_350) : '/frontend/assets/media/components/b-goods/ford-everest-ambiente.jpg' %>" alt="" />
                                                 </div>
-                                                <div class="col-sm-9">
+                                                <div class="col-sm-7">
                                                     <div class="table-container">
                                                         <table class="table table_secondary table-type-2 table-striped typography-last-elem">
                                                             <thead>
@@ -66,7 +66,7 @@
                                                                 <% menu.get_products_for_categories(params).each do |product| %>
                                                                     <tr>
                                                                         <td><%= link_to product.name, product_link(product) %></td>
-                                                                        <td class="text-center">
+                                                                        <td class="text-center price">
                                                                             <% if product.is_sold_out? || product.is_call? || product.product_price.nil? %>
                                                                                 Liên hệ 0905.250.593
                                                                             <% else %>

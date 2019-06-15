@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="b-title-page bg-primary_a">Ford Everest Ambiente 2.0L AT 4x2</h1>
+                    <h1 class="b-title-page bg-primary_a"><%= @product.name %></h1>
                 </div>
             </div>
         </div>
@@ -16,14 +16,10 @@
         <div class="row">
             <div class="col-xs-12">
                 <ol class="breadcrumb">
-                    <li><a href="<%= erp_giafordhcm.root_path %>"><i class="icon fa fa-home"></i></a>
-                    </li>
-                    <li><a href="<%= erp_giafordhcm.all_product_path %>">Sản phẩm</a>
-                    </li>
-                    <% if false %>
-                        <li><a href="<%= erp_giafordhcm.product_listing_path(menu_id: 1, title: url_friendly("Ford Everest")) %>">Ford Everest</a></li>
-                    <% end %>
-                    <li class="active">Ford Everest Ambiente 2.0L AT 4x2</li>
+                    <li><a href="<%= erp_giafordhcm.root_path %>"><i class="icon fa fa-home"></i></a></li>
+                    <li><a href="<%= erp_giafordhcm.all_product_path %>">Sản phẩm</a></li>
+                    <li><a href="<%= menu_link(@menu) %>"><%= @menu.name %></a></li>
+                    <li class="active"><%= @product.name %></li>
                 </ol>
             </div>
         </div>
@@ -31,13 +27,13 @@
 </div>
 <!-- end breadcrumb-->
 
-<main class="l-main-content">
+<main class="section-default">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <section class="b-car-details">
                     <div class="b-car-details__header">
-                        <h2 class="b-car-details__title">Ford Everest Ambiente 2.0L AT 4x2</h2>
+                        <h2 class="b-car-details__title"><%= @product.name %></h2>
                         <div class="b-car-details__subtitle"></div>
                         <div class="b-car-details__share-links">
                             <a class="b-car-details__share-link" href="#">
@@ -52,160 +48,88 @@
                         </div>
                     </div>
                     <div class="slider-car-details slider-pro" id="slider-car-details">
-                        <div class="sp-slides">
-                            <div class="sp-slide">
-                                <img class="sp-image" src="/frontend/assets/media/content/gallery/car-details/main/1.jpg" alt="img" />
+                        <% product_images = @product.product_images %>
+                        <% if product_images.count > 1 %>
+                            <div class="sp-slides">
+                                <% product_images.each_with_index do |product_image,index| %>
+                                    <div class="sp-slide">
+                                        <img class="sp-image" src="<%= product_image.image_url.thumb750x400 %>" alt="<%= @product.name %>" />
+                                    </div>
+                                <% end %>
+                                <% if false %>
+                                    <div class="sp-slide">
+                                        <iframe class="sp-video" src="https://www.youtube.com/embed/AAfLTYZKFTc" allowfullscreen="allowfullscreen"></iframe>
+                                    </div>
+                                <% end %>
                             </div>
-                            <div class="sp-slide">
-                                <img class="sp-image" src="/frontend/assets/media/content/gallery/car-details/main/1.jpg" alt="img" />
+                        <% elsif product_images.count == 1 %>
+                            <img class="sp-image" src="<%= @product.main_image.image_url.thumb750x400 %>" alt="<%= @product.name %>" />
+                        <% end %>
+                        
+                        <% if product_images.count > 1 %>
+                            <div class="sp-thumbnails">
+                                <% product_images.each_with_index do |product_image,index| %>
+                                    <div class="sp-thumbnail">
+                                        <img class="img-responsive" src="<%= product_image.image_url.thumb140x85 %>" alt="<%= @product.name %>" />
+                                    </div>
+                                <% end %>
                             </div>
-                            <div class="sp-slide">
-                                <img class="sp-image" src="/frontend/assets/media/content/gallery/car-details/main/1.jpg" alt="img" />
-                            </div>
-                            <div class="sp-slide">
-                                <iframe class="sp-video" src="https://www.youtube.com/embed/AAfLTYZKFTc" allowfullscreen="allowfullscreen"></iframe>
-                            </div>
-                            <div class="sp-slide">
-                                <img class="sp-image" src="/frontend/assets/media/content/gallery/car-details/main/1.jpg" alt="img" />
-                            </div>
-                            <div class="sp-slide">
-                                <img class="sp-image" src="/frontend/assets/media/content/gallery/car-details/main/1.jpg" alt="img" />
-                            </div>
-                            <div class="sp-slide">
-                                <img class="sp-image" src="/frontend/assets/media/content/gallery/car-details/main/1.jpg" alt="img" />
-                            </div>
-                        </div>
-                        <div class="sp-thumbnails">
-                            <div class="sp-thumbnail">
-                                <img class="img-responsive" src="/frontend/assets/media/content/gallery/car-details/thumb/1.jpg" alt="img" />
-                            </div>
-                            <div class="sp-thumbnail">
-                                <img class="img-responsive" src="/frontend/assets/media/content/gallery/car-details/thumb/2.jpg" alt="img" />
-                            </div>
-                            <div class="sp-thumbnail">
-                                <img class="img-responsive" src="/frontend/assets/media/content/gallery/car-details/thumb/3.jpg" alt="img" />
-                            </div>
-                            <div class="sp-thumbnail sp-thumbnail_video">
-                                <img class="img-responsive" src="/frontend/assets/media/content/gallery/car-details/thumb/4.jpg" alt="img" />
-                            </div>
-                            <div class="sp-thumbnail">
-                                <img class="img-responsive" src="/frontend/assets/media/content/gallery/car-details/thumb/5.jpg" alt="img" />
-                            </div>
-                            <div class="sp-thumbnail">
-                                <img class="img-responsive" src="/frontend/assets/media/content/gallery/car-details/thumb/1.jpg" alt="img" />
-                            </div>
-                            <div class="sp-thumbnail">
-                                <img class="img-responsive" src="/frontend/assets/media/content/gallery/car-details/thumb/2.jpg" alt="img" />
-                            </div>
-                        </div>
+                        <% end %>
                     </div>
                     <!-- end .b-thumb-slider-->
                     <div class="b-car-details__section">
-                        <h3 class="b-car-details__section-title ui-title-inner">Car Overview</h3>
-                        <div class="b-car-details__section-subtitle">Eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.</div>
-                        <p>Motorland nisi aliquip exea consequat duis lorem ipsum dolor sit amet consectetura dipisicing elit dui sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-                            Slamco em laborisa aliquip ex ea comdo consequat uis aute irure dolor sraeprehenderit voluptate velit.</p>
+                        <h3 class="b-car-details__section-title ui-title-inner">Mô tả chi tiết</h3>
+                        <%= @product.description.html_safe if @product.description.present? %>
                     </div>
-                    <ul class="b-car-details__nav nav nav-tabs bg-primary">
-                        <li class="active"><a href="#specifications" data-toggle="tab">specifications</a>
-                        </li>
-                        <li><a href="#details" data-toggle="tab">technical details</a>
-                        </li>
-                        <li><a href="#contact" data-toggle="tab">contact</a>
-                        </li>
-                    </ul>
-                    <div class="b-car-details__tabs tab-content">
-                        <div class="tab-pane active fade in" id="specifications">
-                            <p>This 2018 model car is Brilliant Black Crystal Pearlcoat with a Black/Diesel Gray interior. Buy confidence knowing Jeep Dodge Ram Surprise has been exceeding customer expectations for many years and always provide
-                                customers with a great value!</p>
-                            <p>Sit amet consectetura dipisicing elit dui sed eiusmod tempor incididunt ut labore uset dolore magna aliqua minim veniam quis nostrud exercitation. Slamco em laborisa aliquip ex ea comdo consequat uis auted irure
-                                rehenderit voluptate velit esse cillum dolore eu fugiat nulla sed pariatura ipsum dolor ame consecteu adipis elit sed do eiusmod tempora incididunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
-                                do eius tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <p>Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                                sint cupidatat non proident sunt in culpa qui officia deserunt mollit anim.</p>
-                            <div class="b-car-details__tabs-title">more features</div>
-                            <ul class="list list-mark-5 list_mark-prim list-2-col">
-                                <li>Drivetrain Oil Cooler: Auxiliary</li>
-                                <li>Engine Alternator: 160 Amps</li>
-                                <li>Exterior Mirrors Manual Folding</li>
-                                <li>Seatbelts Seatbelt Warning Sensors</li>
-                                <li>Front Headrests Adjustable</li>
-                                <li>Cruise Control System</li>
-                                <li>Crumple Zones Front</li>
-                                <li>Roll Stability Control</li>
-                                <li>Multi-Function Display</li>
-                                <li>ABS Brakes (4-Wheel)</li>
-                                <li>Audio System 6 Speakers</li>
-                                <li>Electronic Brakeforce Distribution</li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade" id="details">
-                            <p>This 2018 model car is Brilliant Black Crystal Pearlcoat with a Black/Diesel Gray interior. Buy confidence knowing Jeep Dodge Ram Surprise has been exceeding customer expectations for many years and always provide
-                                customers with a great value!</p>
-                            <p>Sit amet consectetura dipisicing elit dui sed eiusmod tempor incididunt ut labore uset dolore magna aliqua minim veniam quis nostrud exercitation. Slamco em laborisa aliquip ex ea comdo consequat uis auted irure
-                                rehenderit voluptate velit esse cillum dolore eu fugiat nulla sed pariatura ipsum dolor ame consecteu adipis elit sed do eiusmod tempora incididunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
-                                do eius tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <p>Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                                sint cupidatat non proident sunt in culpa qui officia deserunt mollit anim.</p>
-                        </div>
-                        <div class="tab-pane fade" id="contact">
-                            <p>Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                                sint cupidatat non proident sunt in culpa qui officia deserunt mollit anim.</p>
-                            <p>This 2018 model car is Brilliant Black Crystal Pearlcoat with a Black/Diesel Gray interior. Buy confidence knowing Jeep Dodge Ram Surprise has been exceeding customer expectations for many years and always provide
-                                customers with a great value!</p>
-                            <p>Sit amet consectetura dipisicing elit dui sed eiusmod tempor incididunt ut labore uset dolore magna aliqua minim veniam quis nostrud exercitation. Slamco em laborisa aliquip ex ea comdo consequat uis auted irure
-                                rehenderit voluptate velit esse cillum dolore eu fugiat nulla sed pariatura ipsum dolor ame consecteu adipis elit sed do eiusmod tempora incididunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
-                                do eius tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <p>Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                                sint cupidatat non proident sunt in culpa qui officia deserunt mollit anim.</p>
-                        </div>
-                    </div>
+                    <%= render "erp/giafordhcm/frontend/modules/product/detail_nar_tabs" if false %>
                 </section>
             </div>
             <div class="col-md-4">
-                <aside class="l-sidebar-2">
+                <aside class="">
                     <div class="b-car-info">
-                        <div class="b-car-info__price"><div>Giá bán: </div>1.022.000.000<span class="b-car-info__price-unit">VNĐ</span>
+                        <div class="b-car-info__price"><div>Giá chỉ từ: </div><%= format_number(@product.price) %><span class="b-car-info__price-unit">VNĐ</span>
                         </div>
                         <dl class="b-car-info__desc dl-horizontal bg-grey">
-                            <dt class="b-car-info__desc-dt">body</dt>
+                            <dt class="b-car-info__desc-dt">Kiểu dáng</dt>
                             <dd class="b-car-info__desc-dd">sedan</dd>
-                            <dt class="b-car-info__desc-dt">year</dt>
+                            <dt class="b-car-info__desc-dt">Động cơ</dt>
                             <dd class="b-car-info__desc-dd">2016</dd>
-                            <dt class="b-car-info__desc-dt">MILEAGe</dt>
+                            <dt class="b-car-info__desc-dt">Hộp số</dt>
                             <dd class="b-car-info__desc-dd">20,300mi</dd>
-                            <dt class="b-car-info__desc-dt">ENGINE</dt>
+                            <dt class="b-car-info__desc-dt">Công suất cực đại</dt>
                             <dd class="b-car-info__desc-dd">5.7L V8</dd>
-                            <dt class="b-car-info__desc-dt">TRANSMISSION</dt>
+                            <dt class="b-car-info__desc-dt">Mô men xoắn cực đại</dt>
                             <dd class="b-car-info__desc-dd">Auto 8-Speed</dd>
-                            <dt class="b-car-info__desc-dt">FUEL</dt>
+                            <dt class="b-car-info__desc-dt">Dài x Rộng x Cao</dt>
                             <dd class="b-car-info__desc-dd">hybird</dd>
-                            <dt class="b-car-info__desc-dt">colors</dt>
-                            <dd class="b-car-info__desc-dd">brown, Black</dd>
-                            <dt class="b-car-info__desc-dt">DRIVE TRAIN</dt>
-                            <dd class="b-car-info__desc-dd">4x2</dd>
-                            <dt class="b-car-info__desc-dt">STOCK #</dt>
-                            <dd class="b-car-info__desc-dd">CXH207</dd>
                         </dl>
-                        <div class="b-car-info__item"><span class="b-car-info__item-name"><i class="icon flaticon-fuel"></i> Economy</span>
-                            <div class="b-car-info__item-inner"><span class="b-car-info__item-info"><span class="b-car-info__item-info_lg">16</span><span class="b-car-info__item-info_sm"> CITY</span></span><span class="b-car-info__item-info"><span class="b-car-info__item-info_lg">24</span>
-                                <span
-                                class="b-car-info__item-info_sm">HWY</span>
-                                    </span>
+                        
+                        <div class="sidebar">
+                            <div class="contact-info">
+                                <div class="business-man__img">
+                                    <img src="/frontend/assets/media/components/b-blockquote/mrtuong.jpg" width="200px" alt="" />
+                                </div>
+                                <blockquote>
+                                    <cite class="b-blockquote__cite" title="Blockquote Title">
+                                        <span class="b-blockquote__author">Mr. Tường Nguyễn</span>
+                                        <span class="b-blockquote__category">Chuyên viên Kinh doanh</span>
+                                        <a href="tel:090 525 0593">
+                                            <span class="b-blockquote__hotline">
+                                                <i class="flaticon-smartphone"></i> 090 525 0593
+                                            </span>
+                                        </a>
+                                    </cite>
+                                    <ul class="list list-mark">
+                                        <li>Giá xe Ford tốt nhất thị trường.</li>
+                                        <li>Nhiều khuyến mãi và ưu đãi nhất.</li>
+                                        <li>Trả góp lãi suất thấp nhất.</li>
+                                    </ul>
+                                </blockquote>
+                                <a class="btn btn-standard btn-xs mb-5 dang-ky-button" href="<%= erp_giafordhcm.registration_form_path %>">Yêu cầu báo giá</a>
+                                <a class="btn btn-standard btn-xs dang-ky-button" href="<%= erp_giafordhcm.registration_form_path %>">Đăng ký lái thử</a>
                             </div>
                         </div>
-                        <div class="b-car-info__item"><span class="b-car-info__item-name"><i class="icon flaticon-car"></i> Vehicle Demand</span>
-                            <div class="b-car-info__item-inner"><span class="b-car-info__item-info">HIGH</span>
-                            </div>
-                        </div>
-                        <div class="b-bnr-2">
-                            <div class="b-bnr-2__icon flaticon-smartphone"></div>
-                            <div class="b-bnr-2__inner">
-                                <div class="b-bnr-2__title">Hotline (Mr. Tường)</div>
-                                <div class="b-bnr-2__info">090 525 0593</div>
-                            </div>
-                        </div>
-                        <!-- end .b-banner-->
+                        
                         <form class="b-calculator">
                             <div class="b-calculator__header"><i class="icon flaticon-calculator text-primary"></i>
                                 <div class="b-calculator__header-inner">
@@ -231,95 +155,46 @@
                             </div>
                             <button class="btn btn-dark">Xác nhận & gửi</button>
                         </form>
-                        <!-- end .b-calculator-->
+                        
                     </div>
                 </aside>
             </div>
         </div>
     </div>
-    <!-- end .b-car-details-->
-    <section class="section-default_top">
+    
+    <section class="section-default">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h2 class="ui-title-block">Có thể bạn quan tâm</h2>
+                    <h2 class="ui-title-block">SẢN PHẨM CÙNG LOẠI</h2>
                     <div class="ui-decor"></div>
-                    <div class="related-carousel owl-carousel owl-theme owl-theme_w-btn enable-owl-carousel" data-min768="2" data-min992="3" data-min1200="3" data-margin="30" data-pagination="false" data-navigation="true" data-auto-play="4000" data-stop-on-hover="true">
-                        <div class="b-goods-feat">
-                            <div class="b-goods-feat__img">
-                                <img class="img-responsive" src="/frontend/assets/media/components/b-goods/featured-1.jpg" alt="foto" /><span class="b-goods-feat__label">$45,000<span class="b-goods-feat__label_msrp">MSRP $27,000</span></span>
+                    <div class="related-carousel owl-carousel owl-theme owl-theme_w-btn enable-owl-carousel"
+                        data-min768="2" data-min992="3" data-min1200="3" data-margin="30"
+                        data-pagination="false" data-navigation="true" data-auto-play="4000"
+                        data-stop-on-hover="true"
+                    >
+                        <% @menu.get_products_for_categories(params).each do |related_product| %>
+                            <div class="b-goods-feat">
+                                <div class="b-goods-feat__wrap">
+                                    <div class="b-goods-feat__img">
+                                        <%= link_to image_tag(product_image(related_product.product_images, 'first', 'thumb560x350'), alt: related_product.product_name, class: "img-responsive"), product_link(related_product), title: related_product.product_name %>
+                                    </div>
+                                    <div class="b-goods-feat__inner">
+                                        <div class="b-goods-feat__info">
+                                            <a href="<%= product_link(related_product) %>">
+                                                <div class="b-goods-feat__name"><%= related_product.name %></div>
+                                            </a>
+                                        </div>
+                                        <div class="b-goods-feat__price">Giá chỉ từ: <span><span style='font-family:sans-serif;'>626.000.000₫</span></span><sup></sup></div>
+                                        <div class="b-goods-feat__price discount">Big Sale trong tháng</div>
+                                        <div class="b-goods-feat__price discount">Liên hệ <span>090 525 0593</span><sup></sup> để nhận giá tốt</div>
+                                    </div>
+                                </div>
                             </div>
-                            <ul class="b-goods-feat__desc list-unstyled">
-                                <li class="b-goods-feat__desc-item">35,000 mi</li>
-                                <li class="b-goods-feat__desc-item">Model: 2017</li>
-                                <li class="b-goods-feat__desc-item">Auto</li>
-                                <li class="b-goods-feat__desc-item">320 hp</li>
-                            </ul>
-                            <h3 class="b-goods-feat__name"><a href="car-details.html">Lexus GX 490i Hybird</a></h3>
-                            <div class="b-goods-feat__info">Duis aute irure reprehender voluptate velit ese acium fugiat nulla pariatur excepteur ipsum.</div>
-                        </div>
-                        <!-- end .b-goods-featured-->
-                        <div class="b-goods-feat">
-                            <div class="b-goods-feat__img">
-                                <img class="img-responsive" src="/frontend/assets/media/components/b-goods/featured-2.jpg" alt="foto" /><span class="b-goods-feat__label">$45,000<span class="b-goods-feat__label_msrp">MSRP $27,000</span></span>
-                            </div>
-                            <ul class="b-goods-feat__desc list-unstyled">
-                                <li class="b-goods-feat__desc-item">35,000 mi</li>
-                                <li class="b-goods-feat__desc-item">Model: 2017</li>
-                                <li class="b-goods-feat__desc-item">Auto</li>
-                                <li class="b-goods-feat__desc-item">320 hp</li>
-                            </ul>
-                            <h3 class="b-goods-feat__name"><a href="car-details.html">Toyota Avalon TX</a></h3>
-                            <div class="b-goods-feat__info">Duis aute irure reprehender voluptate velit ese acium fugiat nulla pariatur excepteur ipsum.</div>
-                        </div>
-                        <!-- end .b-goods-featured-->
-                        <div class="b-goods-feat">
-                            <div class="b-goods-feat__img">
-                                <img class="img-responsive" src="/frontend/assets/media/components/b-goods/featured-3.jpg" alt="foto" /><span class="b-goods-feat__label">$45,000<span class="b-goods-feat__label_msrp">MSRP $27,000</span></span>
-                            </div>
-                            <ul class="b-goods-feat__desc list-unstyled">
-                                <li class="b-goods-feat__desc-item">35,000 mi</li>
-                                <li class="b-goods-feat__desc-item">Model: 2017</li>
-                                <li class="b-goods-feat__desc-item">Auto</li>
-                                <li class="b-goods-feat__desc-item">320 hp</li>
-                            </ul>
-                            <h3 class="b-goods-feat__name"><a href="car-details.html">Lexus GX 490i Hybird</a></h3>
-                            <div class="b-goods-feat__info">Duis aute irure reprehender voluptate velit ese acium fugiat nulla pariatur excepteur ipsum.</div>
-                        </div>
-                        <!-- end .b-goods-featured-->
-                        <div class="b-goods-feat">
-                            <div class="b-goods-feat__img">
-                                <img class="img-responsive" src="/frontend/assets/media/components/b-goods/featured-4.jpg" alt="foto" /><span class="b-goods-feat__label">$45,000<span class="b-goods-feat__label_msrp">MSRP $27,000</span></span>
-                            </div>
-                            <ul class="b-goods-feat__desc list-unstyled">
-                                <li class="b-goods-feat__desc-item">35,000 mi</li>
-                                <li class="b-goods-feat__desc-item">Model: 2017</li>
-                                <li class="b-goods-feat__desc-item">Auto</li>
-                                <li class="b-goods-feat__desc-item">320 hp</li>
-                            </ul>
-                            <h3 class="b-goods-feat__name"><a href="car-details.html">Lexus GX 490i Hybird</a></h3>
-                            <div class="b-goods-feat__info">Duis aute irure reprehender voluptate velit ese acium fugiat nulla pariatur excepteur ipsum.</div>
-                        </div>
-                        <!-- end .b-goods-featured-->
-                        <div class="b-goods-feat">
-                            <div class="b-goods-feat__img">
-                                <img class="img-responsive" src="/frontend/assets/media/components/b-goods/featured-5.jpg" alt="foto" /><span class="b-goods-feat__label">$45,000<span class="b-goods-feat__label_msrp">MSRP $27,000</span></span>
-                            </div>
-                            <ul class="b-goods-feat__desc list-unstyled">
-                                <li class="b-goods-feat__desc-item">35,000 mi</li>
-                                <li class="b-goods-feat__desc-item">Model: 2017</li>
-                                <li class="b-goods-feat__desc-item">Auto</li>
-                                <li class="b-goods-feat__desc-item">320 hp</li>
-                            </ul>
-                            <h3 class="b-goods-feat__name"><a href="car-details.html">Lexus GX 490i Hybird</a></h3>
-                            <div class="b-goods-feat__info">Duis aute irure reprehender voluptate velit ese acium fugiat nulla pariatur excepteur ipsum.</div>
-                        </div>
-                        <!-- end .b-goods-featured-->
+                        <% end %>
                     </div>
-                    <!-- end .related-carousel-->
                 </div>
             </div>
         </div>
     </section>
-    <!-- end .section-default_top-->
 </main>
