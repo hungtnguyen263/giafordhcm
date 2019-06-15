@@ -42,16 +42,16 @@
                                 <div class="entry-footer__group"></div>
                             </div>
                             <div class="entry-content">
-                                <% (1..4).each do |model| %>
+                                <% @menus.each do |menu| %>
                                     <div class="group">
-                                        <h3 class="entry-title-inner"> FORD FOCUS</h3>
+                                        <h3 class="entry-title-inner text-uppercase"> <%= menu.name %></h3>
                                         <blockquote class="sub-title">
                                             <i class="fa fa-lightbulb-o"></i> Gọi ngay giá thương lượng - Tặng phim cách nhiệt, ốp càn sau bô đuôi, nẹp chống trầy cốp sau, thảm lót sàn, túi cứu hộ, áo trùm xe, camera lùi, camera hành trình & đặc biệt ưu đãi gói bảo hiểm vật chất
                                         </blockquote>
                                         <div class="b-post__section">
                                             <div class="row">
                                                 <div class="col-sm-3">
-                                                    <img class="img-post img-responsive" src="/frontend/assets/media/components/b-goods/ford-everest-ambiente.jpg" alt="foto" />
+                                                    <img class="img-post img-responsive" src="<%= menu.image_menu.present? ? (menu.image_menu.thumb_560_350) : '/frontend/assets/media/components/b-goods/ford-everest-ambiente.jpg' %>" alt="" />
                                                 </div>
                                                 <div class="col-sm-9">
                                                     <div class="table-container">
@@ -59,22 +59,22 @@
                                                             <thead>
                                                                 <tr>
                                                                     <th>Mẫu xe</th>
-                                                                    <th class="text-center">Giá bán khuyến mãi</th>
+                                                                    <th class="text-center">Giá bán/khuyến mãi</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <tr>
-                                                                    <td>Focus Trend 1.5L 5 Cửa</td>
-                                                                    <td class="text-center">560,000,000</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Focus Trend 1.5L 4 Cửa</td>
-                                                                    <td class="text-center">560,000,000</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Focus 1.5L Sport 5 Cửa</td>
-                                                                    <td class="text-center">720,000,000</td>
-                                                                </tr>
+                                                                <% menu.get_products_for_categories(params).each do |product| %>
+                                                                    <tr>
+                                                                        <td><%= link_to product.name, product_link(product) %></td>
+                                                                        <td class="text-center">
+                                                                            <% if product.is_sold_out? || product.is_call? || product.product_price.nil? %>
+                                                                                Liên hệ 0905.250.593
+                                                                            <% else %>
+                                                                                <%= format_price(product.price) %>
+                                                                            <% end %>
+                                                                        </td>
+                                                                    </tr>
+                                                                <% end %>
                                                             </tbody>
                                                         </table>
                                                     </div>

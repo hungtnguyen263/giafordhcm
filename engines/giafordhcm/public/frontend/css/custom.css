@@ -409,8 +409,8 @@ footer.footer.area-bg {
     margin-top: 0;
 }
 .l-main-content {
-    padding-top: 50px;
-    padding-bottom: 60px;
+    padding-top: 0;
+    padding-bottom: 30px;
 }
 .b-post-full {
     margin-bottom: 0;
@@ -611,6 +611,12 @@ article.b-post blockquote.sub-title i.fa {
 }
 .l-theme-custom .table-type-2 > tbody > tr > td {
     border: 1px solid #888;
+}
+.l-theme-custom .header-topbarbox-1, .l-theme-custom .header-topbarbox-2 {
+    padding: 15px 0 15px;
+}
+.l-theme-custom .top-bar li {
+    font-size: 15px;
 }
 .sidebar .contact-info-boxes {
     position: fixed;

@@ -124,6 +124,11 @@ module Erp::Articles
     def post_by
 			creator.present? ? creator.name : ''
 		end
+    
+    # lay danh sach bai viet ve tra gop
+    def self.get_installment_articles
+			self.joins(:category).where("erp_articles_categories.alias = ?", Erp::Articles::Category::ALIAS_INSTALLMENT)
+		end
 
     # get all blogs
     def self.get_all_blogs(params)

@@ -20,31 +20,37 @@
         </div>
         <div class="header-navibox-2">
             <ul class="yamm main-menu nav navbar-nav">
-                <li class="active"><a href="<%= erp_giafordhcm.root_path %>">Trang chủ</a>
+                <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/home" %>">
+                    <a href="<%= erp_giafordhcm.root_path %>">Trang chủ</a>
                 </li>
-                <li><a href="<%= erp_giafordhcm.about_us_path %>">Giới thiệu</a>
+                <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/about_us" %>">
+                    <a href="<%= erp_giafordhcm.about_us_path %>">Giới thiệu</a>
                 </li>
-                <li><a href="<%= erp_giafordhcm.all_product_path %>">Sản phẩm</a>
+                <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/product" %>">
+                    <a href="<%= erp_giafordhcm.all_product_path %>">Sản phẩm</a>
                 </li>
-                <li><a href="<%= erp_giafordhcm.price_list_path %>">Bảng giá</a>
+                <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/price" %>">
+                    <a href="<%= erp_giafordhcm.price_list_path %>">Bảng giá</a>
                 </li>
-                <li><a href="<%= erp_giafordhcm.price_list_path %>">Trả góp</a>
+                <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/installment" %>">
+                    <a href="<%= erp_giafordhcm.installment_path %>">Trả góp</a>
                 </li>
                 <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Tin tức khuyến mãi<b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="blog.html">Tin tức</a>
+                        <li><a href="#">Tin tức</a>
                         </li>
-                        <li><a href="blog-posts.html">Khuyến mãi</a>
+                        <li><a href="#">Khuyến mãi</a>
                         </li>
-                        <li><a href="blog-posts.html">Lái thử</a>
+                        <li><a href="#">Lái thử</a>
                         </li>
-                        <li><a href="blog-posts.html">Trả góp</a>
+                        <li><a href="#">Trả góp</a>
                         </li>
-                        <li><a href="blog-posts.html">Mua xe cũ giá cao</a>
+                        <li><a href="#">Mua xe cũ giá cao</a>
                         </li>
                     </ul>
                 </li>
-                <li><a href="<%= erp_giafordhcm.contact_us_path %>">Liên hệ</a>
+                <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/contact_us" %>">
+                    <a href="<%= erp_giafordhcm.contact_us_path %>">Liên hệ</a>
                 </li>
             </ul>
         </div>

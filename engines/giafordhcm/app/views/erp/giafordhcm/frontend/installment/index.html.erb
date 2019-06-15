@@ -1,0 +1,60 @@
+<div class="section-title-page area-bg area-bg_dark area-bg_op_70">
+    <div class="area-bg__inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="b-title-page bg-primary_a">Trả góp</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end .b-title-page-->
+<div class="bg-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ol class="breadcrumb">
+                    <li><a href="<%= erp_giafordhcm.root_path %>"><i class="icon fa fa-home"></i></a></li>
+                    <li class="active">Trả góp</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb-->
+<section class="section-default">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <main class="l-main-content price-list-page">
+                    <article class="b-post b-post-full clearfix">
+                        <div class="entry-main">
+                            <div class="entry-header">
+                                <h2 class="entry-title mt-0">Thủ tục mua xe ô tô trả góp tại Gia Định Ford</h2>
+                            </div>
+                            <div class="entry-footer">
+                                <div class="entry-footer__group">
+                                    <a class="entry-footer__link" href="#"><i class="icon fa fa-facebook-square text-primary"></i> Share to Facebook</a>
+                                    <a class="entry-footer__link" href="#"><i class="icon fa fa-google-plus-square text-primary"></i> Share to Google+</a>
+                                    <a class="entry-footer__link" href="#"><i class="icon fa fa-twitter-square text-primary"></i> Share to Twitter</a>
+                                </div>
+                                <div class="entry-footer__group"></div>
+                            </div>
+                            <div class="entry-content">
+                                <% if @article.present? %>
+                                    <%= @article.content.html_safe %>
+                                <% else %>
+                                    ...
+                                <% end %>
+                            </div>
+                        </div>
+                    </article>
+                </main>
+            </div>
+            <div class="col-md-3">
+                <%= render "erp/giafordhcm/frontend/modules/contact_info_boxes" %>
+            </div>
+        </div>
+    </div>
+</section>

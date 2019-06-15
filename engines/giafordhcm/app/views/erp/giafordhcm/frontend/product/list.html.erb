@@ -57,7 +57,7 @@
                                                         <div class="b-goods-ac__name"><%= product.name %></div>
                                                     </a>
                                                 </div>
-                                                <div class="b-goods-ac__price">Giá bán: <span>1.022.000.000</span><sup>VNĐ</sup></div>
+                                                <div class="b-goods-ac__price">Giá bán: <span><%= format_price(product.price) %></span><sup></sup></div>
                                                 <div class="b-goods-ac__price discount">Hãy liên hệ để nhận giá tốt</div>
                                                 <!--<div class="b-goods-ac__price discount">Giảm thêm (tháng 6): <span>30.000.000</span><sup>VNĐ</sup></div>-->
                                             </div>
