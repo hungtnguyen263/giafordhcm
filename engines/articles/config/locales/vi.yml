@@ -1,5 +1,9 @@
 vi:
-  blog: "Bài viết - Tin tức"
+  blog: "Tin tức"
+  about_us: "Giới thiệu"
+  installment: "Tin trả góp"
+  custom: "Tùy chỉnh"
+  
   faq: "Câu hỏi thường gặp"
   policy: "Chính sách"
   warranty: "Chính sách bảo hành"

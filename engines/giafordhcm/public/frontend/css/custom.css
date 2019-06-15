@@ -715,3 +715,14 @@ article.b-post blockquote.sub-title i.fa {
 .list li > a {
     color: #1565c0;
 }
+.b-post-full .entry-content img {
+    max-width: 100%;
+    border: 1px solid #13ff00;
+}
+.b-post-full .entry-content p+p {
+    margin-top: 10px;
+}
+.b-post-full .entry-content ul {
+    padding-left: 0px;
+    margin-left: 20px;
+}

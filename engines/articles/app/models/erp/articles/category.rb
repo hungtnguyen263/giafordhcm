@@ -9,6 +9,7 @@ module Erp::Articles
     validates :name, :presence => true
     
     # class const
+    ALIAS_CUSTOM = 'custom'
     ALIAS_INSTALLMENT = 'installment'
     ALIAS_COOPERATIVE_CUSTOMERS = 'cooperative_customers'
     ALIAS_HOME_ABOUT = 'home_about'
@@ -32,15 +33,9 @@ module Erp::Articles
     def self.get_alias_options()
       [
         {text: I18n.t('blog'),value: self::ALIAS_BLOG},
-        {text: I18n.t('faq'),value: self::ALIAS_FAQ},
-        {text: I18n.t('warranty'),value: self::ALIAS_WARRANTY},
-        {text: I18n.t('payment'),value: self::ALIAS_PAYMENT},
-        {text: I18n.t('delivery'),value: self::ALIAS_DELIVERY},
-        {text: I18n.t('return_refund'),value: self::ALIAS_RETURN_REFUND},
-        {text: I18n.t('security'),value: self::ALIAS_SECURITY},
-        {text: I18n.t('terms_conditions'),value: self::ALIAS_TERMS_CONDITIONS},
-        {text: I18n.t('shopping_guide'),value: self::ALIAS_SHOPPING_GUIDE},
-        {text: I18n.t('operating_regulations'),value: self::ALIAS_OPERATING_REGULATIONS}
+        {text: I18n.t('about_us'),value: self::ALIAS_ABOUT_US},
+        {text: I18n.t('installment'),value: self::ALIAS_INSTALLMENT},
+        {text: I18n.t('custom'),value: self::ALIAS_CUSTOM},
       ]
     end
     
