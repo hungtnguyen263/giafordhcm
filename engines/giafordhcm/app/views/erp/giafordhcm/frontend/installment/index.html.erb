@@ -30,24 +30,28 @@
                 <main class="l-main-content price-list-page">
                     <article class="b-post b-post-full clearfix">
                         <div class="entry-main">
-                            <div class="entry-header">
-                                <h2 class="entry-title mt-0">Thủ tục mua xe ô tô trả góp tại Gia Định Ford</h2>
-                            </div>
-                            <div class="entry-footer">
-                                <div class="entry-footer__group">
-                                    <a class="entry-footer__link" href="#"><i class="icon fa fa-facebook-square text-primary"></i> Share to Facebook</a>
-                                    <a class="entry-footer__link" href="#"><i class="icon fa fa-google-plus-square text-primary"></i> Share to Google+</a>
-                                    <a class="entry-footer__link" href="#"><i class="icon fa fa-twitter-square text-primary"></i> Share to Twitter</a>
+                            <% if @article.present? %>
+                                <div class="entry-header">
+                                    <h2 class="entry-title mt-0"><%=  @article.name %></h2>
                                 </div>
-                                <div class="entry-footer__group"></div>
-                            </div>
-                            <div class="entry-content">
-                                <% if @article.present? %>
-                                    <%= @article.content.html_safe %>
-                                <% else %>
-                                    ...
-                                <% end %>
-                            </div>
+                                <div class="entry-footer">
+                                    <div class="entry-footer__group">
+                                        <a class="entry-footer__link" href="#"><i class="icon fa fa-facebook-square text-primary"></i> Share to Facebook</a>
+                                        <a class="entry-footer__link" href="#"><i class="icon fa fa-google-plus-square text-primary"></i> Share to Google+</a>
+                                        <a class="entry-footer__link" href="#"><i class="icon fa fa-twitter-square text-primary"></i> Share to Twitter</a>
+                                    </div>
+                                    <div class="entry-footer__group"></div>
+                                </div>
+                                <div class="entry-content">
+                                    <% if @article.content.present? %>
+                                        <%= @article.content.html_safe %>
+                                    <% else %>
+                                        Nội dung đang được cập nhật
+                                    <% end %>
+                                </div>
+                            <% else %>
+                                Bài viết đang được cập nhật
+                            <% end %>
                         </div>
                     </article>
                 </main>
