@@ -603,3 +603,75 @@ article.b-post blockquote.sub-title i.fa {
 .l-theme-custom .owl-theme .owl-nav div {
     border: 1px solid #999;
 }
+.l-theme-custom .table-type-2 > thead:first-child > tr:first-child > th {
+    border-top: 1px solid #888;
+    border-right: 1px solid #888;
+    border-bottom-width: 4px;
+    border-left: 1px solid #888;
+}
+.l-theme-custom .table-type-2 > tbody > tr > td {
+    border: 1px solid #888;
+}
+.sidebar .contact-info-boxes {
+    position: fixed;
+    border: 2px;    
+    box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.15);    
+    color: #000;    
+    background-color: #ffffff;    
+    width: 19%;    
+    height: auto;    
+    padding: 25px 20px;
+    z-index: 100;
+    overflow: hidden;    
+    box-sizing: border-box;    
+    z-index: 900;
+}
+.sidebar .contact-info-boxes .business-man__img {
+    overflow: hidden;
+    text-align: center;
+}
+.sidebar .contact-info-boxes .business-man__img img {
+    width: 200px;
+    /*border-radius: 50%;*/
+}
+.sidebar .contact-info-boxes blockquote {
+    padding: 0;
+    margin: 10px 0 12px;
+    position: relative;
+    font-weight: 400;
+}
+.sidebar .contact-info-boxes blockquote cite {
+    text-align: center;
+}
+.sidebar .contact-info-boxes .b-blockquote__author {
+    display: block;
+    font: 600 18px Roboto;
+    color: #222;
+    text-transform: uppercase;
+}
+.sidebar .contact-info-boxes .b-blockquote__category {
+    display: block;
+    margin: 2px 0 16px;
+    font: 500 15px Roboto;
+    color: #888;
+}
+.sidebar .contact-info-boxes .b-blockquote__hotline {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+.sidebar .contact-info-boxes .list-mark li {
+    font-size: 15px;
+    padding-left: 20px;
+}
+.sidebar .contact-info-boxes .list-mark li:before {
+    font-family: FontAwesome;
+    content: "\f058";
+}
+.sidebar .contact-info-boxes a.btn {
+    width: 100%;
+    font: 14px Roboto;
+    line-height: 20px;
+}

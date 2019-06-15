@@ -47,14 +47,14 @@
                                     <div class="b-goods-ac">
                                         <div class="b-goods-ac__wrap">
                                             <div class="b-goods-ac__img">
-                                                <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                                    <img class="img-responsive" src="/frontend/assets/media/components/b-goods/ford-everest-ambiente.jpg" alt="foto" />
-                                                </a>
+                                                <!--560x350-->
+                                                <%= link_to image_tag(product_image(product.product_images, 'first', 'thumb560x350'), alt: product.product_name, class: "img-responsive img-fullwidth"),
+                                                    product_link(product), title: product.product_name %>
                                             </div>
                                             <div class="b-goods-ac__inner">
                                                 <div class="b-goods-ac__info">
-                                                    <a href="<%= erp_giafordhcm.product_detail_path(product_id: 1, title: url_friendly("Ford Everest Ambiente 2.0L AT 4x2")) %>">
-                                                        <div class="b-goods-ac__name">Ford Everest Ambiente 2.0L AT 4x2</div>
+                                                    <a href="<%= product_link(product) %>">
+                                                        <div class="b-goods-ac__name"><%= product.name %></div>
                                                     </a>
                                                 </div>
                                                 <div class="b-goods-ac__price">Giá bán: <span>1.022.000.000</span><sup>VNĐ</sup></div>
@@ -68,6 +68,9 @@
                         </div>
                     </div>
                 <% end %>
+            </div>
+            <div class="col-md-3">
+                <%= render "erp/giafordhcm/frontend/modules/contact_info_boxes" %>
             </div>
         </div>
     </div>

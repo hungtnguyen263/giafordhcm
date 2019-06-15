@@ -18,3 +18,16 @@ function applyJs(container) {
         });
     }
 }
+
+var box_top_init = $('.contact-info-boxes').offset().top;
+var dis = 160;
+$(window).scroll(function() {
+    var box_top = $('.contact-info-boxes').offset().top;
+    var window_top = $('body, html').scrollTop() + dis;
+    
+    if (window_top > box_top_init) {
+        $('.contact-info-boxes').css('top', (window_top - box_top_init) + 'px');
+    } else {
+        $('.contact-info-boxes').css('top', '60px');
+    }
+});
