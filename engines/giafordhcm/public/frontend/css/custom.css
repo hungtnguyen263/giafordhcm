@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
  color: #999 !important;
 }
 .l-theme-custom {
-    background-color: rgba(170, 170, 170, 0.3)
+    background-color: #fff;/*rgba(170, 170, 170, 0.3)*/
 }
 .panel-title {
     font-family: Roboto;
@@ -620,8 +620,8 @@ article.b-post blockquote.sub-title i.fa {
 }
 .sidebar .contact-info-boxes {
     position: fixed;
-    border: 2px;    
-    box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.15);    
+    border: 1px #eee solid;
+    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.15);
     color: #000;    
     background-color: #ffffff;    
     width: 19%;    
@@ -637,7 +637,7 @@ article.b-post blockquote.sub-title i.fa {
     text-align: center;
 }
 .sidebar .contact-info-boxes .business-man__img img {
-    width: 200px;
+    width: 260px;
     /*border-radius: 50%;*/
 }
 .sidebar .contact-info-boxes blockquote {
@@ -680,4 +680,38 @@ article.b-post blockquote.sub-title i.fa {
     width: 100%;
     font: 14px Roboto;
     line-height: 20px;
+}
+.about-us {
+    padding-top: 60px;
+}
+.about-us .top-content .list {
+    margin-bottom: 0;
+}
+.list-mark-5 li {
+    text-align: justify;
+}
+.about-us .top-content img {
+    box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid #eee;
+}
+.about-us .content {
+    padding-top: 25px;
+}
+.about-us .content p {
+    text-align: justify;
+}
+.about-us .content p+p {
+    margin-top: 15px;
+}
+.about-us .bottom-content {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 4px #eee dashed;
+}
+.telto {
+    color: #ff0000 !important;
+    font-weight: 700;
+}
+.list li > a {
+    color: #1565c0;
 }
