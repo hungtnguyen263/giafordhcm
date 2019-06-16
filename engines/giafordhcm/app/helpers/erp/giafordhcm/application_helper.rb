@@ -16,6 +16,11 @@ module Erp
         erp_giafordhcm.product_detail_path(product_id: product.id, title: url_friendly(product.name))
       end
       
+      # blog link
+      def blog_link(blog)
+        erp_giafordhcm.blog_detail_path(title: url_friendly(blog.name), blog_id: blog.id)
+      end
+      
       # product image
       def product_image(images, ordinal, thumb)
         if images.present?

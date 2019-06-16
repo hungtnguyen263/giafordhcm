@@ -35,6 +35,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .mb-5 {
     margin-bottom: 5px;
 }
+.pt-0 {
+    padding-top: 0;
+}
 .navbar-info * {
     color: #fff !important;
 }
@@ -517,16 +520,20 @@ article.b-post blockquote.sub-title i.fa {
     font-size: 120%;
     margin-right: 5px;
 }
-.price-list-page article.b-post-full .entry-footer__group {
+.price-list-page article.b-post-full .entry-footer__group,
+.installment-page article.b-post-full .entry-footer__group {
     padding-top: 0;
 }
-.price-list-page article.b-post-full .entry-footer__group .entry-footer__link {
+.price-list-page article.b-post-full .entry-footer__group .entry-footer__link,
+.installment-page article.b-post-full .entry-footer__group .entry-footer__link {
     margin-right: 21px;
 }
-.price-list-page article.b-post .entry-header {
+.price-list-page article.b-post .entry-header,
+.installment-page article.b-post .entry-header {
     margin-bottom: 0;
 }
-.price-list-page article.b-post-full .entry-footer {
+.price-list-page article.b-post-full .entry-footer,
+.installment-page article.b-post-full .entry-footer {
     margin-top: 10px;
     margin-bottom: 40px;
 }
