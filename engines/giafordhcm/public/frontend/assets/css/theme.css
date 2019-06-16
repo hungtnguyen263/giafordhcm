@@ -617,7 +617,7 @@ select:focus {
   float: left;
   margin-right: 10px;
   padding: 10px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   color: #fff;
   border-width: 2px;
@@ -1318,7 +1318,7 @@ blockquote cite {
 .section-type-2__title {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: .01em;
@@ -1327,7 +1327,7 @@ blockquote cite {
 
 .section-type-2__subtitle {
   margin-bottom: 20px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 24px;
   font-weight: 300;
   color: #222;
@@ -1399,14 +1399,14 @@ blockquote cite {
 }
 
 .b-about-main__title {
-  font: 600 18px/1.2 Roboto;
+  font: 600 18px/1.2 Roboto, sans-serif;
   letter-spacing: .01em;
   color: #222;
 }
 
 .b-about-main__subtitle {
   margin-bottom: 20px;
-  font: 300 24px Roboto;
+  font: 300 24px Roboto, sans-serif;
 }
 
 .b-about-main__btns {
@@ -1439,7 +1439,7 @@ blockquote cite {
 
 .b-about-list__title {
   margin-bottom: 14px;
-  font: 600 16px Roboto;
+  font: 600 16px Roboto, sans-serif;
   color: #222;
 }
 
@@ -1720,12 +1720,12 @@ blockquote cite {
 }
 
 .b-bnr__label {
-  font: 18px/1 Roboto;
+  font: 18px/1 Roboto, sans-serif;
 }
 
 .b-bnr__title {
   margin-bottom: 13px;
-  font: 600 36px/1 Roboto;
+  font: 600 36px/1 Roboto, sans-serif;
   letter-spacing: .025em;
 }
 
@@ -1738,7 +1738,7 @@ blockquote cite {
 .b-bnr-2 {
   margin-top: 27px;
   padding: 17px 20px 15px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   color: white;
   border-bottom-width: 3px;
   border-bottom-style: solid;
@@ -1777,7 +1777,7 @@ blockquote cite {
 .b-bnr-3 {
   margin-bottom: 70px;
   padding: 58px 0 70px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   text-align: center;
   color: #fff;
   border-radius: 2px;
@@ -1875,7 +1875,7 @@ blockquote cite {
 
 .b-blockquote-1 .b-blockquote__author {
   display: block;
-  font: 600 16px Roboto;
+  font: 600 16px Roboto, sans-serif;
   letter-spacing: .02em;
   color: #222;
 }
@@ -1892,7 +1892,7 @@ blockquote cite {
 .b-blockquote-1 .b-blockquote__category {
   display: block;
   margin-bottom: 16px;
-  font: 500 12px Roboto;
+  font: 500 12px Roboto, sans-serif;
   color: #888;
 }
 
@@ -1911,7 +1911,7 @@ blockquote cite {
   left: 10px;
   width: 60px;
   height: 50px;
-  font: 130px/1 Roboto;
+  font: 130px/1 Roboto, sans-serif;
   content: '“';
 }
 
@@ -1932,7 +1932,7 @@ blockquote cite {
 .b-blockquote-2 .b-blockquote__author {
   display: block;
   margin-top: 32px;
-  font: 600 16px/1 Roboto;
+  font: 600 16px/1 Roboto, sans-serif;
   letter-spacing: .02em;
   color: #222;
 }
@@ -1949,7 +1949,7 @@ blockquote cite {
 .b-blockquote-2 .b-blockquote__category {
   display: block;
   margin-bottom: 16px;
-  font: 500 12px Roboto;
+  font: 500 12px Roboto, sans-serif;
   color: #888;
 }
 
@@ -2013,7 +2013,7 @@ blockquote cite {
 
 .b-blockquote-3 .b-blockquote__author {
   display: block;
-  font: 600 14px/1.2 Roboto;
+  font: 600 14px/1.2 Roboto, sans-serif;
   letter-spacing: .02em;
   color: #222;
 }
@@ -2030,7 +2030,7 @@ blockquote cite {
 
 .b-blockquote-3 .b-blockquote__category {
   display: block;
-  font: 500 12px Roboto;
+  font: 500 12px Roboto, sans-serif;
   color: #888;
 }
 
@@ -2141,7 +2141,7 @@ blockquote cite {
 
 .b-calculator__name {
   margin-bottom: 5px;
-  font: 700 16px Roboto;
+  font: 700 16px Roboto, sans-serif;
   letter-spacing: .01em;
   text-transform: uppercase;
   color: #222;
@@ -2205,7 +2205,7 @@ blockquote cite {
 
 .b-car-details__subtitle {
   margin-bottom: 25px;
-  font: 500 18px/1.2 Roboto;
+  font: 500 18px/1.2 Roboto, sans-serif;
   letter-spacing: .02em;
 }
 
@@ -2213,7 +2213,7 @@ blockquote cite {
   float: left;
   padding-right: 30px;
   padding-left: 3px;
-  font: 500 12px/1 Roboto;
+  font: 500 12px/1 Roboto, sans-serif;
   letter-spacing: .02em;
   color: #888;
 }
@@ -2226,7 +2226,7 @@ blockquote cite {
 .b-car-details__link {
   display: inline-block;
   margin-left: 21px;
-  font: 500 12px Roboto;
+  font: 500 12px Roboto, sans-serif;
   text-decoration: underline;
   color: #222;
 }
@@ -2261,7 +2261,7 @@ blockquote cite {
 
 .b-car-details__nav > li > a {
   padding: 17px 4px 19px 25px;
-  font: 600 14px/1 Roboto;
+  font: 600 14px/1 Roboto, sans-serif;
   letter-spacing: .01em;
   text-transform: uppercase;
   color: white;
@@ -2288,7 +2288,7 @@ blockquote cite {
 .b-car-details__tabs-title {
   margin-top: 35px;
   margin-bottom: 18px;
-  font: 700 16px Roboto;
+  font: 700 16px Roboto, sans-serif;
   letter-spacing: .03em;
   text-transform: uppercase;
   color: #222;
@@ -2297,7 +2297,7 @@ blockquote cite {
 .b-car-info__price {
   margin-bottom: 5px;
   padding: 8px 10px 6px;
-  font: 600 30px Roboto;
+  font: 600 30px Roboto, sans-serif;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
@@ -2337,7 +2337,7 @@ blockquote cite {
 .b-car-info__item {
   margin-bottom: 8px;
   padding: 18px 20px 14px 25px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   border: 3px solid #eee;
   border-radius: 2px;
 }
@@ -2474,7 +2474,7 @@ blockquote cite {
 
 .b-filter-type__title {
   display: block;
-  font: 500 11px Roboto;
+  font: 500 11px Roboto, sans-serif;
   color: #888;
 }
 
@@ -2515,7 +2515,7 @@ blockquote cite {
 
 .b-filter-type-2__title {
   display: block;
-  font: 500 11px Roboto;
+  font: 500 11px Roboto, sans-serif;
   color: #444;
 }
 
@@ -2603,7 +2603,7 @@ blockquote cite {
 .b-filter-2__title {
   margin-top: 0;
   margin-bottom: 0;
-  font: 600 14px/54px Roboto;
+  font: 600 14px/54px Roboto, sans-serif;
   text-align: center;
   text-transform: uppercase;
   color: white;
@@ -2678,7 +2678,7 @@ blockquote cite {
 }
 
 .section-form-contacts__label {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 18px;
 }
 
@@ -2714,7 +2714,7 @@ blockquote cite {
   min-height: 250px;
   margin-bottom: 60px;
   padding: 58px 30px 25px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   -webkit-transition: all .3s;
   transition: all .3s;
   border: 2px solid #eee;
@@ -2854,7 +2854,7 @@ blockquote cite {
   right: 10px;
   bottom: 10px;
   padding: 0 15px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-weight: 600;
   line-height: 38px;
   color: white;
@@ -2871,7 +2871,7 @@ blockquote cite {
   display: table;
   width: 100%;
   margin-top: 10px;
-  font: 500 12px Roboto;
+  font: 500 12px Roboto, sans-serif;
   color: #888;
   border: 1px solid #eee;
 }
@@ -2973,7 +2973,7 @@ blockquote cite {
 .b-goods-1__price {
   float: right;
   width: 173px;
-  font: 600 14px/38px Roboto;
+  font: 600 14px/38px Roboto, sans-serif;
   text-align: center;
   color: white;
 }
@@ -3045,7 +3045,7 @@ blockquote cite {
   width: 360px;
   margin-top: 0;
   margin-bottom: 0;
-  font: 500 12px Roboto;
+  font: 500 12px Roboto, sans-serif;
   color: #888;
   border: 1px solid #eee;
 }
@@ -3173,7 +3173,7 @@ blockquote cite {
   position: relative;
   display: block;
   padding-right: 70px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-weight: 600;
 }
 
@@ -3269,7 +3269,7 @@ blockquote cite {
 
 .b-info-2 {
   padding: 48px 0 45px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   color: #fff;
 }
 
@@ -3363,7 +3363,7 @@ blockquote cite {
   position: relative;
   display: block;
   padding: 0 24px;
-  font: 500 14px/36px Roboto;
+  font: 500 14px/36px Roboto, sans-serif;
   -webkit-transition: all .3s;
   transition: all .3s;
   text-transform: uppercase;
@@ -3422,7 +3422,7 @@ blockquote cite {
 
 .b-isotope-grid__title {
   display: block;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   color: white;
@@ -3472,7 +3472,7 @@ blockquote cite {
   position: relative;
   max-width: 1920px;
   margin: auto;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
 }
 
 .main-slider__wrap {
@@ -3681,7 +3681,7 @@ blockquote cite {
 
 .main-slider-4 {
   margin-top: 161px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   text-align: center;
   color: #fff;
 }
@@ -4056,7 +4056,7 @@ blockquote cite {
 
 .b-post-1 .b-post-social {
   float: left;
-  font: 500 11px Roboto;
+  font: 500 11px Roboto, sans-serif;
   color: #222;
 }
 
@@ -4104,7 +4104,7 @@ blockquote cite {
 
 .b-post-full .entry-meta__item {
   margin-right: 10px;
-  font: 500 12px Roboto;
+  font: 500 12px Roboto, sans-serif;
   letter-spacing: .01em;
   color: #999;
 }
@@ -4187,7 +4187,7 @@ blockquote cite {
 
 .b-post-full .entry-footer__title {
   margin-right: 10px;
-  font: 700 12px Roboto;
+  font: 700 12px Roboto, sans-serif;
   text-transform: uppercase;
   color: #222;
 }
@@ -4195,7 +4195,7 @@ blockquote cite {
 .b-post-full .entry-footer__tags {
   margin-right: 5px;
   padding: 5px 15px;
-  font: 500 12px Roboto;
+  font: 500 12px Roboto, sans-serif;
   -webkit-transition: all .3s;
   transition: all .3s;
   text-transform: uppercase;
@@ -4208,7 +4208,7 @@ blockquote cite {
 }
 
 .b-post-full .entry-footer__link {
-  font: 500 12px Roboto;
+  font: 500 12px Roboto, sans-serif;
   -webkit-transition: all .3s;
   transition: all .3s;
   text-decoration: underline;
@@ -4352,7 +4352,7 @@ blockquote cite {
 }
 
 .about-author__name {
-  font: 700 14px Roboto;
+  font: 700 14px Roboto, sans-serif;
   letter-spacing: .02em;
   color: #222;
 }
@@ -4401,7 +4401,7 @@ blockquote cite {
 }
 
 .post-carousel .owl-nav .owl-prev:before, .post-carousel .owl-nav .owl-next:before {
-  font: 700 14px Roboto;
+  font: 700 14px Roboto, sans-serif;
   -webkit-transition: all .3s;
   transition: all .3s;
   text-transform: uppercase;
@@ -4478,7 +4478,7 @@ blockquote cite {
   overflow: hidden;
   height: 50px;
   margin-bottom: 23px;
-  font: 600 18px/1.44 Roboto;
+  font: 600 18px/1.44 Roboto, sans-serif;
   color: #fff;
 }
 
@@ -4557,7 +4557,7 @@ blockquote cite {
   position: absolute;
   top: 0;
   right: 0;
-  font: 100 48px Roboto;
+  font: 100 48px Roboto, sans-serif;
   content: '/';
   color: #eee;
 }
@@ -4579,7 +4579,7 @@ blockquote cite {
 }
 
 .b-progress-list__percent {
-  font: 300 36px/1 Roboto;
+  font: 300 36px/1 Roboto, sans-serif;
 }
 
 .b-progress-list__name {
@@ -4614,7 +4614,7 @@ blockquote cite {
   float: left;
   width: 20%;
   margin-top: 0;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   text-align: center;
   color: #fff;
 }
@@ -4707,12 +4707,12 @@ blockquote cite {
 
 .b-rent__title {
   margin-top: 30px;
-  font: 600 22px Roboto;
+  font: 600 22px Roboto, sans-serif;
 }
 
 .b-rent__price {
   margin-bottom: 4px;
-  font: 300 18px Roboto;
+  font: 300 18px Roboto, sans-serif;
 }
 
 .b-rent__list {
@@ -4786,7 +4786,7 @@ blockquote cite {
   margin-bottom: -135px;
   margin-left: -30px;
   padding: 56px 30px 47px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   text-align: center;
   color: white;
   background-size: cover;
@@ -4917,7 +4917,7 @@ blockquote cite {
 }
 
 .b-team__social-net > li > a {
-  font: 500 12px/40px Roboto;
+  font: 500 12px/40px Roboto, sans-serif;
   color: #888;
 }
 
@@ -4980,7 +4980,7 @@ blockquote cite {
 }
 
 .b-team-2__category {
-  font: 600 12px Roboto;
+  font: 600 12px Roboto, sans-serif;
   color: #888;
 }
 
@@ -4999,7 +4999,7 @@ blockquote cite {
 .slider-thumbnail .sp-thumbnail-title {
   position: relative;
   margin-bottom: 4px;
-  font: 600 16px Roboto;
+  font: 600 16px Roboto, sans-serif;
   white-space: nowrap;
   letter-spacing: .01em;
   color: #222;
@@ -5711,7 +5711,7 @@ blockquote cite {
   display: block;
   margin-bottom: 10px;
   padding-top: 5px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.57;
@@ -5720,7 +5720,7 @@ blockquote cite {
 }
 
 .post-widget__date {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
   color: #999;
