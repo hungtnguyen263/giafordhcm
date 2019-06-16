@@ -8,47 +8,34 @@
     </a>
     <ul class="nav navbar-nav">
         <li>
-            <h4><a href="">Mobile sidebar</a></h4>
+            <h5><a href="">Danh mục</a></h5>
         </li>
-        <li><a href="index.html">Trang chủ</a>
+        <li <%= 'active' if params[:controller] == "erp/giafordhcm/frontend/home" %>>
+            <a href="<%= erp_giafordhcm.root_path %>">Trang chủ</a>
         </li>
-        <li><a href="#">Giới thiệu</a>
+        <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/about_us" %>">
+            <a href="<%= erp_giafordhcm.about_us_path %>">Giới thiệu</a>
         </li>
-        <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Dòng xe<b class="caret"></b></a>
+        <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/product" %>">
+            <a href="<%= erp_giafordhcm.all_product_path %>">Sản phẩm</a>
+        </li>
+        <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/price" %>">
+            <a href="<%= erp_giafordhcm.price_list_path %>">Bảng giá</a>
+        </li>
+        <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/installment" %>">
+            <a href="<%= erp_giafordhcm.installment_path %>">Trả góp</a>
+        </li>
+        <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Tin tức khuyến mãi<b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="#" tabindex="-1">Ford Ranger Raptor</a>
-                </li>
-                <li><a href="#" tabindex="-1">Ford Ecosport</a>
-                </li>
-                <li><a href="#" tabindex="-1">Ford Ranger</a>
-                </li>
-                <li><a href="#" tabindex="-1">Ford Transit</a>
-                </li>
-                <li><a href="#" tabindex="-1">Ford Focus</a>
-                </li>
-                <li><a href="#" tabindex="-1">Ford Everest</a>
-                </li>
-                <li><a href="#" tabindex="-1">Ford Explorer</a>
-                </li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Khuyến mãi</a></li>
+                <li><a href="#">Lái thử</a></li>
+                <li><a href="#">Trả góp</a></li>
+                <li><a href="#">Mua xe cũ giá cao</a></li>
             </ul>
         </li>
-        <li><a href="#">Bảng giá</a>
-        </li>
-        <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Chương trình<b class="caret"></b></a>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="blog-posts.html" tabindex="-1">Khuyến mãi</a>
-                </li>
-                <li><a href="blog-posts.html" tabindex="-1">Lái thử</a>
-                </li>
-                <li><a href="blog-posts.html" tabindex="-1">Trả góp</a>
-                </li>
-                <li><a href="blog-posts.html" tabindex="-1">Mua xe cũ giá cao</a>
-                </li>
-            </ul>
-        </li>
-        <li><a href="blog.html">Tin tức</a>
-        </li>
-        <li><a href="lien-he.html">Liên hệ</a>
+        <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/contact_us" %>">
+            <a href="<%= erp_giafordhcm.contact_us_path %>">Liên hệ</a>
         </li>
     </ul>
 </div>
