@@ -162,6 +162,8 @@
         </div>
     </div>
     
+    <% related_products = @menu.get_products_for_categories(exclude_product_id: @product.id) %>
+    <% if related_products.present? %>
     <section class="section-default">
         <div class="container">
             <div class="row">
@@ -173,7 +175,7 @@
                         data-pagination="false" data-navigation="true" data-auto-play="4000"
                         data-stop-on-hover="true"
                     >
-                        <% @menu.get_products_for_categories(exclude_product_id: @product.id).each do |related_product| %>
+                        <% related_products.each do |related_product| %>
                             <div class="b-goods-feat">
                                 <div class="b-goods-feat__wrap">
                                     <div class="b-goods-feat__img">
@@ -197,4 +199,5 @@
             </div>
         </div>
     </section>
+    <% end %>
 </main>
