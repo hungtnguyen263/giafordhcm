@@ -29,6 +29,17 @@ module Erp
           url_for('/frontend/images/no-image.png')
         end
       end
+      
+      # article image
+      def article_image(thumb, size)
+        if size == 'large'
+          thumb.present? ? thumb : url_for('/frontend/images/blog/848_309.png')
+        elsif size == 'medium'
+          thumb.present? ? thumb : url_for('/frontend/images/blog/270_175.png')
+        elsif size == 'small'
+          thumb.present? ? thumb : url_for('/frontend/images/blog/75_75.png')
+        end
+      end
     end
   end
 end

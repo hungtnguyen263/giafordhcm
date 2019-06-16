@@ -60,6 +60,10 @@ module Erp
       version :medium do
         process resize_to_fill: [270, 175]
       end
+      
+      version :thumb360x250 do
+        process resize_to_fill: [360, 250]
+      end
     end
   end
 
