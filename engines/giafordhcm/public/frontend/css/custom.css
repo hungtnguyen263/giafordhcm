@@ -38,6 +38,18 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .pt-0 {
     padding-top: 0;
 }
+.pl-5 {
+    padding-left: 5px;
+}
+.pl-10 {
+    padding-left: 10px;
+}
+.pr-5 {
+    padding-right: 5px;
+}
+.pr-10 {
+    padding-right: 10px;
+}
 .navbar-info * {
     color: #fff !important;
 }
@@ -165,7 +177,7 @@ footer.footer.area-bg {
 }
 .ui-title-block {
     font-size: 25px;
-    font-weight: 800;
+    font-weight: 700;
     color: #015697;
 }
 .ui-title-block span {
@@ -731,7 +743,7 @@ article.b-post blockquote.sub-title i.fa {
     color: #000;    
     background-color: #ffffff;
     height: auto;    
-    padding: 25px 20px;
+    padding: 15px 15px;
     z-index: 100;
     overflow: hidden;    
     box-sizing: border-box;    
@@ -761,28 +773,28 @@ article.b-post blockquote.sub-title i.fa {
 .sidebar .contact-info-boxes .b-blockquote__author,
 .sidebar .contact-info .b-blockquote__author {
     display: block;
-    font: 600 18px Roboto, sans-serif;
+    font: 600 16px Roboto, sans-serif;
     color: #222;
     text-transform: uppercase;
 }
 .sidebar .contact-info-boxes .b-blockquote__category,
 .sidebar .contact-info .b-blockquote__category {
     display: block;
-    margin: 2px 0 16px;
-    font: 500 15px Roboto, sans-serif;
+    margin: 2px 0 10px;
+    font: 500 14px Roboto, sans-serif;
     color: #888;
 }
 .sidebar .contact-info-boxes .b-blockquote__hotline,
 .sidebar .contact-info .b-blockquote__hotline {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     font-size: 20px;
     font-weight: bold;
     color: red;
 }
 .sidebar .contact-info-boxes .list-mark li,
 .sidebar .contact-info .list-mark li {
-    font-size: 15px;
+    font-size: 14px;
     padding-left: 20px;
 }
 .sidebar .contact-info-boxes .list-mark li:before,
@@ -793,14 +805,14 @@ article.b-post blockquote.sub-title i.fa {
 .sidebar .contact-info-boxes a.btn,
 .sidebar .contact-info a.btn {
     width: 100%;
-    font: 14px Roboto, sans-serif;
-    line-height: 20px;
+    font: 1.2rem Roboto, sans-serif;
+    line-height: 2.2rem;
 }
 .about-us {
     padding-top: 60px;
 }
 .about-us .section-type-2__subtitle {
-    font-weight: 900;
+    font-weight: 700;
     color: #1565c0;
 }
 .about-us .top-content .list {

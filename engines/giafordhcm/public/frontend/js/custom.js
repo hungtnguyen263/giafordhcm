@@ -27,7 +27,7 @@ function fixBox() {
     var bottom = '';
     
     if (window_top > box_top_init) {
-        top = (window_top - box_top_init) + 'px';
+        top = (window_top - box_top_init - 15) + 'px';
         // $('.contact-info-boxes').css('top', (window_top - box_top_init) + 'px');
     } else {
         top = '60px';
