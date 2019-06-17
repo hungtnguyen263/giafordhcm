@@ -737,7 +737,7 @@ article.b-post blockquote.sub-title i.fa {
 }
 .sidebar .contact-info-boxes .business-man__img img,
 .sidebar .contact-info .business-man__img img {
-    width: 260px;
+    width: 100%;
     /*border-radius: 50%;*/
 }
 .sidebar .contact-info-boxes blockquote,
