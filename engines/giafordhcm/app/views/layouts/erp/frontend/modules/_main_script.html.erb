@@ -38,19 +38,15 @@
 <script src="/frontend/js/custom.js"></script>
 <script src="/frontend/js/modal.js"></script>
 
-<script>
-    $(document).on('click', '.sidebar-toggle', function(e) {
-        $(".sidebar-toggle").closest(".sidebar-contact-us").addClass("collapsed");
-        $(".sidebar-toggle").addClass("closed");
-        $(".sidebar-toggle").html("Thông tin liên hệ");
-        $(".sidebar-toggle").attr('title', 'Nhấn để hiện');
+<script>    
+    $(document).on('click', '.header-navibox-contact .contact-info-toggle', function(e) {
+        $(this).addClass("open");
+        $(this).closest(".header-navibox-contact").find(".contact-info-content").addClass("block");
     });
     
-    $(document).on('click', '.sidebar-toggle.closed', function(e) {
-        $(".sidebar-toggle").closest(".sidebar-contact-us").removeClass("collapsed");
-        $(".sidebar-toggle").removeClass("closed");
-        $(".sidebar-toggle").html("");
-        $(".sidebar-toggle").attr('title', 'Nhấn để ẩn');
+    $(document).on('click', '.header-navibox-contact .contact-info-toggle.open', function(e) {
+        $(this).removeClass("open");
+        $(this).closest(".header-navibox-contact").find(".contact-info-content").removeClass("block");
     });
 </script>
 

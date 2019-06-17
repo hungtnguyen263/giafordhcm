@@ -104,6 +104,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .b-bnr__title {
 	font: 600 36px/1 Roboto, sans-serif;
 }
+.navbar {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
 .header-topbarbox-1, .header-topbarbox-2 {
     padding: 15px 0 15px;
 }
@@ -118,6 +121,125 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     border-bottom: 0.1875em solid #1565c0;
     background: none;
 }
+@media (max-width: 1200px) {
+    .header-navibox-2 {
+        display: none !important;
+    }
+    .visible-xs-block {
+        display: block !important;
+    }
+    .header-navibox-3 {
+        padding: 0;
+        position: absolute;
+        right: 80px;
+    }
+}
+@media (max-width: 1000px) {
+    .sidebar-toggle {
+        display: block !important;
+    }
+    .header-navibox-contact {
+        display: block !important;
+    }
+}
+.header-navibox-contact {
+    display: none;
+    position: absolute;
+    top: 26px;
+    right: 70px;
+    
+}
+.contact-info-toggle {
+    font-weight: 500;
+    background: linear-gradient(to bottom, #4c93bc, #015697);
+    color: #fff;
+    padding: .8rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.contact-info-toggle:after, .contact-info-toggle.open:after {
+    font: 500 14px "FontAwesome";
+    padding-left: 5px;
+}
+.contact-info-toggle:after {
+    content: "\f102";
+}
+.contact-info-toggle.open:after {
+    content: "\f103";
+}
+.contact-info-toggle:hover {
+    box-shadow: #427dac 0px 0px 40px 0px;
+}
+.contact-info-content {
+    position: absolute;
+    right: 0;
+    border: 2px;
+    box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.15);
+    color: #000;
+    background-color: #ffffff;
+    width: 230px;
+    height: auto;
+    padding: 25px 10px;
+    display: none;
+}
+.contact-info-content.block {
+    display: block;
+}
+.contact-info-content .business-man__img {
+    overflow: hidden;
+    text-align: center;
+}
+.contact-info-content .business-man__img img {
+    width: 140px;
+    border-radius: 50%;
+}
+.contact-info-content blockquote {
+    padding: 0;
+    margin: 10px 0 12px;
+    position: relative;
+    font-weight: 400;
+}
+.contact-info-content blockquote cite {
+    text-align: center;
+}
+.contact-info-content .b-blockquote__author {
+    display: block;
+    font: 600 16px Roboto, sans-serif;
+    color: #222;
+    text-transform: uppercase;
+}
+.contact-info-content .b-blockquote__category {
+    display: block;
+    margin: 2px 0 16px;
+    font: 500 13px Roboto, sans-serif;
+    color: #888;
+}
+.contact-info-content .b-blockquote__hotline {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+.contact-info-content .list-mark li {
+    font-size: 12px;
+    padding-left: 20px;
+}
+.contact-info-content .list-mark li:before {
+    font-family: FontAwesome;
+    content: "\f058";
+}
+.contact-info-content a.btn {
+    width: 100%;
+    font: 14px Roboto, sans-serif;
+    line-height: 20px;
+}
+.contact-info-content a.btn:first-child {
+    margin-bottom: 5px;
+}
+
 .yamm .dropdown-menu li > a {
 	font-size: 14px;
 }
@@ -363,130 +485,6 @@ footer.footer.area-bg {
 }
 .b-calculator__input {
     font-family: Roboto, sans-serif;
-}
-.sidebar-contact-us .sidebar-info {
-    top: 150px;
-    position: fixed;
-    right: -2px;
-    border: 2px;
-    box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.15);
-    color: #000;
-    background-color: #ffffff;
-    width: 185px;
-    height: auto;
-    padding: 25px 10px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    z-index: 100;
-    -ms-transform: rotate(-90deg);
-    /* -webkit-transform: rotate(-90deg); */
-    /* transform: rotate(-90deg); */
-    transform-origin: 100% 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 90000;
-}
-.sidebar-contact-us .sidebar-info .business-man__img {
-    overflow: hidden;
-    text-align: center;
-}
-.sidebar-contact-us .sidebar-info .business-man__img img {
-    width: 140px;
-    border-radius: 50%;
-}
-.sidebar-contact-us .sidebar-info blockquote {
-    padding: 0;
-    margin: 10px 0 12px;
-    position: relative;
-    font-weight: 400;
-}
-.sidebar-contact-us .sidebar-info blockquote cite {
-    text-align: center;
-}
-.sidebar-contact-us .sidebar-info .b-blockquote__author {
-    display: block;
-    font: 600 16px Roboto, sans-serif;
-    color: #222;
-    text-transform: uppercase;
-}
-.sidebar-contact-us .sidebar-info .b-blockquote__category {
-    display: block;
-    margin: 2px 0 16px;
-    font: 500 13px Roboto, sans-serif;
-    color: #888;
-}
-.sidebar-contact-us .sidebar-info .b-blockquote__hotline {
-    display: block;
-    margin-bottom: 16px;
-    font-size: 20px;
-    font-weight: bold;
-    color: red;
-}
-.sidebar-contact-us .sidebar-info .list-mark li {
-    font-size: 12px;
-    padding-left: 20px;
-}
-.sidebar-contact-us .sidebar-info .list-mark li:before {
-    font-family: FontAwesome;
-    content: "\f058";
-}
-.sidebar-contact-us .sidebar-info a.btn {
-    width: 100%;
-    font: 14px Roboto, sans-serif;
-    line-height: 20px;
-}
-.sidebar-contact-us .sidebar-info a.btn:first-child {
-    margin-bottom: 5px;
-}
-.sidebar-contact-us .sidebar-toggle {
-    background: #fff;
-    position: fixed;
-    top: 180px;
-    padding: .8rem;
-    padding-right: 1.5rem;
-    /*padding-left: 1.5rem;*/
-    border-radius: 5px 0 0 5px;;
-    box-shadow: -2px 2px 5px #999;
-    right: 175px;
-    cursor: pointer;
-    transition: .5s;
-    z-index: 90000;
-}
-.sidebar-contact-us .sidebar-toggle.closed {
-    background: #fff;
-    position: fixed;
-    top: 180px;
-    padding: .8rem;
-    padding-right: 1.5rem;
-    /* padding-left: 1.5rem; */
-    border-radius: 5px 5px 0 0;
-    box-shadow: -2px 2px 5px #999;
-    right: 175px;
-    cursor: pointer;
-    transition: .5s;
-    z-index: 90000;
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-.sidebar-toggle.closed:before {
-    content: "";
-}
-.sidebar-toggle:before {
-    content: "\f101";
-    font: 400 20px/30px "FontAwesome";
-    color: #1565c0;
-}
-.sidebar-contact-us.collapsed .sidebar-toggle {
-    right: -45px;
-    font-weight: 500;
-    background: #eee;
-}
-.sidebar-contact-us.collapsed .sidebar-toggle:hover {
-    right: -42px;
-    background: #fff;
-}
-.sidebar-contact-us.collapsed .sidebar-info {
-    right: -190px;
 }
 .b-advantages-1.center {
     background-color: rgba(204, 204, 204, 0.15);
@@ -806,11 +804,13 @@ article.b-post blockquote.sub-title i.fa {
     font-family: FontAwesome;
     content: "\f058";
 }
+.sidebar .contact-info-boxes a.btn {
+    font: 1.2rem Roboto, sans-serif;
+    line-height: 2.2rem;
+}
 .sidebar .contact-info-boxes a.btn,
 .sidebar .contact-info a.btn {
     width: 100%;
-    font: 1.2rem Roboto, sans-serif;
-    line-height: 2.2rem;
 }
 .about-us {
     padding-top: 60px;
