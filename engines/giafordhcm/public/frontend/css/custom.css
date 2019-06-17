@@ -147,12 +147,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     position: absolute;
     top: 26px;
     right: 70px;
-    
 }
 .contact-info-toggle {
     font-weight: 500;
     background: linear-gradient(to bottom, #4c93bc, #015697);
-    color: #fff;
+    color: #fff !important;
     padding: .8rem;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
