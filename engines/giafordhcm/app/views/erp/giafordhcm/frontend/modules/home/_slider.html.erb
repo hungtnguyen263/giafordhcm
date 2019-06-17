@@ -26,10 +26,10 @@
                         <% if slider.note.present? %>
                             <div class="main-slider__subtitle"><%= slider.note %></div>
                         <% end %>
-                        <a class="main-slider__btn btn btn-white btn-lg dang-ky-button" href="<%= erp_giafordhcm.registration_form_path %>">
+                        <a class="main-slider__btn btn btn-white btn-lg dang-ky-button" href="<%= erp_giafordhcm.registration_form_path(type: 'quote') %>">
                             Yêu cầu báo giá
                         </a>
-                        <a class="main-slider__btn btn btn-primary btn-lg" href="#">
+                        <a class="main-slider__btn btn btn-standard btn-lg dang-ky-button" href="<%= erp_giafordhcm.registration_form_path(type: 'test_drive') %>">
                             Đăng ký lái thử
                         </a>
                     </div>

@@ -4,7 +4,13 @@
     </div>
     <div class="modal-body">
         <div class="registration-form">
-            <h2 class="title text-center text-uppercase">Yêu cầu báo giá</h2>
+            <h2 class="title text-center text-uppercase">
+                <% if params[:type] == 'quote' %>
+                    Yêu cầu báo giá
+                <% elsif params[:type] == 'test_drive' %>
+                    Đăng ký lái thử
+                <% end %>
+            </h2>
             <div class="sub-title text-center">Để nhận được "BÁO GIÁ ĐẶC BIỆT" và các "CHƯƠNG TRÌNH ƯU ĐÃI", Quý khách vui lòng điền form báo giá dưới đây:</div>
                 <div class="form-group">
                     <label>Họ và tên <span class="required">*</span> </label>
@@ -37,7 +43,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label>Địa chỉ <span class="required">*</span> </label>
                             <select class="select2" data-width="100%" data-live-search="true" title='Choose one of the following...'>
@@ -51,13 +57,18 @@
                 </div>
                 
                 <div class="form-group">
-                    <label>Hình thức thanh toán: </label>
+                    <label>Hình thức thanh toán <span class="required">*</span> </label>
                     <span class="label-group">
-                        <input class="forms__radio hidden" id="forms__radio-5" type="radio" name="radio-group-1" value="" checked="checked" />
-                        <label class="forms__label forms__label-radio forms__label-radio-3" for="forms__radio-5">Trả góp</label>
-                        
-                        <input class="forms__radio hidden" id="forms__radio-6" type="radio" name="radio-group-1" value="" />
-                        <label class="forms__label forms__label-radio forms__label-radio-3" for="forms__radio-6">Trả hết</label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input class="forms__radio hidden" id="forms__radio-5" type="radio" name="radio-group-1" value="" checked="checked" />
+                                <label class="forms__label forms__label-radio forms__label-radio-3" for="forms__radio-5">Trả góp</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="forms__radio hidden" id="forms__radio-6" type="radio" name="radio-group-1" value="" />
+                                <label class="forms__label forms__label-radio forms__label-radio-3" for="forms__radio-6">Trả hết</label>
+                            </div>
+                        </div>
                     </span>
                 </div>
         </div>
