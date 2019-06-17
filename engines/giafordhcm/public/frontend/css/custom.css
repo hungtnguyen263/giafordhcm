@@ -212,6 +212,7 @@ footer.footer.area-bg {
     position: relative;
     min-height: 250px;
     padding: 25px 30px 25px;
+    margin: 5px 0;
     font-family: Roboto, sans-serif;
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -235,7 +236,7 @@ footer.footer.area-bg {
 }
 .b-goods-feat:hover {
     border-color: #fff;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.15);
 }
 .b-goods-feat:hover .b-goods-links {
   opacity: 1;
@@ -327,6 +328,9 @@ footer.footer.area-bg {
 }
 .b-goods-feat__price {
     font-weight: 600;
+}
+.sp-slides-container .sp-slide {
+    background-color: #eee;
 }
 .b-car-details__share-links {
     line-height: 1;

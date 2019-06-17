@@ -89,6 +89,7 @@
                     <div class="b-car-info">
                         <div class="b-car-info__price"><div>Giá chỉ từ: </div><%= format_number(@product.price) %><span class="b-car-info__price-unit">VNĐ</span>
                         </div>
+                        <% if false %>
                         <dl class="b-car-info__desc dl-horizontal bg-grey">
                             <dt class="b-car-info__desc-dt">Kiểu dáng</dt>
                             <dd class="b-car-info__desc-dd">sedan</dd>
@@ -103,6 +104,7 @@
                             <dt class="b-car-info__desc-dt">Dài x Rộng x Cao</dt>
                             <dd class="b-car-info__desc-dd">hybird</dd>
                         </dl>
+                        <% end %>
                         
                         <div class="sidebar">
                             <div class="contact-info">
@@ -187,9 +189,8 @@
                                                 <div class="b-goods-feat__name"><%= related_product.name %></div>
                                             </a>
                                         </div>
-                                        <div class="b-goods-feat__price">Giá chỉ từ: <span><span style='font-family:sans-serif;'>626.000.000₫</span></span><sup></sup></div>
-                                        <div class="b-goods-feat__price discount">Big Sale trong tháng</div>
-                                        <div class="b-goods-feat__price discount">Liên hệ <span>090 525 0593</span><sup></sup> để nhận giá tốt</div>
+                                        <div class="b-goods-ac__price">Giá tham khảo: <span><%= format_price(related_product.price) %></span><sup></sup></div>
+                                        <div class="b-goods-ac__price discount">Liên hệ: <span>0905 250 593</span> để nhận giá ưu đãi trong tháng</div>
                                     </div>
                                 </div>
                             </div>
