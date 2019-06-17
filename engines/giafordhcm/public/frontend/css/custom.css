@@ -300,6 +300,7 @@ footer.footer.area-bg {
 .b-goods-ac__price, .b-goods-ac__price.discount span,
 .b-goods-feat__price, .b-goods-feat__price.discount span {
     font-size: 14px;
+    width: 100%;
 }
 .b-goods-ac__price, .b-goods-ac__price.callme span,
 .b-goods-feat__price, .b-goods-feat__price.callme span {
@@ -717,6 +718,12 @@ article.b-post blockquote.sub-title i.fa {
     position: fixed;
     width: 19%;
     box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 991px) {
+    .sidebar .contact-info-boxes {
+        display: none;
+    }
 }
 .sidebar .contact-info-boxes,
 .sidebar .contact-info {
