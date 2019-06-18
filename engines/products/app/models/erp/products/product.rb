@@ -1319,7 +1319,7 @@ module Erp::Products
 
     # get product main images
     def main_image
-			product_images.first
+			product_images.where.not(image_url: nil).first
 		end
 
     # get product sub images
