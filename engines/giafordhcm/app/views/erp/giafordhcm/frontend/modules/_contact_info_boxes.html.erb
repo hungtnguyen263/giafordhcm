@@ -21,10 +21,10 @@
         </blockquote>
         <div class="row pl-10 pr-10">
             <div class="col-md-6 pl-5 pr-5">
-                <a class="btn btn-standard btn-xs dang-ky-button" href="<%= erp_giafordhcm.registration_form_path %>">Yêu cầu báo giá</a>
+                <a class="btn btn-standard btn-xs dang-ky-button" href="<%= erp_giafordhcm.registration_form_path(type: 'quote') %>">Yêu cầu báo giá</a>
             </div>
             <div class="col-md-6 pl-5 pr-5">
-                <a class="btn btn-standard btn-xs dang-ky-button" href="<%= erp_giafordhcm.registration_form_path %>">Đăng ký lái thử</a>
+                <a class="btn btn-standard btn-xs dang-ky-button" href="<%= erp_giafordhcm.registration_form_path(type: 'test_drive') %>">Đăng ký lái thử</a>
             </div>
         </div>
     </div>
