@@ -63,7 +63,7 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <% menu.get_products_for_categories(params).each do |product| %>
+                                                                <% menu.get_products_for_categories(sort_by: 'price desc').each do |product| %>
                                                                     <tr>
                                                                         <td><%= link_to product.name, product_link(product) %></td>
                                                                         <td class="text-center price">
