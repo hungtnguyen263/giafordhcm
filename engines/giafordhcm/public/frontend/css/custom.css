@@ -282,6 +282,9 @@ header.header img.scroll-logo {
 .footer__info span {
     display: block;
 }
+.footer__link {
+    color: #fff;
+}
 .footer-list__link {
     color: #fff;
 }
