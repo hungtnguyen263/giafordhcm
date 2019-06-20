@@ -56,6 +56,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .right {
     float: right;
 }
+#page-preloader .spinner, #page-preloader .spinner:before, #page-preloader .spinner:after {
+    border-top-color: #00415f;
+}
 .navbar-info * {
     color: #fff;
 }
