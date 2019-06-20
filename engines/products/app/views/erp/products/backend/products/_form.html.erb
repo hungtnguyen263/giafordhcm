@@ -28,49 +28,6 @@
                                     help: t('.help_product_short_name'),
                                     placeholder: t('.placeholder_product_short_name')
                                 }) %>
-                                <% if !Erp::Core.available?("ortho_k") %>
-                                    <div class="row form-control-mb-0">
-                                        <div class="col-md-6">
-                                            <%= erp_form_control('checkbox', {
-                                                name: 'product[can_be_sold]',
-                                                id: 'product_can_be_sold',
-                                                value: product.can_be_sold,
-                                                not_selected_value: 'false',
-                                                options: [{value: 'true', text: t('.can_be_sold')}]
-                                            }) %>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <%= erp_form_control('checkbox', {
-                                                name: 'product[can_be_purchased]',
-                                                id: 'product_can_be_purchased',
-                                                value: product.can_be_purchased,
-                                                not_selected_value: 'false',
-                                                options: [{value: 'true', text: t('.can_be_purchased')}]
-                                            }) %>
-                                        </div>
-                                    </div>
-                                    <div class="row form-control-mb-0">
-                                        <div class="col-md-6">
-                                            <%= erp_form_control('checkbox', {
-                                                name: 'product[is_for_pos]',
-                                                id: 'product_is_for_pos',
-                                                value: product.is_for_pos,
-                                                not_selected_value: 'false',
-                                                options: [{value: 'true', text: t('.is_for_pos')}],
-                                                help: t('.help_is_for_pos')
-                                            }) %>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <%= erp_form_control('checkbox', {
-                                                name: 'product[point_enabled]',
-                                                id: 'product_point_enabled',
-                                                value: product.point_enabled,
-                                                not_selected_value: 'false',
-                                                options: [{value: 'true', text: t('.point_enabled')}]
-                                            }) %>
-                                        </div>
-                                    </div>
-                                <% end %>
                             </div>
                             <div class="col-md-7">
                                 <%= erp_form_control("images", {
@@ -100,10 +57,10 @@
                 <div class="tabbable-custom ">
                     <ul class="nav nav-tabs ">
                         <li class="active">
-                            <a href="#tab_5_1" data-toggle="tab"> <%= t('.general_information') %> </a>
+                            <a href="#tab_5_1" data-toggle="tab"> Thông tin cơ bản </a>
                         </li>
                         <li>
-                            <a href="#tab_5_2" data-toggle="tab"> <%= t('.properties') %> </a>
+                            <a href="#tab_5_2" data-toggle="tab"> Thông số kỹ thuật </a>
                         </li>
                         <li>
                             <a href="#tab_5_3" data-toggle="tab"> <%= t('.products_units') %> </a>
@@ -154,51 +111,65 @@
                                             container_selector: '.new_brand',
                                             input_selector: 'input[name="brand[name]"]'
                                         },
+                                        required: true,
                                         errors: product.errors.full_messages_for(:brand_id)
-                                    }) %>                                    
+                                    }) %>
                                 </div>
                                 <div class="col-md-4">
-                                    <%= erp_form_control("text", {
-                                        name: 'product[barcode]',
-                                        value: product.barcode,
-                                        label: t('.barcode'),
-                                        help: t('.help_barcode')
+                                    <%= erp_form_control("number", {
+                                        name: 'product[price]',
+                                        value: product.price,
+                                        label: t('.sale_price'),
+                                        help: t('.help_price')
                                     }) %>
                                 </div>
                             </div>
-                            <% if !Erp::Core.available?("ortho_k") %>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <%= erp_form_control("number", {
-                                            name: 'product[cost]',
-                                            value: product.cost,
-                                            label: t('.cost'),
-                                            help: t('.help_cost')
-                                        }) %>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <%= erp_form_control("number", {
-                                            name: 'product[price]',
-                                            value: product.price,
-                                            label: t('.sale_price'),
-                                            help: t('.help_price')
-                                        }) %>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <%= erp_form_control("number", {
-                                            name: 'product[on_hand]',
-                                            value: product.on_hand,
-                                            label: t('.on_hand'),
-                                            help: t('.help_on_hand')
-                                        }) %>
-                                    </div>
-                                </div>
-                            <% end %>
                         </div>
 
                         <div class="tab-pane" id="tab_5_2">
-                            <div class="product-property-container" data-url="<%= erp_products.property_form_backend_products_path(id: product.id) %>">
-                                <%= render partial: 'erp/products/backend/products/property_form', locals: {product: product} %>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <%= erp_form_control("text", {
+                                        name: 'product[body]',
+                                        value: '',
+                                        label: 'Kiểu dáng/Body'
+                                    }) %>
+                                </div>
+                                <div class="col-md-4">
+                                    <%= erp_form_control("text", {
+                                        name: 'product[dongco]',
+                                        value: '',
+                                        label: 'Động cơ'
+                                    }) %>
+                                </div>
+                                <div class="col-md-4">
+                                    <%= erp_form_control("text", {
+                                        name: 'product[hopso]',
+                                        value: '',
+                                        label: 'Hộp số'
+                                    }) %>
+                                </div>
+                                <div class="col-md-4">
+                                    <%= erp_form_control("text", {
+                                        name: 'product[body]',
+                                        value: '',
+                                        label: 'Công suất cực đại'
+                                    }) %>
+                                </div>
+                                <div class="col-md-4">
+                                    <%= erp_form_control("text", {
+                                        name: 'product[dongco]',
+                                        value: '',
+                                        label: 'Mô-men xoắn cực đại'
+                                    }) %>
+                                </div>
+                                <div class="col-md-4">
+                                    <%= erp_form_control("text", {
+                                        name: 'product[hopso]',
+                                        value: '',
+                                        label: 'Dài x Rộng x Cao'
+                                    }) %>
+                                </div>
                             </div>
                         </div>
                         <div class="tab-pane" id="tab_5_3">
