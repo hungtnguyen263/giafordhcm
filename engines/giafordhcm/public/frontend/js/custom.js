@@ -118,15 +118,17 @@ function fixBox() {
     $('.contact-info-boxes').css('bottom', bottom);
 }
 
-var box_top_init = $('.contact-info-boxes').offset().top;
-var dis = 160;
-$(window).scroll(function() {
-    fixBox();
-});
-
-$(window).ready(function() {
-    setTimeout(function() {fixBox();fixBox();}, 10);
-});
+if ($('.contact-info-boxes').length > 0) {
+    var box_top_init = $('.contact-info-boxes').offset().top;
+    var dis = 160;
+    $(window).scroll(function() {
+        fixBox();
+    });
+    
+    $(window).ready(function() {
+        setTimeout(function() {fixBox();fixBox();}, 10);
+    });
+}
 
 $(document).ready(function() {    
     // Apply js first load
