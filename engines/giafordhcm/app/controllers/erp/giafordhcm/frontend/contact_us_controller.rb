@@ -13,7 +13,7 @@ module Erp
               # @todo get email receive contact
               #@msg.to_contact_id = Erp::Contacts::Contact.first.id
               if @message.save
-                #Erp::Contacts::ContactMailer.sending_email_contact(@msg).deliver_now
+                Erp::Contacts::ContactMailer.sending_email_contact(@message).deliver_now
                   render :json => {status: 'success', notice: 'Tin nhắn đã được gửi thành công. Chúng tôi sẽ sớm liên hệ lại với Quý vị.'}
               end
             else
