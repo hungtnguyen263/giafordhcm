@@ -50,39 +50,40 @@
                     <h2 class="ui-title-block-2">GỬI YÊU CẦU TRỢ GIÚP</h2>
                     <div class="ui-decor"></div>
                     <div id="success"></div>
-                    <form class="b-form-checkup ui-form-3" id="contactForm" action="#" method="post">
+                    <%= form_for '', url: erp_giafordhcm.contact_us_path,
+                        html: {class: "b-form-checkup ui-form-3", id: "ajax-contact-form",  autocomplete: "off"} do |f| %>
                         <div class="form-group">
-                            <input class="form-control" id="user-name" type="text" name="user-name" placeholder="Nhập họ & tên" required="required" />
+                            <input class="form-control" type="text" name="contact[name]" placeholder="Nhập họ & tên" />
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input class="form-control" id="user-email" type="email" name="user-email" placeholder="Nhập địa chỉ email" required="required" />
+                                    <input class="form-control" type="email" name="contact[email]" placeholder="Nhập địa chỉ email" />
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input class="form-control" id="user-phone" type="tel" name="user-phone" placeholder="Nhập số điện thoại" required="required" />
+                                    <input class="form-control" type="tel" name="contact[phone]" placeholder="Nhập số điện thoại" />
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="form-group">
-                                    <select class="selectpicker" data-width="100%">
+                                    <select class="selectpicker" data-width="100%" name="message[subject]">
                                         <option value="" selected>-- Vui lòng chọn chủ đề --</option>
-                                        <option value="YCBG">Yêu cầu báo giá</option>
-                                        <option value="UTTG">Ước tính trả góp</option>
-                                        <option value="DKLT">Đăng ký lái thử</option>
-                                        <option value="OTHER">Nội dung khác</option>
+                                        <option value="Yêu cầu báo giá">Yêu cầu báo giá</option>
+                                        <option value="Ước tính trả góp">Ước tính trả góp</option>
+                                        <option value="Đăng ký lái thử">Đăng ký lái thử</option>
+                                        <option value="Nội dung khác">Nội dung khác</option>
                                     </select>
                                 </div>
-                                <textarea class="form-control" id="user-message" rows="4" placeholder="Vui lòng cung cấp nội dung yêu cầu, câu hỏi hoặc góp ý của bạn tại đây" required="required"></textarea>
-                                <button class="btn btn-primary">Xác nhận & Gửi</button>
+                                <textarea class="form-control" rows="4" name="message[message]" placeholder="Vui lòng cung cấp nội dung yêu cầu, câu hỏi hoặc góp ý của bạn tại đây"></textarea>
+                                <div class="form-notice"></div>
+                                <button class="btn btn-standard" type="submit">Xác nhận & Gửi</button>
                             </div>
                         </div>
-                    </form>
-                    <!-- end .b-form-checkup-->
+                    <% end %>
                 </section>
             </div>
         </div>

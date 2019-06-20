@@ -50,14 +50,17 @@
             text: t('.email'), name: 'email', value: true, checked: true
         },
         {
-            text: t('.phone'), name: 'phone', value: true, checked: false
+            text: t('.phone'), name: 'phone', value: true, checked: true
+        },
+        {
+            text: t('.subject'), name: 'subject', value: true, checked: true
         },
         {
             text: t('.message'), name: 'message', value: true, checked: true
         },
         {
-            text: t('.created_at'), name: 'created_at', value: true, checked: false
+            text: t('.created_at'), name: 'created_at', value: true, checked: true
         }
     ],
-    sort: { sort_by: 'erp_contacts_messages.created_at', sort_direction: 'asc' }
+    sort: { sort_by: 'erp_contacts_messages.created_at', sort_direction: 'desc' }
 ) %>    

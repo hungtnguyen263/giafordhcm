@@ -353,7 +353,7 @@ module Erp::Contacts
 
     validate :must_select_is_customer_or_supplier
     def must_select_is_customer_or_supplier
-      errors.add(:is_customer, :message_must_select) if (is_customer != true and is_supplier != true and user_id.nil?)
+      #errors.add(:is_customer, :message_must_select) if (is_customer != true and is_supplier != true and user_id.nil?)
     end
 
     # get customer commission rate by product

@@ -20,7 +20,7 @@
 <script src="/frontend/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 <!-- Mail scripts-->
 <script src="/frontend/assets/plugins/jqBootstrapValidation.js"></script>
-<script src="/frontend/assets/plugins/contact_me.js"></script>
+<!--<script src="/frontend/assets/plugins/contact_me.js"></script>-->
 <!-- Filter and sorting images-->
 <script src="/frontend/assets/plugins/isotope/isotope.pkgd.min.js"></script>
 <script src="/frontend/assets/plugins/isotope/imagesLoaded.js"></script>
@@ -52,7 +52,6 @@
 
 <script>
     var dang_ky_modal = new giafordhcmModal({size: 'md'});
-    //var updateEmployeeCallback;
     var dang_ky_callback;
     
     $(function() {
@@ -62,20 +61,7 @@
             var button = $(this);
             
             dang_ky_modal.load(button.attr('href'));
-            
-            dang_ky_callback = function(response) {
-                if (typeof(response.status) !== 'undefined') {
-                    showNotification(response.status, response.message);
-                    // hide modal
-                    dang_ky_modal.hide();
-                } else {
-                    // validation error
-                    dang_ky_modal.renderHtml(response);
-                }
-            };
         });
-        
-        //$('.dang-ky-close').click(function(e) {
     });
 </script>
 

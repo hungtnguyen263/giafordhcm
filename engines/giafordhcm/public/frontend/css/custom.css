@@ -1134,3 +1134,8 @@ aside.floating .contact-boxes a.open-link:before {
     justify-content: center;
     flex-flow: wrap;
 }
+.ui-form-3 .ui-select {
+    line-height: 18px;
+    padding-top: 10px;
+    padding: 14px 22px 11px;
+}

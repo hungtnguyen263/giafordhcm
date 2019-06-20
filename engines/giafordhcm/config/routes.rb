@@ -4,6 +4,7 @@ Erp::Giafordhcm::Engine.routes.draw do
     
     get "gioi-thieu.html" => "frontend/about_us#index", as: :about_us
     get "lien-he.html" => "frontend/contact_us#index", as: :contact_us
+    post "lien-he.html" => "frontend/contact_us#index"
     get "dang-ky.html" => "frontend/contact_us#registration_form", as: :registration_form
     
     get "tra-gop.html" => "frontend/installment#index", as: :installment

@@ -17,6 +17,11 @@
                     <%= t('.phone') %>
                 </th>
             <% end %>
+            <% if get_columns(params).include?("subject") %>
+                <th>
+                    <%= t('.subject') %>
+                </th>
+            <% end %>
             <% if get_columns(params).include?("message") %>
                 <th>
                     <%= t('.message') %>
@@ -44,6 +49,9 @@
                 <% end %>
                 <% if get_columns(params).include?("phone") %>
                     <td><%= message.contact_phone %></td>
+                <% end %>
+                <% if get_columns(params).include?("subject") %>
+                    <td><%= message.subject %></td>
                 <% end %>
                 <% if get_columns(params).include?("message") %>
                     <td><%= message.message %></td>
