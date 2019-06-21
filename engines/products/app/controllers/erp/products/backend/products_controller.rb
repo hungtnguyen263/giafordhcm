@@ -700,6 +700,7 @@ module Erp
               :deal_from_date, :deal_to_date, :meta_keywords, :meta_description, :is_bestseller, :is_business_choices, :is_top_business_choices, :is_sold_out, :is_call,
               # end frontend
               :stock_min, :stock_max, :description, :internal_note, :point_enabled, :category_id,
+              :body, :engine_type, :transmission, :max_power, :max_torque, :length_width_height,
               customer_tax_ids: [], vendor_tax_ids: [],
               :product_images_attributes => [ :id, :image_url, :image_url_cache, :product_id, :_destroy ],
               :products_units_attributes => [ :id, :unit_id, :conversion_value, :price, :code, :product_id, :_destroy ],
