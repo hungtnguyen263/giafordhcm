@@ -90,23 +90,36 @@
                     <div class="b-car-info">
                         <div class="b-car-info__price"><div>Giá khuyến mãi: </div><%= format_number(@product.price) %><span class="b-car-info__price-unit">VNĐ</span>
                         </div>
-                        <% if false %>
+                        
+                        <% if @product.body.present? || @product.engine_type.present? || @product.transmission.present? ||
+                            @product.max_power.present? || @product.max_torque.present? || @product.length_width_height.present? %>
                         <dl class="b-car-info__desc dl-horizontal bg-grey">
+                            <% if @product.body.present? %>
                             <dt class="b-car-info__desc-dt">Kiểu dáng</dt>
-                            <dd class="b-car-info__desc-dd">sedan</dd>
+                            <dd class="b-car-info__desc-dd"><%= @product.body %></dd>
+                            <% end %>
+                            <% if @product.engine_type.present? %>
                             <dt class="b-car-info__desc-dt">Động cơ</dt>
-                            <dd class="b-car-info__desc-dd">2016</dd>
+                            <dd class="b-car-info__desc-dd"><%= @product.engine_type %></dd>
+                            <% end %>
+                            <% if @product.transmission.present? %>
                             <dt class="b-car-info__desc-dt">Hộp số</dt>
-                            <dd class="b-car-info__desc-dd">20,300mi</dd>
+                            <dd class="b-car-info__desc-dd"><%= @product.transmission %></dd>
+                            <% end %>
+                            <% if @product.max_power.present? %>
                             <dt class="b-car-info__desc-dt">Công suất cực đại</dt>
-                            <dd class="b-car-info__desc-dd">5.7L V8</dd>
+                            <dd class="b-car-info__desc-dd"><%= @product.max_power %></dd>
+                            <% end %>
+                            <% if @product.max_torque.present? %>
                             <dt class="b-car-info__desc-dt">Mô men xoắn cực đại</dt>
-                            <dd class="b-car-info__desc-dd">Auto 8-Speed</dd>
+                            <dd class="b-car-info__desc-dd"><%= @product.max_torque %></dd>
+                            <% end %>
+                            <% if @product.length_width_height.present? %>
                             <dt class="b-car-info__desc-dt">Dài x Rộng x Cao</dt>
-                            <dd class="b-car-info__desc-dd">hybird</dd>
+                            <dd class="b-car-info__desc-dd"><%= @product.length_width_height %></dd>
+                            <% end %>
                         </dl>
                         <% end %>
-                        
                         <div class="sidebar">
                             <div class="contact-info">
                                 <div class="business-man__img">
