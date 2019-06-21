@@ -4,16 +4,16 @@ module Erp::Contacts
       @message = msg
       
       #@todo static emails
-      @recipients = ['Tường Nguyễn <npptuong@giadinhford.com.vn>', 'Tường Nguyễn <tuong.npp@giafordhcm.com>']
+      @recipients = ['Hùng Nguyễn <hungnt@hoangkhang.com.vn>']
       
       send_email(@recipients.join("; "), "#{@message.contact_phone} Thông báo tin nhắn trên hệ thống GiaFordHcm.com")
     end
     
-    def sending_email_registration_quote(@registration_quote)
+    def sending_email_registration_quote(registration_quote)
       @registration_quote = registration_quote
       
       #@todo static emails
-      @recipients = ['Tường Nguyễn <npptuong@giadinhford.com.vn>', 'Tường Nguyễn <tuong.npp@giafordhcm.com>']
+      @recipients = ['Hùng Nguyễn <hungnt@hoangkhang.com.vn>']
       
       send_email(@recipients.join("; "), "#{@registration_quote.contact_phone} Thông báo yêu cầu báo giá/lái thử trên hệ thống GiaFordHcm.com")
     end 
