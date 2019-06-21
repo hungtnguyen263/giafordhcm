@@ -1,3 +1,4 @@
+<% @web_info = Erp::Contacts::Contact.get_main_contact %>
 <div class="sidebar">
     <div class="contact-info-boxes">
         <div class="business-man__img">
@@ -7,9 +8,9 @@
             <cite class="b-blockquote__cite" title="Blockquote Title">
                 <span class="b-blockquote__author">Mr. Tường Nguyễn</span>
                 <span class="b-blockquote__category">Chuyên viên Kinh doanh</span>
-                <a href="tel:090 525 0593">
+                <a href="tel:<%= @web_info.phone %>">
                     <span class="b-blockquote__hotline">
-                        <i class="flaticon-smartphone"></i> 090 525 0593
+                        <i class="flaticon-smartphone"></i> <%= @web_info.phone %>
                     </span>
                 </a>
             </cite>

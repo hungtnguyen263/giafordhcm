@@ -40,6 +40,15 @@ module Erp
           thumb.present? ? thumb : url_for('/frontend/images/blog/75_75.png')
         end
       end
+      
+      # display full address
+      def full_address(contact)
+        str = []
+        str << contact.address if contact.address.present?
+        str << contact.district_name if contact.district_name.present?
+        str << contact.state_name if contact.state_name.present?
+        str.join(", ")
+      end
     end
   end
 end

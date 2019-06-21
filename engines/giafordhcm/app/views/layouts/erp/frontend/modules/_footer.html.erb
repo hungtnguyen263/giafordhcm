@@ -43,14 +43,14 @@
                     <div class="col-md-3">
                         <section class="footer-section">
                             <h3 class="footer-section__title ui-title-inner">Thông tin liên hệ</h3>
-                            <div class="footer-contact"><i class="icon icon-xs fa fa-phone"></i> <a href="tel:0905250593" class="footer-contact_lg">0905 25 05 93</a></div>
+                            <div class="footer-contact"><i class="icon icon-xs fa fa-phone"></i> <a href="tel:<%= web_info.phone %>" class="footer-contact_lg"><%= web_info.phone %></a></div>
                             <div class="footer-contact">
                                 <i class="icon icon-xs fa fa-envelope"></i>
                                 <%= mail_to 'tuong.npp@giafordhcm.com', 'tuong.npp@giafordhcm.com', class: 'footer__link' %>
                                 <%= mail_to 'npptuong@giadinhford.com.vn', 'npptuong@giadinhford.com.vn', class: 'footer__link' %>
                             </div>
-                            <div class="footer-contact"><i class="icon icon-xs fa fa-home"></i> 900 Quốc Lộ 1A, Phường Thạnh Xuân, Quận 12, TP Hồ Chí Minh</div>
-                            <div class="footer-contact"><i class="icon icon-xs fa fa-globe"></i> www.giafordhcm.com</div>
+                            <div class="footer-contact"><i class="icon icon-xs fa fa-home"></i> <%= full_address(web_info) %></div>
+                            <div class="footer-contact"><i class="icon icon-xs fa fa-globe"></i> <%= web_info.website %></div>
                         </section>
                         <section class="footer-section">
                             <h3 class="footer-section__title ui-title-inner">Kết nối mạng xã hội</h3>

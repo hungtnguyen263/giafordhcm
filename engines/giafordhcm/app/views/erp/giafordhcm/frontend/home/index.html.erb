@@ -1,10 +1,11 @@
+<% title "Trang chủ" %>
 <%= render "erp/giafordhcm/frontend/modules/home/slider" %>
 <%= render "erp/giafordhcm/frontend/modules/home/advantages" %>
 <%= render "erp/giafordhcm/frontend/modules/home/goods" if false %>
-<%= render "erp/giafordhcm/frontend/modules/home/vehicle_group" %>
+<%= render "erp/giafordhcm/frontend/modules/home/vehicle_group", web_info: @web_info %>
 <%= render "erp/giafordhcm/frontend/modules/home/offers" if false %>
 <%= render "erp/giafordhcm/frontend/modules/home/redirect_visitors" %>
-<%= render "erp/giafordhcm/frontend/modules/home/special_offers" %>
+<%= render "erp/giafordhcm/frontend/modules/home/special_offers", web_info: @web_info %>
 <%= render "erp/giafordhcm/frontend/modules/home/blockquote" if false %>
 <%= render "erp/giafordhcm/frontend/modules/home/news" %>
 <%= render "erp/giafordhcm/frontend/modules/home/brands" %>

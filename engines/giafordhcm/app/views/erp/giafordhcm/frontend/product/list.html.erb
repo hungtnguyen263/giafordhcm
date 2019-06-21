@@ -1,3 +1,5 @@
+<% title 'Tất cả dòng xe' %>
+
 <div class="section-title-page area-bg area-bg_dark area-bg_op_70">
     <div class="area-bg__inner">
         <div class="container">
@@ -36,7 +38,7 @@
                             <div class="text-center">
                                 <h2 class="ui-title-block text-uppercase">
                                     - <%= menu.name %> -
-                                    <span>HOTLINE <a href="tel:0905250593" class="telto">090 525 0593</a></span>
+                                    <span>HOTLINE <a href="tel:<%= @web_info.phone %>" class="telto"><%= @web_info.phone %></a></span>
                                 </h2>
                                 <div class="ui-subtitle-block"><%= menu.description %></div>
                                 <div class="ui-decor"></div>
@@ -61,7 +63,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="b-goods-ac__price">Giá tham khảo: <span><%= format_price(product.price) %></span><sup></sup></div>
-                                                <div class="b-goods-ac__price discount">Liên hệ: <span>0905 250 593</span> để nhận giá ưu đãi trong tháng</div>
+                                                <div class="b-goods-ac__price discount">Liên hệ: <span><%= @web_info.phone %></span> để nhận giá ưu đãi trong tháng</div>
                                                 <!--<div class="b-goods-ac__price discount">Giảm thêm (tháng 6): <span>30.000.000</span><sup>VNĐ</sup></div>-->
                                             </div>
                                         </div>

@@ -318,7 +318,8 @@ module Erp::Contacts
     # Get main contact
     def self.get_main_contact
       #@todo: hard code
-      return Contact.find(self::MAIN_CONTACT_ID)
+      #return Contact.find(self::MAIN_CONTACT_ID)
+      return Contact.all_active.where(is_main: true).last
     end
     
     # force generate code

@@ -1,3 +1,5 @@
+<% title "Trợ giúp và liên hệ" %>
+
 <div class="section-title-page area-bg area-bg_dark area-bg_op_70">
     <div class="area-bg__inner">
         <div class="container">
@@ -36,10 +38,10 @@
                     <div class="accordion accordion-1">
                         <h3 class="company-name text-uppercase">Ford Gia Định</h3>
                         <ul class="b-rent__list list-unstyled">
-                            <li>Mr. Nguyễn Phan Phúc Tường (Chuyên viên Kinh doanh)</li>
-                            <li>Điện thoại: 090 525 0593</li>
-                            <li>Email: tuong.npp@giafordhcm.com</li>
-                            <li><span class="contact-address">Địa chỉ:</span> 900 Quốc lộ 1A, Phường Thạnh Xuận, Quận 12, TP Hồ Chí Minh</li>
+                            <li><strong>Mr. Nguyễn Phan Phúc Tường - Chuyên viên Kinh doanh</strong></li>
+                            <li>Điện thoại: <%= link_to @web_info.phone, "tel:#{@web_info.phone}" %></li>
+                            <li>Email: <%= mail_to @web_info.email %></li>
+                            <li><span class="contact-address">Địa chỉ:</span> <%= full_address(@web_info) %></li>
                         </ul>
                     </div>
                     <!-- end .accordion-->

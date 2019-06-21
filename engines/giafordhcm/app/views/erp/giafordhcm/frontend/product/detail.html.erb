@@ -1,3 +1,4 @@
+<% title @product.name %>
 <% product_images = @product.product_images.where.not(image_url: nil) %>
 
 <div class="section-title-page area-bg area-bg_dark area-bg_op_70">
@@ -115,9 +116,9 @@
                                     <cite class="b-blockquote__cite" title="Blockquote Title">
                                         <span class="b-blockquote__author">Mr. Tường Nguyễn</span>
                                         <span class="b-blockquote__category">Chuyên viên Kinh doanh</span>
-                                        <a href="tel:090 525 0593">
+                                        <a href="tel:<%= @web_info.phone %>">
                                             <span class="b-blockquote__hotline">
-                                                <i class="flaticon-smartphone"></i> 090 525 0593
+                                                <i class="flaticon-smartphone"></i> <%= @web_info.phone %>
                                             </span>
                                         </a>
                                     </cite>
@@ -189,7 +190,7 @@
                                             </a>
                                         </div>
                                         <div class="b-goods-ac__price">Giá tham khảo: <span><%= format_price(related_product.price) %></span><sup></sup></div>
-                                        <div class="b-goods-ac__price discount">Liên hệ: <span>0905 250 593</span> để nhận giá ưu đãi trong tháng</div>
+                                        <div class="b-goods-ac__price discount">Liên hệ: <span><%= @web_info.phone %></span> để nhận giá ưu đãi trong tháng</div>
                                     </div>
                                 </div>
                             </div>

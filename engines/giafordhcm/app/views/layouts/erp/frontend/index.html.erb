@@ -1,18 +1,68 @@
 <!DOCTYPE html>
 <html lang="vi-VN">
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>Ford Gia Định - Đại Lý Xe Ford Uy Tín Tại Việt Nam</title>
-        <meta content="" name="description" />
-        <meta content="" name="keywords" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta content="telephone=no" name="format-detection" />
-        <meta name="HandheldFriendly" content="true" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp,index,follow">
+        <meta name="author" content="Giá Ford Hồ Chí Minh, GiaFordHcm.com, Phan Nguyễn Phúc Tường">
+        <meta name="copyright" content="GIAFORDHCM.COM [npptuong25@gmail.com]">
+        <!--<meta name="google-site-verification" content="RwhV3sDQ6graE0gwVmwHZJ1uLm7bWEEm5fqhHexKk3I" />-->
+        
+        <!-- Basic -->
+        <title>
+            <% if content_for?(:title) %>
+                <%= yield(:title) %> | GiaFordHcm.com | Ford Gia Định | Đại Lý Xe Ford Uy Tín Tại Việt Nam | Ford Giá Tốt | Mua xe ô tô trả góp
+            <% else %>
+                GiaFordHcm.com | Ford Gia Định | Đại Lý Xe Ford Uy Tín Tại Việt Nam | Ford Giá Tốt | Mua xe ô tô trả góp
+            <% end %>
+        </title>
+        <% if @meta_description.present? %>
+        <meta name="description" content="<%= @meta_description %>">
+        <% else %>
+        <meta name="description" content="Ford Gia Định - Đại Lý Xe Ford Uy Tín Tại Việt Nam">
+        <% end %>
+        <% if @meta_keywords.present? %>
+        <meta name="keywords" content="<%= @meta_keywords %>">
+        <% else %>
+        <!--<meta name="keywords" content="song hanh cts, san xuat ca phe, san xuat tra gung, coffee, trà gừng, quan tri nguon nhan luc, nhan dien thuong hieu, quan tri kinh doanh, tu van phap luat, marketing">-->
+        <% end %>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142541725-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-142541725-1');
+        </script>
+        
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/frontend/images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/frontend/images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/frontend/images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/frontend/images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/frontend/images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/frontend/images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/frontend/images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/frontend/images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/frontend/images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/frontend/images/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/frontend/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/frontend/images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/frontend/images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/frontend/images/favicons/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/frontend/images/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        
+        
+        
+        <!-- Stylesheet -->
         <link rel="stylesheet" href="/frontend/assets/css/master.css" />
         <link rel="stylesheet" href="/frontend/css/custom.css" />
         <!-- SWITCHER-->
-        
         <link rel="icon" type="image/x-icon" href="/frontend/assets/favicon.ico" />
         <!--[if lt IE 9 ]>
         <script src="/frontend/assets/js/separate-js/html5shiv-3.7.2.min.js" type="text/javascript"></script>
@@ -21,21 +71,22 @@
     </head>
 
     <body>
+        <% @web_info = Erp::Contacts::Contact.get_main_contact %>
         <!-- Loader-->
         <div id="page-preloader"><span class="spinner border-t_second_b border-t_prim_a"></span>
         </div>
         <!-- Loader end-->
         <%= render "layouts/erp/frontend/modules/mobile_slidebar" %>
         <div class="l-theme animated-css" data-header="sticky" data-header-top="200" data-canvas="container"><!--.l-theme-custom-->
-            <%= render "layouts/erp/frontend/modules/header" %>
+            <%= render "layouts/erp/frontend/modules/header", web_info: @web_info %>
             
             <%= yield %>
             
-            <%= render "layouts/erp/frontend/modules/footer" %>
+            <%= render "layouts/erp/frontend/modules/footer", web_info: @web_info %>
             
             <aside class="floating">
                 <div class="contact-boxes">
-                    <a class="call-me" href="tel:0905250593">0905 250 593</a>
+                    <a class="call-me" href="tel:<%= @web_info.phone %>"><%= @web_info.phone %></a>
                     <a class="open-link dang-ky-button" href="<%= erp_giafordhcm.registration_form_path(type: 'quote') %>">Nhận báo giá</a>
                 </div>
             </aside>

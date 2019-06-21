@@ -8,7 +8,7 @@
                             <div class="text-center">
                                 <h2 class="ui-title-block text-uppercase">
                                     - <%= menu.name %> -
-                                    <span>HOTLINE <a href="tel:0905250593" class="telto">090 525 0593</a></span>
+                                    <span>HOTLINE <a href="tel:<%= @web_info.phone %>" class="telto"><%= @web_info.phone %></a></span>
                                 </h2>
                                 <div class="ui-subtitle-block"><%= menu.description %></div>
                                 <div class="ui-decor"></div>
@@ -33,7 +33,7 @@
                                                         <div class="b-goods-ac__name"><%= submenu.name %></div>
                                                     </a>
                                                 </div>
-                                                <div class="b-goods-ac__price discount">Liên hệ: <span>0905 250 593</span> để nhận giá ưu đãi trong tháng</div>
+                                                <div class="b-goods-ac__price discount">Liên hệ: <span><%= @web_info.phone %></span> để nhận giá ưu đãi trong tháng</div>
                                             </div>
                                         </div>
                                     </div>

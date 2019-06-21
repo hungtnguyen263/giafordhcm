@@ -3,7 +3,7 @@ module Erp
     module Frontend
       class ContactUsController < Erp::Frontend::FrontendController
         def index
-          #@company_info = Erp::Contacts::Contact.get_main_contact
+          @web_info = Erp::Contacts::Contact.get_main_contact
           
           if params[:contact].present?
             @contact = Erp::Contacts::Contact.new(contact_params)

@@ -1,3 +1,5 @@
+<% title 'Về chúng tôi' %>
+
 <div class="section-title-page area-bg area-bg_dark area-bg_op_70">
     <div class="area-bg__inner">
         <div class="container">
@@ -36,7 +38,7 @@
                             <h2 class="section-type-2__title">CÔNG TY TNHH DV SÀI GÒN Ô TÔ GIA ĐỊNH</h2>
                             <div class="section-type-2__subtitle">GIA ĐỊNH FORD</div>
                             <ul class="list list-mark-5 list_mark-prim">
-                                <li>Tọa lạc tại đại chỉ số 900 Quốc lộ 1A, Phường Thạnh Xuân, Quận 12, Tp. Hồ Chí Minh (trên trục quốc lộ 1A và nằm gần Ngã Tư Ga)</li>
+                                <li>Tọa lạc tại địa chỉ số 900 Quốc lộ 1A, Phường Thạnh Xuân, Quận 12, Thành phố Hồ Chí Minh (trên trục quốc lộ 1A và nằm gần Ngã Tư Ga)</li>
                                 <li>Được biết đến là đại lý ô tô đầu tiên được Ford Việt Nam tiến hành đầu tư và trang bị cơ sở vật chất cùng trang thiết bị hiện đại theo đúng tiêu chuẩn Ford Signture</li>
                                 <li>Chính thức được khai trương và đi vào hoạt động vào ngày 08/01/2019.</li>
                             </ul>
@@ -51,10 +53,10 @@
                 
                 <div class="bottom-content">
                     <ul class="list list-mark-5 list_mark-prim">
-                    <li><strong>Hotline:</strong> <%= link_to '0905 2505 93', 'tel:0905250593', class: 'telto' %> - Mr. Tường</li>
-                    <li><strong>Email:</strong> <%= mail_to 'tuong.npp@giafordhcm.com', 'tuong.npp@giafordhcm.com', class: 'mailto' %></li>
-                    <li><strong>Địa chỉ:</strong> 900 Quốc lộ 1A, Phường Thạnh Xuận, Quận 12, TP Hồ Chí Minh</li>
-                    <li><strong>Website:</strong> <%= link_to 'www.giafordhcm.com', 'giafordhcm.com' %></li>
+                    <li><strong>Hotline:</strong> <%= link_to @web_info.phone, "tel:#{@web_info.phone}", class: 'telto' %> - Mr. Tường</li>
+                    <li><strong>Email:</strong> <%= mail_to @web_info.email, @web_info.email, class: 'mailto' %></li>
+                    <li><strong>Địa chỉ:</strong> <%= full_address(@web_info) %></li>
+                    <li><strong>Website:</strong> <%= link_to @web_info.website, @web_info.website %></li>
                 </ul>
                 </div>
             </div>

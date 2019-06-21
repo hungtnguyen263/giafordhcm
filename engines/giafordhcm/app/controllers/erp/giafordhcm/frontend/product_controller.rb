@@ -3,10 +3,14 @@ module Erp
     module Frontend
       class ProductController < Erp::Frontend::FrontendController
         def list
+          @web_info = Erp::Contacts::Contact.get_main_contact
+          
           @menus = Erp::Menus::Menu.get_active.where.not(parent_id: nil)
         end
         
         def category
+          @web_info = Erp::Contacts::Contact.get_main_contact
+          
           @menu = Erp::Menus::Menu.find(params[:menu_id])
           @products = @menu.get_products_for_categories(params).paginate(:page => params[:page], :per_page => @menu.number_per_page)
           @meta_keywords = @menu.meta_keywords
@@ -14,6 +18,8 @@ module Erp
         end
         
         def detail
+          @web_info = Erp::Contacts::Contact.get_main_contact
+          
           @product = Erp::Products::Product.find(params[:product_id])
           @menu = params[:menu_id].present? ? Erp::Menus::Menu.find(params[:menu_id]) : @product.find_menu
           
