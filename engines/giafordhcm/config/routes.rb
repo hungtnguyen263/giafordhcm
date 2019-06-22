@@ -6,6 +6,8 @@ Erp::Giafordhcm::Engine.routes.draw do
     get "lien-he.html" => "frontend/contact_us#index", as: :contact_us
     post "lien-he.html" => "frontend/contact_us#index"
     get "dang-ky.html" => "frontend/contact_us#registration_form", as: :registration_form
+    #post "dang-ky.html" => "frontend/contact_us#registration_form"
+    post "gui-yeu-cau.html" => "frontend/contact_us#registration", as: :contact_register
     
     get "tra-gop.html" => "frontend/installment#index", as: :installment
     get "bang-gia.html" => "frontend/price#list", as: :price_list

@@ -1,0 +1,18 @@
+Xin chào,
+<p>Bạn vừa nhận nhận được một yêu cầu báo giá/lái thử trên GiaFordHcm.com. Thông tin như sau:</p>
+<p>
+    Họ và tên: <%= @register.contact_name %><br />
+    Số điện thoại: <%= @register.contact_phone %><br />
+    Thư e-mail: <%= @register.contact_email %><br />
+    Dòng xe quan tâm: <%= @register.product_category_name %><br />
+    Địa chỉ (Tỉnh/TP): <%= @register.contact_state_name %><br />
+    Hình thức thanh toán: <%= t(".#{@register.payment_method}") %>
+</p>
+<p>Vui lòng xử lý nội dung trên và phản hồi sớm đến người đã yêu cầu.</p>
+<p>Trân trọng,<br/>
+</p>
+<p style="color: #999;font-size: 12px;">
+    <i>
+        *Đây là thư tự động, vui lòng không trả lời thư này!
+    </i>
+</p>

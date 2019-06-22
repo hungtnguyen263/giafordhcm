@@ -1,4 +1,5 @@
-<form class="ui-form-3" id="contactForm" action="#" method="post">
+<%= form_for '', url: erp_giafordhcm.contact_register_path(type: params[:type]),
+    html: {class: "ui-form-3 registration_form", id: "",  autocomplete: "off"} do |f| %>
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     </div>
@@ -14,19 +15,19 @@
             <div class="sub-title text-center">Để nhận được "BÁO GIÁ ĐẶC BIỆT" và các "CHƯƠNG TRÌNH ƯU ĐÃI", Quý khách vui lòng điền form báo giá dưới đây:</div>
                 <div class="form-group">
                     <label>Họ và tên <span class="required">*</span> </label>
-                    <input class="form-control" id="user-name" type="text" name="user-name" placeholder="Họ và tên" required="required" />
+                    <input class="form-control" type="text" name="contact[name]" placeholder="Họ và tên"  />
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Số điện thoại <span class="required">*</span> </label>
-                            <input class="form-control" id="user-phone" type="tel" name="user-phone" placeholder="Số điện thoại" required="required" />
+                            <input class="form-control" type="tel" name="contact[phone]" placeholder="Số điện thoại"  />
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Email: </label>
-                            <input class="form-control" id="user-email" type="email" name="user-email" placeholder="Địa chỉ email" required="required" />
+                            <input class="form-control" type="email" name="contact[email]" placeholder="Địa chỉ email"  />
                         </div>
                     </div>
                 </div>
@@ -35,7 +36,11 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Dòng xe <span class="required">*</span> </label>
-                            <select class="select2" data-width="100%">
+                            <select class="select2" data-width="100%"
+                                title='Chọn dòng xe'
+                                name="registration[product_category_id]"
+                                
+                            >
                                 <option value=""> --- Chọn dòng xe quan tâm --- </option>
                                 <% Erp::Products::Category.where.not(parent_id: nil).each do |category| %>
                                     <option value="<%= category.id %>"><%= category.name %></option>
@@ -46,7 +51,11 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Địa chỉ <span class="required">*</span> </label>
-                            <select class="select2" data-width="100%" data-live-search="true" title='Choose one of the following...'>
+                            <select class="select2" data-width="100%" data-live-search="true"
+                                title='Chọn tỉnh/thành phố'
+                                name="contact[state_id]"
+                                
+                            >
                                 <option value=""> --- Chọn tỉnh/thành phố --- </option>
                                 <% Erp::Areas::State.get_all.each do |state| %>
                                     <option value="<%= state.id %>"><%= state.name %></option>
@@ -61,12 +70,23 @@
                     <span class="label-group">
                         <div class="row">
                             <div class="col-md-6">
-                                <input class="forms__radio hidden" id="forms__radio-5" type="radio" name="radio-group-1" value="" checked="checked" />
-                                <label class="forms__label forms__label-radio forms__label-radio-3" for="forms__radio-5">Trả góp</label>
+                                <input class="forms__radio hidden"
+                                    id="forms__radio-<%= Erp::Contacts::Registration::METHOD_INSTALMENTS %>" type="radio"
+                                    name="registration[payment_method]" value="<%= Erp::Contacts::Registration::METHOD_INSTALMENTS %>"
+                                    checked="checked"
+                                />
+                                <label class="forms__label forms__label-radio forms__label-radio-3"
+                                    for="forms__radio-<%= Erp::Contacts::Registration::METHOD_INSTALMENTS %>"
+                                >Trả góp</label>
                             </div>
                             <div class="col-md-6">
-                                <input class="forms__radio hidden" id="forms__radio-6" type="radio" name="radio-group-1" value="" />
-                                <label class="forms__label forms__label-radio forms__label-radio-3" for="forms__radio-6">Trả hết</label>
+                                <input class="forms__radio hidden"
+                                    id="forms__radio-<%= Erp::Contacts::Registration::METHOD_FULLY_PAID %>" type="radio"
+                                    name="registration[payment_method]" value="<%= Erp::Contacts::Registration::METHOD_FULLY_PAID %>"
+                                />
+                                <label class="forms__label forms__label-radio forms__label-radio-3"
+                                    for="forms__radio-<%= Erp::Contacts::Registration::METHOD_FULLY_PAID %>"
+                                >Trả hết</label>
                             </div>
                         </div>
                     </span>
@@ -75,6 +95,30 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Bỏ qua</button>
-        <button type="button" class="btn btn-standard">Gửi yêu cầu</button>
+        <button type="submit" class="btn btn-standard">Gửi yêu cầu</button>
     </div>
-</form>
+<% end %>
+
+<script>
+    $('form.registration_form').submit(function(e) {
+        e.preventDefault();
+        
+        var form = $(this);
+        // clear modal
+        dang_ky_modal.clear();
+        
+        $.ajax({
+            url: form.attr('action'),
+            method: form.attr('method'),
+            data: form.serialize() + '&layout=modal',
+        }).done(function(response) {
+            console.log(response);
+            // do something            
+            if (typeof(dang_ky_callback) !== 'undefined') {
+                dang_ky_callback(response);
+            }
+        });
+        
+        return false;
+    });
+</script>

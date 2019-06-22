@@ -141,36 +141,38 @@
                                         <li>Trả góp lãi suất thấp nhất.</li>
                                     </ul>
                                 </blockquote>
+                                <a class="btn btn-standard dang-ky-button mb-5" href="<%= erp_giafordhcm.registration_form_path(type: 'quote') %>">Yêu cầu báo giá</a>
                                 <a class="btn btn-standard dang-ky-button" href="<%= erp_giafordhcm.registration_form_path(type: 'test_drive') %>">Đăng ký lái thử</a>
                             </div>
                         </div>
                         
-                        <form class="b-calculator">
-                            <div class="b-calculator__header"><i class="icon flaticon-calculator text-primary"></i>
-                                <div class="b-calculator__header-inner">
-                                    <div class="b-calculator__name">Đăng ký báo giá mua xe</div>
-                                    <div class="b-calculator__info">Hãy gửi yêu cầu vào mẫu bên dưới</div>
+                        <% if false %>
+                            <form class="b-calculator">
+                                <div class="b-calculator__header"><i class="icon flaticon-calculator text-primary"></i>
+                                    <div class="b-calculator__header-inner">
+                                        <div class="b-calculator__name">Đăng ký báo giá mua xe</div>
+                                        <div class="b-calculator__info">Hãy gửi yêu cầu vào mẫu bên dưới</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="b-calculator__group">
-                                <div class="b-calculator__label">Họ & tên</div>
-                                <input class="b-calculator__input form-control" type="text" placeholder="Nhập thông tin họ & tên" />
-                            </div>
-                            <div class="b-calculator__group">
-                                <div class="b-calculator__label">Số điện thoại</div>
-                                <input class="b-calculator__input form-control" type="text" placeholder="Nhập đúng số điện thoại" />
-                            </div>
-                            <div class="b-calculator__group">
-                                <div class="b-calculator__label">Tỉnh/TP</div>
-                                <input class="b-calculator__input form-control" type="text" placeholder="VD: Thành phố Hồ Chí Minh" />
-                            </div>
-                            <div class="b-calculator__group">
-                                <div class="b-calculator__label">Hình thức thanh toán</div>
-                                <input class="b-calculator__input form-control" type="text" placeholder="Trả góp/Trả hết" />
-                            </div>
-                            <button class="btn btn-dark">Xác nhận & gửi</button>
-                        </form>
-                        
+                                <div class="b-calculator__group">
+                                    <div class="b-calculator__label">Họ & tên</div>
+                                    <input class="b-calculator__input form-control" type="text" placeholder="Nhập thông tin họ & tên" />
+                                </div>
+                                <div class="b-calculator__group">
+                                    <div class="b-calculator__label">Số điện thoại</div>
+                                    <input class="b-calculator__input form-control" type="text" placeholder="Nhập đúng số điện thoại" />
+                                </div>
+                                <div class="b-calculator__group">
+                                    <div class="b-calculator__label">Tỉnh/TP</div>
+                                    <input class="b-calculator__input form-control" type="text" placeholder="VD: Thành phố Hồ Chí Minh" />
+                                </div>
+                                <div class="b-calculator__group">
+                                    <div class="b-calculator__label">Hình thức thanh toán</div>
+                                    <input class="b-calculator__input form-control" type="text" placeholder="Trả góp/Trả hết" />
+                                </div>
+                                <button class="btn btn-dark">Xác nhận & gửi</button>
+                            </form>
+                        <% end %>
                     </div>
                 </aside>
             </div>

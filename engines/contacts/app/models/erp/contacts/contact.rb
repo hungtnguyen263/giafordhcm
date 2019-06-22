@@ -4,9 +4,7 @@ module Erp::Contacts
     validates :name, presence: true
     validates_format_of :email, :allow_blank => true, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, :message => " is invalid (Eg. 'user@domain.com')"
 
-    if Erp::Core.available?("online_store")
-      validates :phone, presence: true
-    end
+    validates :phone, presence: true
 
     belongs_to :creator, class_name: "Erp::User", optional: true
     belongs_to :user, class_name: "Erp::User", optional: true
@@ -23,6 +21,8 @@ module Erp::Contacts
 
     has_many :sent_messages, class_name: "Erp::Contacts::Message", dependent: :destroy
     has_many :received_messages, class_name: "Erp::Contacts::Message", foreign_key: :to_contact_id, dependent: :destroy
+    
+    has_many :registrations, class_name: "Erp::Contacts::Registration", dependent: :destroy
 
     MAIN_CONTACT_ID = 1
 

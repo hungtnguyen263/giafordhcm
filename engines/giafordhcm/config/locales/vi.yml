@@ -1,2 +1,7 @@
 vi:
-  
+  erp:
+    contacts:
+      contact_mailer:
+        sending_email_contact_register:
+          instalments: "Trả góp"
+          fully_paid: "Trả hết"
