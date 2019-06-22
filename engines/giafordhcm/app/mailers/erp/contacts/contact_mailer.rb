@@ -5,7 +5,7 @@ module Erp::Contacts
       @message = msg
       
       #@todo static emails
-      @recipients = ['Hùng Nguyễn <hungnt@hoangkhang.com.vn>']
+      @recipients = ['Tường Nguyễn <npptuong@giadinhford.com.vn>']
       
       send_email(@recipients.join("; "), "#{@message.contact_phone} Thông báo tin nhắn trên hệ thống GiaFordHcm.com")
     end
@@ -15,7 +15,7 @@ module Erp::Contacts
       @register = register
       
       #@todo static emails
-      @recipients = ['Hùng Nguyễn <hungnt@hoangkhang.com.vn>']
+      @recipients = ['Tường Nguyễn <npptuong@giadinhford.com.vn>']
       
       send_email(@recipients.join("; "), "#{@register.contact_phone} Thông báo yêu cầu báo giá/lái thử trên hệ thống GiaFordHcm.com")
     end 
