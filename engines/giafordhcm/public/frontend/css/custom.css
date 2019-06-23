@@ -545,7 +545,7 @@ footer.footer.area-bg {
     right: 0;
 }
 .sp-image-container:after {
-    background-color: rgba(0, 0, 0, 0.20);
+    background-color: rgba(0, 0, 0, 0);
 }
 .main-slider-1 .main-slider__subtitle {
     font-size: 35px;
@@ -947,6 +947,15 @@ article.b-post blockquote.sub-title i.fa {
 }
 .b-car-details .b-car-details__section img {
     max-width: 100%;
+}
+.b-car-details .slider-pro img.sp-image {
+    width: 100%;
+}
+.b-car-details .sp-button {
+    background-color: #002c8a;
+}
+.b-car-details .sp-button:after {
+    background-color: #fff;
 }
 .b-brands .b-brands__img {
     opacity: 1;
