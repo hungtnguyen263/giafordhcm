@@ -957,6 +957,9 @@ article.b-post blockquote.sub-title i.fa {
 .b-car-details .sp-button:after {
     background-color: #fff;
 }
+.slider-car-details .sp-selected-thumbnail:after {
+    background-color: rgba(0, 0, 0, 0.2);
+}
 .b-brands .b-brands__img {
     opacity: 1;
     filter: grayscale(0);
