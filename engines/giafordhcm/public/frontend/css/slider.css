@@ -1,0 +1,421 @@
+/*Custom Anmation*/
+.bgburns .slides li:nth-of-type(odd) .slide-background {
+    animation: bgburnsEast 25s linear infinite alternate;
+    -webkit-animation: bgburnsEast 25s linear infinite alternate
+}
+
+.bgburns .slides li:nth-of-type(even) .slide-background {
+    animation: bgburnsWest 25s linear infinite alternate;
+    -webkit-animation: bgburnsWest 25s linear infinite alternate
+}
+
+@keyframes bgburnsEast {
+    from {
+        transform: scale(1) translateX(0);
+        -webkit-transform: scale(1) translateX(0)
+    }
+    to {
+        transform: scale(1.2) translateX(100px);
+        -webkit-transform: scale(1.2) translateX(100px)
+    }
+}
+
+@-webkit-keyframes bgburnsEast {
+    from {
+        transform: scale(1) translateX(0);
+        -webkit-transform: scale(1) translateX(0)
+    }
+    to {
+        transform: scale(1.2) translateX(100px);
+        -webkit-transform: scale(1.2) translateX(100px)
+    }
+}
+
+@keyframes bgburnsWest {
+    from {
+        transform: scale(1) translateX(0);
+        -webkit-transform: scale(1) translateX(0)
+    }
+    to {
+        transform: scale(1.2) translateX(-100px);
+        -webkit-transform: scale(1.2) translateX(-100px)
+    }
+}
+
+@-webkit-keyframes bgburnsWest {
+    from {
+        transform: scale(1) translateX(0);
+        -webkit-transform: scale(1) translateX(0)
+    }
+    to {
+        transform: scale(1.2) translateX(-100px);
+        -webkit-transform: scale(1.2) translateX(-100px)
+    }
+}
+
+@media all and (max-width: 767px) {
+    .flex-direction-nav {
+        display: none
+    }
+
+    .bgburns .slides li .slide-background {
+        -webkit-animation: none !important;
+        animation: none !important
+    }
+}
+
+.banner {
+    position: relative;
+    margin-top: 145px;
+}
+
+.banner_video_bg {
+    /*max-height: 700px;*/
+}
+
+.pattern-overlay {
+    background-color: rgba(0, 0, 0, 0.35);
+    min-height: 496px;
+}
+
+#wrapper_mbYTP_bgndVideo {
+    z-index: -999 !important;
+}
+
+.banner .item {
+
+}
+
+.banner .item-100vh {
+    height: 100vh;
+}
+
+.banner .item img {
+    height: 100%;
+    width: 100%;
+    animation: bgburnsEast 25s linear infinite alternate;
+    -webkit-animation: bgburnsEast 25s linear infinite alternate;
+}
+
+.carousel-control {
+    width: 0;
+}
+
+.carousel-control.left {
+    background: none;
+}
+
+.carousel-control.right {
+    background: none;
+}
+
+.slider-mover-left {
+    width: 35px;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    top: 45%;
+    z-index: 5;
+    display: inline-block;
+    left: 0;
+    background: #151515;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+}
+
+.slider-mover-left i {
+    font-size: 20px;
+}
+
+.slider-mover-right {
+    width: 35px;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    top: 45%;
+    z-index: 5;
+    display: inline-block;
+    right: 0;
+    background: #151515;
+    text-align: center;
+    border-radius: 5px 0 0 5px;
+}
+
+.slider-mover-right i {
+    font-size: 20px;
+}
+
+.banner-max-height {
+    max-height: 720px !important;
+}
+
+.banner-max-height img {
+    max-height: 720px;
+}
+
+.banner .banner-slider-inneri {
+    top: 150px;
+    display: inline-block;
+    text-shadow: none;
+    right: 8%;
+    left: 8%;
+}
+
+.banner .banner-slider-inner {
+    top: 0%;
+    display: inline-block;
+    text-shadow: none;
+    right: 0%;
+    left: 0%;
+    padding: 0;
+    bottom: 0%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex !important;
+}
+
+.banner-content {
+    align-self: center !important;
+    margin: 0px auto;
+    font-family: 'Roboto', sans-serif !important;;
+    color: #fff;
+}
+
+/*.banner-content-left {
+    margin-left: 8%;
+    margin-right: 8%;
+}*/
+
+.banner .banner-slider-inner h1 {
+    color: #fff;
+    margin: 0 0 20px;
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.banner-2 .banner-slider-inner h1 {
+    color: #fff;
+    font-size: 70px;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 20px;
+    text-shadow: none;
+}
+
+.banner .banner-slider-inner h1 span {
+    font-weight: 600;
+}
+
+.banner .banner-slider-inner h2 {
+    font-size: 50px;
+}
+
+.banner .banner-slider-inner p {
+    margin-bottom: 20px;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.banner-3 .banner-box h1{
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.498039);
+    width: auto;
+    /*display: inline-block;*/
+    display: table;
+    font-weight: 700 !important;
+}
+
+.banner-3 .banner-box p{
+    font-size: 16px;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0, 0.498039);
+    width: auto;
+    /*display: inline-block;*/
+    display: table;
+    font-weight: 600 !important;
+}
+
+.banner-content .btn {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.banner-detail-box {
+    background: rgba(0, 0, 0, 0.6);
+    max-width: 600px;
+    padding: 20px;
+}
+
+.banner-detail-box h3 {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.banner .banner-detail-box p {
+    margin-bottom: 20px;
+    color: #dcd7d7;
+    font-size: 15px;
+}
+
+/** MEDIA QUERY **/
+@media (max-width: 1200px) {
+
+    .banner .banner-slider-inner h1 {
+        font-size: 50px;
+    }
+
+    .banner-search-box {
+        max-width: 600px;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px 5px 20px;
+        display: inline-block;
+        float: left;
+    }
+}
+
+@media (max-width: 992px) {
+    .banner .banner-slider-inner h1 {
+        font-size: 35px;
+    }
+
+    .banner .banner-slider-inner p {
+        font-size: 14px;
+    }
+
+    .banner .button-md {
+        padding: 12px 20px 8px 20px;
+        font-size: 12px;
+    }
+
+    /*.banner .banner-tb {
+        top: 30%;
+    }*/
+    .banner-content-left {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .animated {
+        /*CSS3 animation properties*/
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+
+        /*CSS3 transition properties*/
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+
+        /*CSS3 transform properties*/
+        -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+    }
+
+    .banner .item {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-mover-left {
+        width: 30px;
+        height: 30px;
+        /*left: 5px;*/
+    }
+
+    .slider-mover-left i {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .slider-mover-right {
+        width: 30px;
+        height: 30px;
+        /*right: 5px;*/
+    }
+
+    .slider-mover-right i {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .thumb-preview {
+        height: auto;
+    }
+
+    .banner .item img{
+        min-height: 200px;
+    }
+
+    .banner-content {
+        max-width: 80%;
+    }
+
+    .banner .banner-slider-inner h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .banner-3 .banner-slider-inner h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .banner-3 .banner-slider-inner p {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .banner .banner-slider-inner p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .carousel-control.left {
+        /*left: -5px;*/
+    }
+
+    .carousel-control.right {
+        /*right: -5px;*/
+    }
+
+    .banner .btn {
+        font-size: 11px;
+        padding: 9px 10px 7px 10px;
+        margin-bottom: 5px;
+    }
+
+    .slider-mover-left, .slider-mover-right {
+        width: 25px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .slider-mover-left i {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 525px) {
+
+}
+
+@media (max-width: 450px) {
+    .amenities .amenities-box {
+        width: 100%;
+    }
+}
