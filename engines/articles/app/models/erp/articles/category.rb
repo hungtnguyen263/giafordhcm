@@ -172,5 +172,10 @@ module Erp::Articles
 			query = self.get_active
 			query = query.where(alias: Erp::Articles::Category::ALIAS_BLOG)
 		end
+    
+    def self.get_categories_by_alias_custom
+			query = self.get_active
+			query = query.where(alias: Erp::Articles::Category::ALIAS_CUSTOM)
+		end
   end
 end

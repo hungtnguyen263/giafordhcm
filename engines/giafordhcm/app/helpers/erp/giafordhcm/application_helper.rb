@@ -16,9 +16,19 @@ module Erp
         erp_giafordhcm.product_detail_path(product_id: product.id, title: url_friendly(product.name))
       end
       
+      # blogs helper
+      def blogs_link(category)
+        erp_giafordhcm.blog_path(category_id: category.id, title: url_friendly(category.name))
+      end
+      
       # blog link
       def blog_link(blog)
         erp_giafordhcm.blog_detail_path(title: url_friendly(blog.name), blog_id: blog.id)
+      end
+      
+      # custom blog link / bai viet lai thu/mua xe cu gia cao
+      def single_post_link(article)
+        erp_giafordhcm.custom_single_post_path(title: url_friendly(article.name), article_id: article.id)
       end
       
       # product image

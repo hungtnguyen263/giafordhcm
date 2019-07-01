@@ -15,7 +15,8 @@ Erp::Giafordhcm::Engine.routes.draw do
     get "san-pham/:title-sp-:product_id.html" => "frontend/product#detail", as: :product_detail
     get ":title-dx-:menu_id.html" => "frontend/product#category", as: :product_listing
     
-    get "tin-tuc.html" => "frontend/blog#index", as: :blog
-    get "tin-tuc/:title-bl(:blog_id).html" => "frontend/blog#detail", as: :blog_detail
+    get ":title-dsbv-:category_id.html" => "frontend/blog#index", as: :blog
+    get "bai-viet/:title-bl-:blog_id.html" => "frontend/blog#detail", as: :blog_detail
+    get ":title-cus-:article_id.html" => "frontend/blog#custom_single_post", as: :custom_single_post
   end
 end

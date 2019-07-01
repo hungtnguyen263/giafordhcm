@@ -63,18 +63,21 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: #fff;
 }
 .navbar-info {
-	height: 60px;
+	height: 54px;
 	padding: 5px 5px;
 	font-size: 19px !important;
-	top: 5px;
+	top: 0px;
 	border-radius: 5px;
 	color: #fff;
 	line-height: 20px;
 	font-weight: bold;
-	font: 600 12px/20px 'Roboto', sans-serif;
+	font: 600 12px/18px 'Roboto', sans-serif;
     text-transform: none;
     letter-spacing: 0;
     
+}
+.navbar-scrolling .navbar-info {
+    top: 4px;
 }
 .navbar-info div {
     font-size: 24px;
@@ -138,19 +141,51 @@ header.header img.scroll-logo {
         margin-top: 10px;
     }
 }
+.navbar {
+    padding-top: 8px;
+}
+.section-title-page, .banner {
+    margin-top: 120px;
+}
+body:not(.header-demo) .header.header.navbar-scrolling .navbar-brand{
+    padding-top: 5px;
+}
 .header-topbarbox-1, .header-topbarbox-2 {
-    padding: 15px 0 15px;
+    padding: 8px 0 8px;
+}
+.header .navbar .navbar-nav {
+    padding-top: 5px;
+}
+.navbar .navbar-nav > li.active, .navbar .navbar-nav > li:hover {
+    background-color: #1565c0;
+}
+.navbar .navbar-nav > li.active > a, .navbar .navbar-nav > li:hover > a,
+.navbar .navbar-nav > li.active > a .caret, .navbar .navbar-nav > li:hover > a .caret {
+    color: #fff !important;
 }
 .header.header-color-black .navbar .navbar-nav > li.active > a,
 .header.navbar-scrolling .navbar .navbar-nav > li.active > a
  {
-    border-bottom: 0.1875em solid #1565c0;
+    color: #fff !important;
+}
+.header-navibox-1, .header-navibox-2, .header-navibox-3, .header-navibox-4 {
+    padding: 0;
+}
+.header.header-color-black .navbar .navbar-nav > li.active > a .caret,
+.header.navbar-scrolling .navbar .navbar-nav > li.active > a .caret {
+    color: #fff;
 }
 .header.header-color-black .navbar .navbar-nav > li > a:hover,
 .header.header-color-black .navbar .navbar-nav > li > a:focus {
-	color: #222;
-    border-bottom: 0.1875em solid #1565c0;
+	color: #fff;
+    /*border-bottom: 0.1875em solid #1565c0;*/
     background: none;
+}
+.yamm li.dropdown:hover > .dropdown-menu {
+    margin-top: 0;
+}
+.navbar .navbar-nav > li {
+    padding: 10px 0;
 }
 @media (max-width: 1200px) {
     .header-navibox-2 {
@@ -773,6 +808,63 @@ article.b-post blockquote.sub-title i.fa {
 }
 .l-theme-custom .top-bar li {
     font-size: 15px;
+}
+.top-bar .header-topbarbox-1 ul li i {
+    font-size: 15px;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    border-radius: 5px;
+    color: #ffffff;
+    text-align: center;
+    padding: 0;
+    background: #ff7800;
+    margin-right: 5px;
+    opacity: 1;
+    font-weight: bold;
+}
+.top-bar li {
+    font-size: 15px;
+    line-height: 30px;
+}
+.top-bar .social-links li, .footer .social-net li {
+    font-size: 15px;
+    height: 30px;
+    width: 30px;
+    line-height: 25px;
+    border-radius: 50%;
+    color: #ffffff;
+    text-align: center;
+    padding: 0;
+}
+.top-bar .social-links li {
+    margin-left: 10px;
+}
+.footer .social-net li {
+    margin-right: 10px;
+}
+.top-bar .social-links li.facebook, .footer .social-net li.facebook {
+    background-color: #4267b2;
+}
+.top-bar .social-links li.youtube, .footer .social-net li.youtube {
+    background-color: #c01515;
+}
+.top-bar .social-links li > a {
+    opacity: 1;
+    font-size: 15px;
+    padding: 0;
+    margin-left: 0;
+    line-height: 30px;
+}
+.footer .social-net__link {
+    padding: 0;
+    font-size: 15px;
+    line-height: 30px;
+}
+.footer .social-net {
+    margin-top: 27px;
+    margin-bottom: 27px;
+    margin-left: 30px;
 }
 .sidebar .contact-info-boxes {
     position: fixed;

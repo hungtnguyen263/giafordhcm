@@ -1,9 +1,11 @@
+<%= title @category.name %>
+
 <div class="section-title-page area-bg area-bg_dark area-bg_op_70">
     <div class="area-bg__inner">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="b-title-page bg-primary_a">Tin tức</h1>
+                    <h1 class="b-title-page bg-primary_a"><%= @category.name %></h1>
                 </div>
             </div>
         </div>
@@ -16,7 +18,7 @@
             <div class="col-xs-12">
                 <ol class="breadcrumb">
                     <li><a href="<%= erp_giafordhcm.root_path %>"><i class="icon fa fa-home"></i></a></li>
-                    <li class="active">Tin tức</li>
+                    <li class="active"><%= @category.name %></li>
                 </ol>
             </div>
         </div>

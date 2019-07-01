@@ -29,14 +29,23 @@
                         <section class="footer-section footer-section_list-one">
                             <h3 class="footer-section__title ui-title-inner">Hỗ trợ khách hàng</h3>
                             <ul class="footer-list list-unstyled">
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Giới thiệu</a></li>
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Bảng giá</a></li>
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Tin tức</a></li>
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Khuyến mãi</a></li>
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Thủ tục trả góp</a></li>
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Đăng ký lái thử</a></li>
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Mua xe cũ giá cao</a></li>
-                                <li class="footer-list__item"><a class="footer-list__link" href="#">Liên hệ</a></li>
+                                <li class="footer-list__item"><a class="footer-list__link" href="<%= erp_giafordhcm.about_us_path %>">Giới thiệu</a></li>
+                                <li class="footer-list__item"><a class="footer-list__link" href="<%= erp_giafordhcm.price_list_path %>">Bảng giá</a></li>
+                                <% Erp::Articles::Category.get_categories_by_alias_blog.each do |menu_blog| %>
+                                <li class="footer-list__item"><a class="footer-list__link" href="<%= blogs_link(menu_blog) %>"><%= menu_blog.name %></a></li>
+                                <% end %>
+                                <% Erp::Articles::Category.get_categories_by_alias_custom.each do |menu_custom| %>
+                                    <% article = Erp::Articles::Article.find_by_category_id(menu_custom.id) %>
+                                    <li class="footer-list__item">
+                                        <a class="footer-list__link" href="<%= article.nil? ? 'javascript:;' : single_post_link(article) %>"><%= menu_custom.name %></a>
+                                    </li>
+                                <% end %>
+                                <li class="footer-list__item">
+                                    <a class="footer-list__link" href="<%= erp_giafordhcm.installment_path %>">Thủ tục trả góp</a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a class="footer-list__link" href="<%= erp_giafordhcm.contact_us_path %>">Liên hệ</a>
+                                </li>
                             </ul>
                         </section>
                     </div>
@@ -53,18 +62,22 @@
                             <div class="footer-contact"><i class="icon icon-xs fa fa-globe"></i> <%= web_info.website %></div>
                         </section>
                         <section class="footer-section">
-                            <h3 class="footer-section__title ui-title-inner">Kết nối mạng xã hội</h3>
+                            <h3 class="footer-section__title ui-title-inner">follow us</h3>
                             
                             <ul class="social-net list-inline">
-                                <li class="social-net__item"><a class="social-net__link text-primary_h" href="facebook.com"><i class="icon fa fa-facebook"></i></a>
+                                <li class="social-net__item facebook">
+                                    <a class="social-net__link text-primary"
+                                       href="https://www.facebook.com/GIA-ĐỊNH-FORD-341016306770284"
+                                       target="_blank">
+                                        <i class="icon fa fa-facebook"></i>
+                                    </a>
                                 </li>
-                                <li class="social-net__item"><a class="social-net__link text-primary_h" href="twitter.com"><i class="icon fa fa-twitter"></i></a>
-                                </li>
-                                <li class="social-net__item"><a class="social-net__link text-primary_h" href="linkedin.com"><i class="icon fa fa-linkedin"></i></a>
-                                </li>
-                                <li class="social-net__item"><a class="social-net__link text-primary_h" href="instagram.com"><i class="icon fa fa-instagram"></i></a>
-                                </li>
-                                <li class="social-net__item"><a class="social-net__link text-primary_h" href="youtube.com"><i class="icon fa fa-youtube-play"></i></a>
+                                <li class="social-net__item youtube">
+                                    <a class="social-net__link text-primary"
+                                       href="#"
+                                       target="_blank">
+                                        <i class="icon fa fa-youtube-play"></i>
+                                    </a>
                                 </li>
                             </ul>
                         </section>
@@ -76,8 +89,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <span class="left">Copyright &copy; 2019 GIAFORDHCM.COM - All Rights Reserved</span>
-                        <span class="right">Designed by Hoang Khang Incotech</span>
+                        Copyright &copy; 2019 GIAFORDHCM.COM - All Rights Reserved<br>
+                        Designed by Hoang Khang Incotech
                     </div>
                 </div>
             </div>

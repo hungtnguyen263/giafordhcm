@@ -63,13 +63,18 @@
                 <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/installment" %>">
                     <a href="<%= erp_giafordhcm.installment_path %>">Trả góp</a>
                 </li>
-                <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Tin tức khuyến mãi<b class="caret"></b></a>
+                <li class="dropdown <%= 'active' if params[:controller] == "erp/giafordhcm/frontend/blog" %>">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Tin tức khuyến mãi<b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Tin tức</a></li>
-                        <li><a href="#">Khuyến mãi</a></li>
-                        <li><a href="#">Lái thử</a></li>
-                        <li><a href="#">Trả góp</a></li>
-                        <li><a href="#">Mua xe cũ giá cao</a></li>
+                        <% Erp::Articles::Category.get_categories_by_alias_blog.each do |menu_blog| %>
+                            <li><a href="<%= blogs_link(menu_blog) %>"><%= menu_blog.name %></a></li>
+                        <% end %>
+                        <% Erp::Articles::Category.get_categories_by_alias_custom.each do |menu_custom| %>
+                            <% article = Erp::Articles::Article.find_by_category_id(menu_custom.id) %>
+                            <li>
+                                <a href="<%= article.nil? ? 'javascript:;' : single_post_link(article) %>"><%= menu_custom.name %></a>
+                            </li>
+                        <% end %>
                     </ul>
                 </li>
                 <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/contact_us" %>">
