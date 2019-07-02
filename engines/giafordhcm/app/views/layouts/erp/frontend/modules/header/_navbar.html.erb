@@ -61,6 +61,12 @@
                     <ul class="dropdown-menu horizontal" role="menu">
                         <% @menus = Erp::Menus::Menu.get_active.where.not(parent_id: nil) %>
                         <% @menus.each do |sp| %>
+                        <%
+                            @link = menu_link(sp)
+                            if sp.get_products_for_categories({}).count == 1
+                                @link = product_link(sp.get_products_for_categories({}).first)
+                            end
+                        %>
                         <li>
                             <a title="<%= sp.name %>" href="<%= menu_link(sp) %>">
                                 <center>
