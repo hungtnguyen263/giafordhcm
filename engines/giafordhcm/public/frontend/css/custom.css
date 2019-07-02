@@ -76,8 +76,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     letter-spacing: 0;
     
 }
+.navbar-info {
+    top: 3px;
+}
 .navbar-scrolling .navbar-info {
-    top: 4px;
+    top: 3px;
 }
 .navbar-info div {
     font-size: 24px;
@@ -118,9 +121,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .b-bnr__title {
 	font: 600 36px/1 Roboto, sans-serif;
 }
-.navbar {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
 header.header img.scroll-logo {
     max-height: 50px;
 }
@@ -142,10 +142,11 @@ header.header img.scroll-logo {
     }
 }
 .navbar {
-    padding-top: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    padding: 0;
 }
 .section-title-page, .banner {
-    margin-top: 120px;
+    margin-top: 105px;
 }
 body:not(.header-demo) .header.header.navbar-scrolling .navbar-brand{
     padding-top: 5px;
@@ -154,7 +155,7 @@ body:not(.header-demo) .header.header.navbar-scrolling .navbar-brand{
     padding: 8px 0 8px;
 }
 .header .navbar .navbar-nav {
-    padding-top: 5px;
+    padding-top: 0;
 }
 .navbar .navbar-nav > li.active, .navbar .navbar-nav > li:hover {
     background-color: #1565c0;
@@ -185,7 +186,7 @@ body:not(.header-demo) .header.header.navbar-scrolling .navbar-brand{
     margin-top: 0;
 }
 .navbar .navbar-nav > li {
-    padding: 10px 0;
+    padding: 15px 0;
 }
 @media (max-width: 1200px) {
     .header-navibox-2 {
@@ -567,11 +568,15 @@ footer.footer.area-bg {
 .b-calculator__input {
     font-family: Roboto, sans-serif;
 }
-.b-advantages-1.center {
-    background-color: rgba(204, 204, 204, 0.15);
-}
-.b-advantages-1:hover {
+.b-advantages-1 {
+    padding: 30px 5% 30px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.b-advantages-1__icon {
+    font-size: 80px;
+}
+.b-advantages-1:hover > h3.b-advantages-1__title {
+    color: #1565c0;
 }
 .main-slider-1 {
     margin-top: 145px;
@@ -1245,4 +1250,29 @@ aside.floating .contact-boxes a.open-link:before {
     line-height: 18px;
     padding-top: 10px;
     padding: 14px 22px 11px;
+}
+.navbar-nav > li > .dropdown-menu.horizontal {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    top: 57px;
+}
+.navbar-nav > li > .dropdown-menu.horizontal li {
+    float: left;
+    width: 14%;
+}
+.dropdown-menu.horizontal > li > a {
+    padding: 10px 8%;
+    text-align: center;
+}
+.dropdown-menu.horizontal > li > a img {
+    max-width: 100%;
+}
+.dropdown-menu.horizontal > li > a:hover, .navbar-scrolling .dropdown-menu.horizontal > li > a:hover,
+.dropdown-menu.horizontal > li > a:focus, .navbar-scrolling .dropdown-menu.horizontal > li > a:focus {
+    background-color: #fff;
+}
+.dropdown-menu.horizontal > li > a:hover > span, .navbar-scrolling .dropdown-menu.horizontal > li > a:hover > span {
+    color: #1565c0;
 }

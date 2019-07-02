@@ -54,8 +54,23 @@
                 <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/about_us" %>">
                     <a href="<%= erp_giafordhcm.about_us_path %>">Giới thiệu</a>
                 </li>
-                <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/product" %>">
-                    <a href="<%= erp_giafordhcm.all_product_path %>">Sản phẩm</a>
+                <li class="dropdown <%= 'active' if params[:controller] == "erp/giafordhcm/frontend/product" %>">
+                    <a class="dropdown-toggle" href="<%= erp_giafordhcm.all_product_path %>">
+                        Sản phẩm <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu horizontal" role="menu">
+                        <% @menus = Erp::Menus::Menu.get_active.where.not(parent_id: nil) %>
+                        <% @menus.each do |sp| %>
+                        <li>
+                            <a title="<%= sp.name %>" href="<%= menu_link(sp) %>">
+                                <center>
+                                    <img src="<%= sp.image_menu.present? ? (sp.image_menu.thumb_560_350) : '/frontend/assets/media/components/b-goods/ford-everest-ambiente.jpg' %>">
+                                </center>
+                                <span><%= sp.name %></span>
+                            </a>
+                        </li>
+                        <% end %>
+                    </ul>
                 </li>
                 <li class="<%= 'active' if params[:controller] == "erp/giafordhcm/frontend/price" %>">
                     <a href="<%= erp_giafordhcm.price_list_path %>">Bảng giá</a>
