@@ -48,24 +48,24 @@ $(function() {
 		});
 	});
     
-    //function showPopupAds()
-    //{
-    //    if(typeof($.cookie("ads_showed")) === 'undefined') {
-    //        var date = new Date();
-    //        var minutes = 60;
-    //        date.setTime(date.getTime() + (minutes * 60 * 1000));
-    //        $.cookie("ads_showed", true, { expires: date });
-    //        
-    //        $('#popup-ads').modal('show'); // Show popup
-    //    }
-    //}
-    //
-    //function callerPopupAds()
-    //{
-    //    setTimeout(showPopupAds, 10000);
-    //}
-    //
-    //callerPopupAds();
+    function showFormBaoGia()
+    {
+        if(typeof($.cookie("baogia_showed")) === 'undefined') {
+            var date = new Date();
+            var minutes = 0.5;
+            date.setTime(date.getTime() + (minutes * 60 * 1000));
+            $.cookie("baogia_showed", true, { expires: date });
+            
+            $('.dang-ky-button').click();
+        }
+    }
+    
+    function callerFormBaoGia()
+    {
+        setTimeout(showFormBaoGia, 10000);
+    }
+    
+    callerFormBaoGia();
 });
 
 function uniqueId() {
