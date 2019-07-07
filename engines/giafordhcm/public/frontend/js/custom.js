@@ -1,3 +1,4 @@
+
 $(function() {
     // Get the form.
     var form = $('#ajax-contact-form');
@@ -48,24 +49,60 @@ $(function() {
 		});
 	});
     
+    var dang_ky_modal = new giafordhcmModal({size: 'md'});
+    var dang_ky_callback;
+    
+    $('.dang-ky-button').click(function(e) {
+        e.preventDefault();
+        var button = $(this);
+        
+        dang_ky_modal.load(button.attr('href'));
+        
+        dang_ky_callback = function(response) {
+            console.log(response.status);
+            console.log(response.redirect);
+            if (typeof(response.status) !== 'undefined') {
+                //showNotification(response.status, response.message);
+                dang_ky_modal.hide();
+                location.reload();
+                alert("Cảm ơn Quý vị đã gửi yêu cầu. Chúng tôi sẽ sớm liên hệ lại với Quý vị.");
+            } else if (typeof(response.redirect) !== 'undefined') {
+                window.location = response.redirect;
+                alert("Cảm ơn Quý vị đã gửi yêu cầu. Chúng tôi sẽ sớm liên hệ lại với Quý vị.");
+            } else {
+                // validation error
+                dang_ky_modal.renderHtml(response);
+                alert("Yêu cầu chưa được gửi. Vui lòng cung cấp đầy đủ thông tin và thử lại.");
+            }
+        };
+    });
+    
     function showFormBaoGia()
     {
-        if(typeof($.cookie("baogia_showed")) === 'undefined') {
-            var date = new Date();
-            var minutes = 0.5;
-            date.setTime(date.getTime() + (minutes * 60 * 1000));
-            $.cookie("baogia_showed", true, { expires: date });
-            
-            $('.dang-ky-button').click();
-        }
+        //if(typeof($.cookie("baogia_showed")) === 'undefined') {
+        //    var date = new Date();
+        //    var minutes = 0.5;
+        //    date.setTime(date.getTime() + (minutes * 60 * 1000));
+        //    $.cookie("baogia_showed", true, { expires: date });
+        //    
+        //    $('.dang-ky-button').click();
+        //}
+        $('.dang-ky-button').click();
     }
     
-    function callerFormBaoGia()
-    {
-        setTimeout(showFormBaoGia, 10000);
-    }
+    setTimeout(
+        function() {
+            showFormBaoGia();
+        },
+        10000
+    );
     
-    callerFormBaoGia();
+    //$(document).on('click', '.close-bao-gia', function() {
+    $(document).on('hidden.bs.modal', function () {
+        setTimeout(function(){
+            showFormBaoGia();
+        }, 40000);
+    });
 });
 
 function uniqueId() {
