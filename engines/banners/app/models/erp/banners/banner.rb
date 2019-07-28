@@ -150,5 +150,9 @@ module Erp::Banners
     def self.get_category_banners
 			self.get_active.joins(:category).where(erp_banners_categories: {position: Erp::Banners::Category::POSITION_CATEGORY_BANNER})
 		end
+
+    def self.get_souvenir_banners
+			self.get_active.joins(:category).where(erp_banners_categories: {position: Erp::Banners::Category::POSITION_SOUVENIR_PHOTO})
+		end
   end
 end

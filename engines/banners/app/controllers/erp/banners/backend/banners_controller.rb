@@ -203,7 +203,7 @@ module Erp
 
           # Only allow a trusted parameter "white list" through.
           def banner_params
-            params.fetch(:banner, {}).permit(:image_url, :name, :category_id, :link_url, :note)
+            params.fetch(:banner, {}).permit(:image_url, :name, :category_id, :link_url, :note, :video_link)
           end
       end
     end

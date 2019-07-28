@@ -1,0 +1,45 @@
+<section class="section-isotope">
+    <div class="section-isotope__header bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="text-center">
+                        <h2 class="ui-title-block">THƯ VIỆN</h2>
+                        <div class="ui-subtitle-block"></div>
+                        <div class="ui-decor"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="b-isotope">
+        <ul class="b-isotope-grid grid list-unstyled">
+            <li class="grid-sizer"></li>
+            <% @photos.each do |photo|%>
+            <li class="b-isotope-grid__item grid-item">
+                <a class="b-isotope-grid__inner"
+                   data-fancybox="images"
+                   href="<%= photo.video_link.present? ? photo.video_link : photo.image_url %>">
+                    <img src="<%= photo.image_url.thumb %>" alt="<%= photo.name %>" />
+                    <span class="b-isotope-grid__wrap-info helper">
+                        <span class="b-isotope-grid__info">
+                            <span class="b-isotope-grid__title"><%= photo.name %></span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+            <% end %>
+        </ul>
+        <% if false %>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="b-isotope-filter list-inline">
+                            <a href="#" class="btn btn-default">Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</section>

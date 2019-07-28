@@ -1276,3 +1276,27 @@ aside.floating .contact-boxes a.open-link:before {
 .dropdown-menu.horizontal > li > a:hover > span, .navbar-scrolling .dropdown-menu.horizontal > li > a:hover > span {
     color: #1565c0;
 }
+.b-post-full .entry-meta {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 0;
+}
+.b-post-full .entry-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+.section-isotope__header {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.b-isotope-grid__wrap-info {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.b-isotope-grid__info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+}

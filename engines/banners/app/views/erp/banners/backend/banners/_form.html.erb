@@ -49,12 +49,21 @@
                         </div>
                         
                         <div class="row">
-                            <div class="col-md-12">
-                                <%= erp_form_control("textarea", {
+                            <div class="col-md-6">
+                                <%= erp_form_control("text", {
                                     name: 'banner[link_url]',
                                     value: banner.link_url,                   
                                     label: t('.link_url'),
                                     placeholder: t('.enter_link_url'),
+                                    rows: 1
+                                }) %>
+                            </div>
+                            <div class="col-md-6">
+                                <%= erp_form_control("text", {
+                                    name: 'banner[video_link]',
+                                    value: banner.video_link,                   
+                                    label: t('.video_link'),
+                                    placeholder: t('.enter_video_link'),
                                     rows: 1
                                 }) %>
                             </div>

@@ -8,13 +8,14 @@ module Erp::Banners
     SCALE_FILL = 'fill'
     SCALE_FIT = 'fit'
     POSITION_HOME_SLIDESHOW = 'home_slideshow'
-    POSITION_HOME_BLOCK_BANNER = 'home_block_banner'
-    POSITION_HOME_SERVICE = 'home_service_banner'
-    POSITION_HOME_LONG_BANNER	= 'home_long_banner'
-    POSITION_CATEGORY_BANNER = 'category_banner'
-    POSITION_BRAND_IDENTITY = 'brand_identity'
-    POSITION_ADS_BANNER = 'ads_banner'
-    POSITION_ALBUM = 'album'
+    #POSITION_HOME_BLOCK_BANNER = 'home_block_banner'
+    #POSITION_HOME_SERVICE = 'home_service_banner'
+    #POSITION_HOME_LONG_BANNER	= 'home_long_banner'
+    #POSITION_CATEGORY_BANNER = 'category_banner'
+    #POSITION_BRAND_IDENTITY = 'brand_identity'
+    #POSITION_ADS_BANNER = 'ads_banner'
+    #POSITION_ALBUM = 'album'
+    POSITION_SOUVENIR_PHOTO = 'souvenir_photo'
     
     # get image scale
     def self.get_image_scale_options
@@ -28,10 +29,11 @@ module Erp::Banners
     def self.get_position_options()
       [
         {text: 'home_slideshow',value: self::POSITION_HOME_SLIDESHOW},
-        {text: 'home_block_banner',value: self::POSITION_HOME_BLOCK_BANNER},
-        {text: 'home_service_banner',value: self::POSITION_HOME_SERVICE},
-        {text: 'home_long_banner',value: self::POSITION_HOME_LONG_BANNER},
-        {text: 'category_banner',value: self::POSITION_CATEGORY_BANNER}
+        {text: 'souvenir_photo',value: self::POSITION_SOUVENIR_PHOTO},
+        #{text: 'home_block_banner',value: self::POSITION_HOME_BLOCK_BANNER},
+        #{text: 'home_service_banner',value: self::POSITION_HOME_SERVICE},
+        #{text: 'home_long_banner',value: self::POSITION_HOME_LONG_BANNER},
+        #{text: 'category_banner',value: self::POSITION_CATEGORY_BANNER}
       ]
     end
     

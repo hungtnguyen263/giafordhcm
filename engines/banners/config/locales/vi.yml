@@ -59,6 +59,8 @@ vi:
             category: "Chuyên mục/kiểu kích thước"
             link_url: "Link URL"
             enter_link_url: "Nhập URL cần để gắn vào hình ảnh"
+            video_link: "Video URL"
+            enter_video_link: "Nhập URL cho video"
             choose_category: "Chọn chuyên mục/kiểu tỉ lệ cho hình ảnh"
             note: "Ghi chú"
             enter_note: "Nhập nội dung ghi chú"
